@@ -1,4 +1,30 @@
+h1 {
+  font-size: 18px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @media (min-width: $sm) {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  @media (min-width: $md) {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+  @media (min-width: $lg) {
+    font-size: 30px;
+    font-weight: 100;
+  }
+  @media (min-width: $xl) {
+    font-size: 34px;
+    letter-spacing: 5px;
+  }
+  @media (min-width: $xxl) {
+    font-size: 38px;
+  }
+}
 
+/*
 h1 {
   font-size: 18px;
   font-weight: 200;
@@ -98,4 +124,4 @@ strong {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
-}
+}*/

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from 'next/script';
 import { Montserrat } from "next/font/google";
 import "./globals.scss";
+import './globalicons.scss';
 
 // Components
 import Header from "./components/Header";

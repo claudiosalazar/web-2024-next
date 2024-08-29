@@ -4,18 +4,28 @@
 @import "./scss/variables";
 
 // Layout
-@import "./scss/components/textos";
 @import "./scss/layout/contenedores";
+@import "./scss/layout/inicio";
+@import "./scss/layout/conocimientos";
+@import "./scss/layout/trayectoria";
+
 
 // Components
+@import "./scss/components/accordion";
+@import "./scss/components/button";
+@import "./scss/components/iconos";
+@import "./scss/components/textos";
 @import "./scss/components/header";
 @import "./scss/components/footer";
+
+
+
 
 /*@import "./scss/components/accordion";
 @import "./scss/components/button";
 
 @import "./scss/components/header";
-@import "./scss/components/iconos";
+
 @import "./scss/components/modal";
 @import "./scss/components/textos";
 

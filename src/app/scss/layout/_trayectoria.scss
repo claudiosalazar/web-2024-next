@@ -1,4 +1,11 @@
 .trayectoria {
+  color: $blanco;
+  h1 {
+    line-height: 1.1;
+  }
+}
+
+/*.trayectoria {
   position: relative;
   height: fit-content;
   z-index: 0;
@@ -37,8 +44,8 @@
     }
 
     .contenedor-btn-cv {
-      /*display: flex;
-      justify-content: center;*/
+      display: flex;
+      justify-content: center;
       @media (min-width: $md) {
         //justify-content: flex-start;
       }
@@ -290,7 +297,7 @@
   &.nuestragencia {
     left: 90px;
   }
-}
+}*/
 
 
 

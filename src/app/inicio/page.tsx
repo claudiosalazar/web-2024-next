@@ -4,9 +4,10 @@ function Inicio() {
   return (
     <>
       <div className='info-inicio'>
-        <section className='info-portada'>
+        <section className='info-portada inicio'>
           <div className="row">
             <div className='col-8 offset-2'>
+              <div className='logo-inicio'></div>
               <h1 className='titulo my-3 my-xl-4'>
                 FRONTEND
                 <br />
@@ -19,7 +20,7 @@ function Inicio() {
                 <strong>Frontend Designer</strong> especializado en <strong>transformar el diseño UI</strong> en <strong>interfaces web responsivas cross browser</strong>, creando código semántico y manteniendo siempre un enfoque en la mejora continua y el conocimiento de nuevas tecnologías, trabajando con <strong>metodologías ágiles</strong>. Gracias a mis estudios en diseño, estoy familiarizado con los términos técnicos y la interpretación de los <strong>equipos UX/UI</strong>.
               </p>
 
-              <div className='uxUi mt-5 mt-md-3 mt-xl-4'>
+              <div className='uxUi mt-5 mt-md-3 mt-xl-4 d-flex align-items-center'>
                 <span className='ux-ui'>UX / UI</span>
                 <span className='ico-saludo d-block mx-3'></span>
                 <span className='dev'>DEV</span>

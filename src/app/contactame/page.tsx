@@ -1,7 +1,7 @@
 function Contactame () {
   return (
     <div className="contactame">
-      <p>Hablemos</p>
+      <a href='#' className="material-symbols-outlined">sms</a>
     </div>
   )
 }
