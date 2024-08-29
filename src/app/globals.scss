@@ -1,4 +1,36 @@
-:root {
+@import "~bootstrap/scss/bootstrap";
+
+@import "./scss/mixins";
+@import "./scss/variables";
+
+// Layout
+@import "./scss/components/textos";
+@import "./scss/layout/contenedores";
+
+// Components
+@import "./scss/components/header";
+@import "./scss/components/footer";
+
+/*@import "./scss/components/accordion";
+@import "./scss/components/button";
+
+@import "./scss/components/header";
+@import "./scss/components/iconos";
+@import "./scss/components/modal";
+@import "./scss/components/textos";
+
+
+// Layout
+@import "./scss/layout/bienvenida";
+@import "./scss/layout/conocimientos";
+@import "./scss/layout/contactame";
+@import "./scss/layout/contenedores";
+@import "./scss/layout/inicio";
+@import "./scss/layout/saludo";
+@import "./scss/layout/trayectoria";*/
+
+
+/*:root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -104,4 +136,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+}*/

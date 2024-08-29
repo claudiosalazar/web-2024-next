@@ -1,0 +1,50 @@
+.saludo {
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: $negro;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+  z-index: 8000;
+  color: $dorado;
+  font-weight: 900;
+
+  .texto-saludo {
+    position: relative;
+    z-index: 9000;
+    span {
+      font-size: 100px;
+      opacity: 0;
+      transition: opacity .4s ease-in-out;
+      @media (min-width: $md) {
+        font-size: 180px;
+      }
+      @media (min-width: $lg) {
+        font-size: 250px;
+      }
+      @media (min-width: $xl) {
+        font-size: 280px;
+      }
+    }
+  }
+
+  &.posicion {
+    z-index: -200;
+  }
+
+  .ruido {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background-color: transparent;
+    background-image: url('../../assets/ruido.gif');
+    opacity: .2;
+  }
+}

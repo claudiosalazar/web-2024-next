@@ -1,0 +1,132 @@
+
+.contenido {
+  position: relative;
+  z-index: 0;
+}
+
+.info-inicio {
+  text-align: center;
+  position: relative;
+  top: 0;
+  .info-portada {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: $blanco;
+  }
+  .resumen-portafolio {
+    background-color: $gris-30;
+  }
+  .resumen-conocimiento {
+    background-color: $gris-100;
+  }
+  .resumen-trayectoria {
+    background-color: $dorado;
+  }
+}
+
+.contactame {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/*.contenido {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  @media (max-width: $md) {
+    position: relative;
+    height: fit-content ;
+    top: 47px;
+  }
+
+  .info-inicio {
+    position: relative;
+    opacity: 1;
+    background-color: $blanco;
+    @media (min-width: $md) {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      &.mostrar-seccion {
+        @include fade-in-seccion;
+      }
+      &.ocultar-seccion {
+        @include fade-out-seccion;
+      }
+    }
+  }
+  
+  .info-conocimientos {
+    position: relative;
+    opacity: 1;
+    background-color: $gris-conocimientos-texto;
+    @media (min-width: $md) {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      &.mostrar-seccion {
+        @include fade-in-seccion;
+      }
+      &.ocultar-seccion {
+        @include fade-out-seccion;
+      }
+    }
+  }
+
+  .info-trayectoria {
+    position: relative;
+    opacity: 1;
+    background-color: $dorado;
+    @media (min-width: $md) {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      &.mostrar-seccion {
+        @include fade-in-seccion;
+      }
+      &.ocultar-seccion {
+        @include fade-out-seccion;
+      }
+    }
+  }
+}
+
+.fondo-blur {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  z-index: -200;
+  @media (max-width: $md) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  &.mostrar-fondo-blur {
+    @include fade-in-blur;
+    animation: fade-in-blur .3s forwards;
+  }
+  &.ocultar-fondo-blur {
+    @include fade-out-blur;
+    animation: fade-out-blur .3s forwards;
+  }
+}*/

@@ -1,0 +1,70 @@
+.contenedor-iconos-conocimiento {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  // text-align: right;
+
+  .ico-conocimientos {
+    width: 40px;
+    height: auto;
+    margin: 10px;
+  }
+
+  img {
+    filter: blur(4px);
+    opacity: .5;
+  }
+
+  .grupo-1 {
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    top: 45%;
+    bottom: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    border: 1px solid red;
+  }
+  .grupo-2 {
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    top: 50%;
+    bottom: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    border: 1px solid red;
+  }
+  .grupo-3 {
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    top: 55%;
+    bottom: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    border: 1px solid red;
+  }
+  .grupo-4 {
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    top: 60%;
+    bottom: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    border: 1px solid red;
+  }
+  .grupo-5 {
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    top: 65%;
+    bottom: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    border: 1px solid red;
+  }
+}

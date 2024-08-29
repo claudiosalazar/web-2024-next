@@ -1,0 +1,15 @@
+.curriculum {
+  padding: 10px 18px !important;
+  background-color: $dorado-claro;
+  text-decoration: none;
+  width: fit-content;
+  color: $blanco;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+  font-size: 16px;
+  height: fit-content;
+  &:hover {
+    background-color: $blanco;
+    color: $dorado;
+  }
+}
