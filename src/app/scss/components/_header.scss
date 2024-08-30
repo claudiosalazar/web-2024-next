@@ -32,73 +32,47 @@ header {
   
       // Botones
       li {
-        font-size: 11px;
+        font-size: 12px;
         margin-bottom: 14px;
         padding-top: 15px;
         width: 33.33%;
         height: 47px;
-        @media (min-width: $sm) {
-          font-size: 12px;
-          padding-bottom: 24px;
-          margin-bottom: 0;
-        }
-        /*&:last-child {
-          display: none;
-          @media (min-width: $md) {
-            display: inherit;
-            margin-bottom: 0;
-          }
-        }*/
         a {
           font-weight: 400;
           text-transform: uppercase;
           text-decoration: none;
-          letter-spacing: .5px;
+          letter-spacing: 1px;
           width: 100%;
           justify-content: center;
           cursor: pointer;
-          @media (min-width: $md) {
-            width: fit-content;
-            justify-content: left;
-          }
-          @media (min-width: $lg) {
-            letter-spacing: 2px;
-          }
+          transform: translateX(-100%);
+          opacity: 0;
+          animation: slideIn 1.6s forwards;
+          transition: color 0.3s ease-in-out, margin-left 0.3s ease-in-out;
           .indicador-boton {
-            display: none;
+            display: block;
             height: 1px;
             transition: width 0.3s ease-in-out;
-            @media (min-width: $md) {
-              display: inherit;
-              width: 14px;
-              margin-right: 10px;
-              margin-bottom: 5px;
-            }
-            @media (min-width: $lg) {
-              width: 32px;
-              margin-right: 10px;
-            }
+            width: 28px;
+            margin-right: 10px;
+            position: absolute;
+            left: -42px;
+            top: 12px;
           }
   
           &.link-inicio {
             color: $gris-inicio;
-            @media (max-width: $md) {
-              color: inherit;
-            }
             &:hover {
               color: $gris-100;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
+
             }
             .indicador-boton {
               background-color: $gris-inicio;
             }
             &.active {
               color: $dorado;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
               .indicador-boton {
                 background-color: $dorado;
               }
@@ -106,47 +80,34 @@ header {
           }
           &.link-portafolio {
             color: $gris-10;
-            @media (max-width: $md) {
-              color: inherit;
-            }
             .indicador-boton {
               background-color: $gris-conocimientos;
             }
             &:hover {
               color: $blanco;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
+
             }
             &.active {
               color: $dorado-portafolio;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
               .indicador-boton {
-                background-color: $dorado;
+                background-color: $dorado-portafolio;
               }
             }
           }
           &.link-conocimientos {
             color: $gris-conocimientos;
-            @media (max-width: $md) {
-              color: inherit;
-            }
             .indicador-boton {
               background-color: $gris-conocimientos;
             }
             &:hover {
               color: $blanco;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
             }
             &.active {
               color: $dorado;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
               .indicador-boton {
                 background-color: $dorado;
               }
@@ -154,23 +115,17 @@ header {
           }
           &.link-trayectoria {
             color: $dorado-link-trayectoria;
-            @media (max-width: $md) {
-              color: inherit;
-            }
             &:hover {
               color: #EDD9B8;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
             }
             .indicador-boton {
               background-color: $dorado-link-trayectoria;
+              
             }
             &.active {
               color: $blanco;
-              @media (max-width: $md) {
-                color: inherit;
-              }
+              margin-left: 10px;
               .indicador-boton {
                 background-color: $blanco;
               }
@@ -178,300 +133,46 @@ header {
           }
   
           &:hover {
-            transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out, margin-left 0.3s ease-in-out;
             .indicador-boton {
-              width: 24px;
-              @media (min-width: $lg) {
-                width: 46px;
-              }
+              width: 34px;
             }
           }
           &.active {
             color: $dorado;
             cursor: default;
-            font-weight: 600;
-            @media (min-width: $lg) {
-              font-weight: 800;
-            }
+            font-weight: 700;
             .indicador-boton {
-              @media (min-width: $md) {
-                width: 24px;
-              }
-              @media (min-width: $lg) {
-                width: 46px;
-              }
-              @media (min-width: $xl) {
-                width: 46px;
-              }
+              width: 32px;
             }
           }
+        }
+
+        // Añadir animación con retraso
+        li:nth-child(1) a {
+          animation-delay: 2s;
+        }
+        li:nth-child(2) a {
+          animation-delay: 2.2s;
+        }
+        li:nth-child(3) a {
+          animation-delay: 2.4s;
+        }
+        li:nth-child(4) a {
+          animation-delay: 2.6s;
         }
       }
     }
   }
 }
 
-
-
-/*header {
-  @media (max-width: $md) {
-    position: fixed;
-    width: 100%;
-    height: 47px;
-    top: 0% !important;
-    transform: translateY(0%) !important;
-    z-index: 500;
-    transition: background-color .3s ease-in-out;
-    a {
-      &.active-mobile {
-        font-weight: 800 !important;
-      }
-    }
-    &.fnd-menu-inicio-mobile {
-      background-color: $blanco;
-      a {
-        color: $gris-inicio !important;
-        &.active-mobile {
-          color: $dorado !important;
-        }
-      }
-    }
-    &.fnd-menu-conocimiento-mobile {
-      background-color: $gris-conocimientos-texto;
-      a {
-        color: $gris-conocimientos !important;
-        &.active-mobile {
-          color: $dorado !important;
-        }
-      }
-    }
-    &.fnd-menu-trayectoria-mobile {
-      background-color: $dorado;
-      a {
-        color: $dorado-link-trayectoria !important;
-        &.active-mobile {
-          color: $blanco !important;
-        }
-      }
-    }
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
-
-nav {
-  position: absolute;
-  height: 100vh;
-  width: fit-content;
-  z-index: 500;
-  
-  @media (max-width: $md) {
-    position: relative;
-    height: fit-content;
-    width: 100%;
-  }
-  .menu {
-    position: relative;
-    height: fit-content !important;
-    list-style: none;
-    z-index: 500;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    @media (max-width: $md) {
-      position: inherit;
-      display: flex;
-      justify-content: space-between;
-      &.top-menu, &.center-menu, &.bottom-menu {
-        top: 0% !important;
-        transform: translateY(0%) !important;
-        padding: 0;
-      }
-    }
-
-    // Botones
-    li {
-      font-size: 11px;
-      margin-bottom: 14px;
-      padding-top: 15px;
-      width: 33.33%;
-      height: 47px;
-      @media (min-width: $sm) {
-        font-size: 12px;
-        padding-bottom: 24px;
-        margin-bottom: 0;
-      }
-      &:last-child {
-        display: none;
-        @media (min-width: $md) {
-          display: inherit;
-          margin-bottom: 0;
-        }
-      }
-      a {
-        font-weight: 400;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: .5px;
-        width: 100%;
-        justify-content: center;
-        cursor: pointer;
-        @media (min-width: $md) {
-          width: fit-content;
-          justify-content: left;
-        }
-        @media (min-width: $lg) {
-          letter-spacing: 2px;
-        }
-        .indicador-boton {
-          display: none;
-          height: 1px;
-          transition: width 0.3s ease-in-out;
-          @media (min-width: $md) {
-            display: inherit;
-            width: 14px;
-            margin-right: 10px;
-            margin-bottom: 5px;
-          }
-          @media (min-width: $lg) {
-            width: 32px;
-            margin-right: 10px;
-          }
-        }
-
-        &.link-inicio {
-          color: $gris-inicio;
-          @media (max-width: $md) {
-            color: inherit;
-          }
-          &:hover {
-            color: $gris-100;
-            @media (max-width: $md) {
-              color: inherit;
-            }
-          }
-          .indicador-boton {
-            background-color: $gris-inicio;
-          }
-          &.active {
-            color: $dorado;
-            @media (max-width: $md) {
-              color: inherit;
-            }
-            .indicador-boton {
-              background-color: $dorado;
-            }
-          }
-        }
-        &.link-conocimientos {
-          color: $gris-conocimientos;
-          @media (max-width: $md) {
-            color: inherit;
-          }
-          .indicador-boton {
-            background-color: $gris-conocimientos;
-          }
-          &:hover {
-            color: $blanco;
-            @media (max-width: $md) {
-              color: inherit;
-            }
-          }
-          &.active {
-            color: $dorado;
-            @media (max-width: $md) {
-              color: inherit;
-            }
-            .indicador-boton {
-              background-color: $dorado;
-            }
-          }
-        }
-        &.link-trayectoria {
-          color: $dorado-link-trayectoria;
-          @media (max-width: $md) {
-            color: inherit;
-          }
-          &:hover {
-            color: #EDD9B8;
-            @media (max-width: $md) {
-              color: inherit;
-            }
-          }
-          .indicador-boton {
-            background-color: $dorado-link-trayectoria;
-          }
-          &.active {
-            color: $blanco;
-            @media (max-width: $md) {
-              color: inherit;
-            }
-            .indicador-boton {
-              background-color: $blanco;
-            }
-          }
-        }
-
-        &:hover {
-          transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
-          .indicador-boton {
-            width: 24px;
-            @media (min-width: $lg) {
-              width: 46px;
-            }
-          }
-        }
-        &.active {
-          color: $dorado;
-          cursor: default;
-          font-weight: 600;
-          @media (min-width: $lg) {
-            font-weight: 800;
-          }
-          .indicador-boton {
-            @media (min-width: $md) {
-              width: 24px;
-            }
-            @media (min-width: $lg) {
-              width: 46px;
-            }
-            @media (min-width: $xl) {
-              width: 46px;
-            }
-          }
-        }
-      }
-    }
-  } 
-}
-
-
-.contactame-mobile-boton {
-  position: fixed;
-  top: 78px;
-  right: 0;
-  background-color: $dorado-claro;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  border-radius: 50% 0 0 50%;
-  a {
-    height: 30px;
-    width: 30px;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    .ico-contactame-mobile {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.8658 0H1.13422C0.510397 0 0 0.503497 0 1.11888V13.4266C0 14.042 0.510397 14.5455 1.13422 14.5455H18.8658C19.4896 14.5455 20 14.042 20 13.4266V1.11888C20 0.503497 19.4896 0 18.8658 0ZM18.7713 1.21212V3.39394L10 8.55944L1.22873 3.39394V1.21212H18.7713ZM1.22873 13.3333V4.81119L10 9.97669L18.7713 4.81119V13.3333H1.22873Z' fill='white'/%3E%3C/svg%3E");
-      background-size: 20px 15px;
-      width: 20px;
-      height: 15px;
-      margin-right: 2px;
-    }
-  }
-  @media (min-width: $md) {
-    display: none;
-  }
-}*/
