@@ -30,9 +30,11 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <div className="contenido">
           <Header />
+          <div className="container-fluid">
             {children}
-          <Footer />
-          <Contactame />
+            <Footer />
+            <Contactame />
+          </div>
         </div>
       </body>
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" />

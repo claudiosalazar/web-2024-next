@@ -18,8 +18,12 @@
 @import "./scss/components/header";
 @import "./scss/components/footer";
 
-
-
+.separador {
+  width: 30%;
+  height: 1px;
+  margin: 24px 0;
+  border-color: $gris-30;
+}
 
 /*@import "./scss/components/accordion";
 @import "./scss/components/button";
