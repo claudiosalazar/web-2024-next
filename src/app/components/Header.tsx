@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { animated, useSpring } from '@react-spring/web';
+import Link from "next/link";
 
 function Header() {
   const [menuPosicion, setPosicion] = useState<string>('top-menu');
@@ -18,26 +18,34 @@ function Header() {
 
   const pathname = usePathname();
 
-  const handleClick = (name: string) => {
+  const updateMenuState = (path: string) => {
     let nextPosicion = '';
     let nextColor = '';
 
-    if (name === 'Portafolio') {
-      nextPosicion = 'center-menu';
-      nextColor = 'link-portafolio';
-    } else if (name === 'Trayectoria') {
-      nextPosicion = 'bottom-menu';
-      nextColor = 'link-trayectoria';
-    } else if (name === 'Conocimientos') {
-      nextPosicion = 'mid-bottom-menu';
-      nextColor = 'link-conocimientos';
-    } else if (name === 'Inicio') {
+    if (path === '/') {
       nextPosicion = 'top-menu';
       nextColor = 'link-inicio';
+    } else if (path === '/portafolio') {
+      nextPosicion = 'center-menu';
+      nextColor = 'link-portafolio';
+    } else if (path === '/conocimientos') {
+      nextPosicion = 'mid-bottom-menu';
+      nextColor = 'link-conocimientos';
+    } else if (path === '/trayectoria') {
+      nextPosicion = 'bottom-menu';
+      nextColor = 'link-trayectoria';
     }
 
     setPosicion(nextPosicion);
     setColor(nextColor);
+  };
+
+  useEffect(() => {
+    updateMenuState(pathname);
+  }, [pathname]);
+
+  const handleClick = (name: string) => {
+    updateMenuState(links.find(link => link.label === name)?.href || '/');
   };
 
   const animation = useSpring({
@@ -52,7 +60,7 @@ function Header() {
         await next({ top: '100%', bottom: '0%', transform: 'translateY(-100%)' });
       }
     },
-    from: { transform: 'translateY(0%)' },
+    from: { top: '0%', bottom: '100%', transform: 'translateY(0%)' },
     config: { duration: 500 },
   });
 
@@ -62,11 +70,7 @@ function Header() {
         <animated.ul style={animation} className={`menu ${menuPosicion}`}>
           {links.map((link) => (
             <li className="nav-item" key={link.label}>
-              <Link
-                className={`nav-link ${pathname === link.href ? "active" : ""} ${menuColor}`}
-                href={link.href}
-                onClick={() => handleClick(link.label)}
-              >
+              <Link href={link.href} className={`nav-link ${pathname === link.href ? "active" : ""} ${menuColor}`} onClick={() => handleClick(link.label)}>
                 {link.label}
               </Link>
             </li>
