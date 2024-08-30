@@ -1,22 +1,16 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
-import { usePathname } from "next/navigation";
-import { animated, useSpring } from '@react-spring/web';
+import React, { useEffect, useState } from 'react';
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 function Header() {
   const pathname = usePathname();
-  const [menuPosicion, setPosicion] = useState<string>('top-menu');
   const [menuColor, setColor] = useState<string>('link-inicio');
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedMenuPosicion = localStorage.getItem('menuPosicion');
-      const savedMenuColor = localStorage.getItem('menuColor');
-      if (savedMenuPosicion) setPosicion(savedMenuPosicion);
+    const savedMenuColor = localStorage.getItem('menuColor');
       if (savedMenuColor) setColor(savedMenuColor);
-    }
   }, []);
 
   const updateMenuState = (path: string) => {
@@ -37,10 +31,8 @@ function Header() {
       nextColor = 'link-trayectoria';
     }
 
-    setPosicion(nextPosicion);
     setColor(nextColor);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('menuPosicion', nextPosicion);
       localStorage.setItem('menuColor', nextColor);
     }
   };
@@ -49,67 +41,49 @@ function Header() {
     updateMenuState(pathname);
   }, [pathname]);
 
-  const initialAnimationState = () => {
-    if (menuPosicion === 'top-menu') {
-      return { top: '0%', bottom: '100%', transform: 'translateY(0%)' };
-    } else if (menuPosicion === 'center-menu') {
-      return { top: '33%', bottom: '67%', transform: 'translateY(-33%)' };
-    } else if (menuPosicion === 'mid-bottom-menu') {
-      return { top: '67%', bottom: '33%', transform: 'translateY(-67%)' };
-    } else if (menuPosicion === 'bottom-menu') {
-      return { top: '100%', bottom: '0%', transform: 'translateY(-100%)' };
-    }
-    return { top: '0%', bottom: '100%', transform: 'translateY(0%)' };
-  };
-
-  const animation = useSpring({
-    to: async (next: (arg0: { top: string; bottom: string; transform: string; }) => any) => {
-      if (menuPosicion === 'top-menu') {
-        await next({ top: '0%', bottom: '100%', transform: 'translateY(0%)' });
-      } else if (menuPosicion === 'center-menu') {
-        await next({ top: '33%', bottom: '67%', transform: 'translateY(-33%)' });
-      } else if (menuPosicion === 'mid-bottom-menu') {
-        await next({ top: '67%', bottom: '33%', transform: 'translateY(-67%)' });
-      } else if (menuPosicion === 'bottom-menu') {
-        await next({ top: '100%', bottom: '0%', transform: 'translateY(-100%)' });
-      }
-    },
-    from: initialAnimationState(),
-    config: { duration: 500 },
-  });
-
   return (
     <header>
-      <nav>
-        <animated.ul style={animation} className={`menu ${menuPosicion}`}>
-          <li className="nav-item">
-            <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
-            <span className="indicador-boton"></span>
-              Inicio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
-              <span className="indicador-boton"></span>
-              Portafolio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`}>
-              <span className="indicador-boton"></span>
-              Conocimientos
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
-              <span className="indicador-boton"></span>
-              Trayectoria
-            </Link>
-          </li>
-        </animated.ul>
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
+          <a className="navbar-brand d-none" href="#">Navbar</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
+                  Bienvenida
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
+                  Portafolio
+                </Link>
+              </li>
+              <li className="nav-item logo">
+                <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
+                  <div className='logo-header'></div>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`}>
+                  Conocimientos
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
+                  Trayectoria
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+
     </header>
   );
 }
 
 export default Header;
+
