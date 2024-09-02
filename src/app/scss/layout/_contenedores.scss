@@ -7,6 +7,7 @@
   .info-inicio {
     position: relative;
     top: 0;
+    overflow: hidden !important;
     .resumen-portafolio {
       background-color: $gris-30;
     }
@@ -19,8 +20,8 @@
   }
   
   .info-portada {
-    // height: 100vh;
     background-color: $blanco;
+    overflow: hidden;
   }
   
   .info-portafolio {
