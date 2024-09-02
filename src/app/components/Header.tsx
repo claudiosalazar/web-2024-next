@@ -1,16 +1,20 @@
-'use client'
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
-function Header() {
+interface HeaderProps {
+  onLinkClick: () => void;
+}
+
+function Header({ onLinkClick }: HeaderProps) {
   const pathname = usePathname();
   const [menuColor, setColor] = useState<string>('link-inicio');
 
   useEffect(() => {
     const savedMenuColor = localStorage.getItem('menuColor');
-      if (savedMenuColor) setColor(savedMenuColor);
+    if (savedMenuColor) setColor(savedMenuColor);
   }, []);
 
   const updateMenuState = (path: string) => {
@@ -53,7 +57,7 @@ function Header() {
             <ul className="navbar-nav">
               <li className='separador-lista'></li>
               <li className='boton'>
-                <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
+                <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
                   Bienvenida
                 </Link>
               </li>
@@ -61,7 +65,7 @@ function Header() {
                 <div className='separador-menu'></div>
               </li>
               <li className='boton'>
-                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
+                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
                   Trayectoria
                 </Link>
               </li>
@@ -69,15 +73,15 @@ function Header() {
                 <div className='separador-menu'></div>
               </li>
               <li className="nav-item logo">
-                <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
-                  <div className='logo-header'></div>
+                <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
+                  <div className='logo-header' onClick={onLinkClick}></div>
                 </Link>
               </li>
               <li className='separador-menu'>
                 <div className='separador-menu'></div>
               </li>
               <li className='boton'>
-                <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`}>
+                <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
                   Conocimientos
                 </Link>
               </li>
@@ -85,7 +89,7 @@ function Header() {
                 <div className='separador-menu'></div>
               </li>
               <li className='boton'>
-                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
+                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
                   Portafolio
                 </Link>
               </li>
@@ -94,10 +98,8 @@ function Header() {
           </div>
         </div>
       </nav>
-
     </header>
   );
 }
 
 export default Header;
-

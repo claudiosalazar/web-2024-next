@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+/*import React, { useEffect, useRef } from 'react';
 
 declare global {
   interface Window {
@@ -15,18 +15,25 @@ const VideoInicio: React.FC = () => {
 
   useEffect(() => {
     // Definir la variable global ytPlayer
-    window.ytPlayer = null;
+    if (!window.ytPlayer) {
+      window.ytPlayer = null;
+    }
 
-    // Cargar la API de YouTube Player
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    if (firstScriptTag && firstScriptTag.parentNode) {
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // Cargar la API de YouTube Player si no está cargada
+    if (!window.YT) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      if (firstScriptTag && firstScriptTag.parentNode) {
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      }
     }
 
     // Inicializar el reproductor cuando la API esté lista
     window.onYouTubePlayerAPIReady = () => {
+      if (window.ytPlayer) {
+        window.ytPlayer.destroy();
+      }
       window.ytPlayer = new window.YT.Player(playerRef.current, {
         videoId: 'RV9l-pVc_FE',
         playerVars: {
@@ -61,14 +68,26 @@ const VideoInicio: React.FC = () => {
         }
       });
     };
+
+    // Verificar si la API de YouTube ya está lista
+    if (window.YT && window.YT.Player) {
+      window.onYouTubePlayerAPIReady();
+    }
+
+    // Limpiar el reproductor al desmontar el componente
+    return () => {
+      if (window.ytPlayer) {
+        window.ytPlayer.destroy();
+      }
+    };
   }, []);
 
   return (
     <div className="yt-embed">
-      <div ref={playerRef}  data-id="6lK0rl1TnKc" id="yt-embed-player" className="yt-embed-player"></div>
+      <div ref={playerRef} data-id="6lK0rl1TnKc" id="yt-embed-player" className="yt-embed-player"></div>
       <div className="yt-embed-overlay"></div>
     </div>
   );
 };
 
-export default VideoInicio;
+export default VideoInicio;*/

@@ -1,7 +1,7 @@
 'client-only'
 
 import React from 'react';
-import VideoInicio from '../ui/video-inicio';
+//import VideoInicio from '../ui/video-inicio';
 
 
 function Inicio() {
@@ -17,9 +17,9 @@ function Inicio() {
                 <div className='nombre-inicio'></div>
               </div>
             </div>
-            <div className='fondo-video'>
+            {/* <div className='fondo-video'>
               <VideoInicio />
-            </div>
+            </div> */}
           </div>
         </section>
           
