@@ -51,31 +51,45 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <li className='separador-lista'></li>
+              <li className='boton'>
                 <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
                   Bienvenida
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
-                  Portafolio
+              <li className='separador-menu'>
+                <div className='separador-menu'></div>
+              </li>
+              <li className='boton'>
+                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
+                  Trayectoria
                 </Link>
+              </li>
+              <li className='separador-menu'>
+                <div className='separador-menu'></div>
               </li>
               <li className="nav-item logo">
                 <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
                   <div className='logo-header'></div>
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className='separador-menu'>
+                <div className='separador-menu'></div>
+              </li>
+              <li className='boton'>
                 <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`}>
                   Conocimientos
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
-                  Trayectoria
+              <li className='separador-menu'>
+                <div className='separador-menu'></div>
+              </li>
+              <li className='boton'>
+                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
+                  Portafolio
                 </Link>
               </li>
+              <li className='separador-lista'></li>
             </ul>
           </div>
         </div>
