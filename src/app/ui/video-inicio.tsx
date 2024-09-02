@@ -1,6 +1,6 @@
 'use client';
 
-/*import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 declare global {
   interface Window {
@@ -90,4 +90,4 @@ const VideoInicio: React.FC = () => {
   );
 };
 
-export default VideoInicio;*/
+export default VideoInicio;

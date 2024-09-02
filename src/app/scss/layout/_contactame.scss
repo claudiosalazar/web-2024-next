@@ -1,1 +1,16 @@
 
+.contactame {
+  height: 50px;
+  width: 50px;
+  background-color: $blanco;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 80px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: $dorado;
+  }
+}
