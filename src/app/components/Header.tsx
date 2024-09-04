@@ -11,6 +11,7 @@ interface HeaderProps {
 function Header({ onLinkClick }: HeaderProps) {
   const pathname = usePathname();
   const [menuColor, setColor] = useState<string>('link-inicio');
+  const [fondoHeader, setFondoHeader] = useState<string>('');
 
   useEffect(() => {
     const savedMenuColor = localStorage.getItem('menuColor');
@@ -18,20 +19,15 @@ function Header({ onLinkClick }: HeaderProps) {
   }, []);
 
   const updateMenuState = (path: string) => {
-    let nextPosicion = '';
     let nextColor = '';
 
     if (path === '/') {
-      nextPosicion = 'top-menu';
       nextColor = 'link-inicio';
     } else if (path === '/portafolio') {
-      nextPosicion = 'center-menu';
       nextColor = 'link-portafolio';
     } else if (path === '/conocimientos') {
-      nextPosicion = 'mid-bottom-menu';
       nextColor = 'link-conocimientos';
     } else if (path === '/trayectoria') {
-      nextPosicion = 'bottom-menu';
       nextColor = 'link-trayectoria';
     }
 
@@ -43,10 +39,33 @@ function Header({ onLinkClick }: HeaderProps) {
 
   useEffect(() => {
     updateMenuState(pathname);
+
+    const handleScroll = () => {
+      if (window.scrollY >= 79) {
+        if (pathname === '/') {
+          setFondoHeader('fondo-inicio');
+        } else if (pathname === '/trayectoria') {
+          setFondoHeader('fondo-trayectoria');
+        } else if (pathname === '/conocimientos') {
+          setFondoHeader('fondo-conocimientos');
+        } else if (pathname === '/portafolio') {
+          setFondoHeader('fondo-portafolio');
+        }
+      } else {
+        setFondoHeader('');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [pathname]);
 
   return (
-    <header>
+    <header className={`${fondoHeader} ${menuColor}`}>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand d-none" href="#">Navbar</a>
