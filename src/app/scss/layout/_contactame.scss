@@ -5,12 +5,27 @@
   background-color: $blanco;
   border-radius: 50%;
   position: fixed;
+  z-index: 500;
   bottom: 80px;
-  right: 12px;
+  right: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgb(207, 131, 0, .3);
   a {
     color: $dorado;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none'%3E%3Cpath fill='%23E2A337' d='M3.5 10.5h7v-1h-7v1Zm0-3h11v-1h-11v1Zm0-3h11v-1h-11v1ZM0 17.077V1.615C0 1.156.154.772.463.463A1.565 1.565 0 0 1 1.615 0h14.768c.46 0 .845.154 1.154.463.308.308.462.692.462 1.153v10.768c0 .46-.154.845-.462 1.153a1.565 1.565 0 0 1-1.154.463H3.077L0 17.077ZM2.65 13h13.734a.589.589 0 0 0 .424-.192.589.589 0 0 0 .192-.424V1.616a.588.588 0 0 0-.192-.424.588.588 0 0 0-.424-.192H1.616a.588.588 0 0 0-.424.192.588.588 0 0 0-.192.423v13.03L2.65 13Z'/%3E%3C/svg%3E");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    transition: all .2s;
+    border: none;
+    &:hover {
+      width: 22px;
+      height: 22px;
+      background-size: 22px 22px;
+    }
   }
 }

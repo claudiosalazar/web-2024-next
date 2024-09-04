@@ -1,7 +1,7 @@
 function Contactame () {
   return (
     <div className="contactame">
-      <a href='#' className="material-symbols-outlined">chat</a>
+      <a href='#' className="material-symbols-outlined"></a>
     </div>
   )
 }
