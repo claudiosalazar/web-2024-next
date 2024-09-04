@@ -1,11 +1,42 @@
 import Image from 'next/image';
 import icoHtml from '../assets/iconos/ico-html.png';
+import icoCss from '../assets/iconos/ico-css.png';
+import icoSass from '../assets/iconos/ico-sass.png';
+import icoBootstrap from '../assets/iconos/ico-bootstrap.png';
+import icoAdobe from '../assets/iconos/ico-adobe.png';
+import icoAngular from '../assets/iconos/ico-angular.png';  
+import icoAtlassian from '../assets/iconos/ico-atlassian.png';
+
+import icoPhp from '../assets/iconos/ico-php.png';  
+import icoWp from '../assets/iconos/ico-wordpress.png';
+import icoMysql from '../assets/iconos/ico-mysql.png';
+import icoApi from '../assets/iconos/ico-api.png';
+
+import icoFigma from '../assets/iconos/ico-figma.png';
+import icoGit from '../assets/iconos/ico-git.png';
+import icoGitHub from '../assets/iconos/ico-github.png';
+import icoGitLab from '../assets/iconos/ico-gitlab.png';
+
+import icoIllustrator from '../assets/iconos/ico-illustrator.png';
+import icoJs from '../assets/iconos/ico-js.png';
+import icoKanban from '../assets/iconos/ico-kanban.png';
+import icoNpm from '../assets/iconos/ico-npm.png';
+import icoPhotoshop from '../assets/iconos/ico-photoshop.png';
+import icoReact from '../assets/iconos/ico-react.png';
+
+import icoScrum from '../assets/iconos/ico-scrum.png';
+import icoSketch from '../assets/iconos/ico-sketch.png';
+import icoTs from '../assets/iconos/ico-ts.png';
+import icoXd from '../assets/iconos/ico-xd.png';
+import React from 'react';
+
+
 
 
 function Conocimientos() {
   return (
     <section className="info-conocimientos conocimientos row d-flex align-items-center">
-      <div className="col-8 offset-2">
+      <div className="col-6 mx-auto">
         <h1 className="my-5">Conocimientos</h1>
         
         <div className="accordion" id="accordionFlushExample">
@@ -13,13 +44,22 @@ function Conocimientos() {
             <h2 className="accordion-header">
               {/* <button className="accordion-button collapsed" onClick={handleClick1} type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoUno" aria-expanded="true" aria-controls="panelsAbierto-conocimientoUno"> */}
               <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoUno" aria-expanded="true" aria-controls="panelsAbierto-conocimientoUno">
+                <div className="icono-item">
+                  <div className={`vertical`}></div>
+                  <div className="horizontal"></div>
+                </div>
+                <div className={`iconos d-none d-md-flex`}>
+                  <Image src={icoHtml} className="ico-conocimientos" alt="HTML 5" title="HTML 5" />
+                  <Image src={icoCss} className="ico-conocimientos" alt="CSS 3" title="CSS 3" />
+                  <Image src={icoSass} className="ico-conocimientos" alt="Sass" title="Sass, scss" />
+                  <Image src={icoBootstrap} className="ico-conocimientos" alt="Bootstrap" title="Bootstrap 4 o superior" />
+                </div>
                 Códigos estructurales
               </button>
             </h2>
             <div id="panelsAbierto-conocimientoUno" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div className="accordion-body">
                 <p>
-                  {/* <Image src={icoHtml} className="ico-conocimientos" alt="HTML 5" title="HTML 5" /> */}
                   Con más de 15 años de experiencia en desarrollo web, domino <strong>HTML5</strong> semántico y <strong>CSS3</strong> para crear proyectos responsivos. Utilizo <strong>preprocesadores CSS</strong> y <strong>Bootstrap (4 y versiones superiores)</strong> para optimizar el flujo de trabajo y garantizar interfaces consistentes en diversos dispositivos.
                 </p>
               </div>
@@ -27,9 +67,20 @@ function Conocimientos() {
           </div>
           <div className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoDos" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Lenguajes
-              </button>
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoDos" aria-expanded="true" aria-controls="panelsAbierto-conocimientoUno">
+              <div className="icono-item">
+                <div className={`vertical`}></div>
+                <div className="horizontal"></div>
+              </div>
+              <div className={`iconos d-none d-md-flex`}>
+                <Image src={icoJs} className="ico-conocimientos" alt="javascript" title="JavaScript" />
+                <Image src={icoTs} className="ico-conocimientos" alt="typescript" title="TypeScript" />
+                <Image src={icoPhp} className="ico-conocimientos" alt="php" title="PHP" />
+                <Image src={icoApi} className="ico-api" alt="api" title="API" />
+                <Image src={icoMysql} className="ico-conocimientos" alt="mysql" title="MySQL" />
+              </div>
+              Lenguajes
+            </button>
             </h2>
             <div id="panelsAbierto-conocimientoDos" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div className="accordion-body">
@@ -39,7 +90,17 @@ function Conocimientos() {
           </div>
           <div className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoTres" aria-expanded="false" aria-controls="flush-collapseThree">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoTres" aria-expanded="false" aria-controls="panelsAbierto-conocimientoTres">
+                <div className="icono-item">
+                  <div className={`vertical`}></div>
+                  <div className="horizontal"></div>
+                </div>
+                <div className={`iconos d-none d-md-flex`}>
+                  <Image src={icoAngular} className="ico-conocimientos" alt="angular" title="Angular 15 o superior" />
+                  <Image src={icoReact} className="ico-conocimientos" alt="react" title="React Native" />
+                  <Image src={icoWp} className="ico-conocimientos" alt="wordpress" title="WordPress" />
+                  <Image src={icoNpm} className="ico-conocimientos" alt="npm" title="Dependencias NPM" />
+                </div>
                 Frameworks y Gestión de Dependencias
               </button>
             </h2>
@@ -51,7 +112,17 @@ function Conocimientos() {
           </div>
           <div className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoCuatro" aria-expanded="false" aria-controls="flush-collapseThree">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoCuatro" aria-expanded="false" aria-controls="panelsAbierto-conocimientoTres">
+                <div className="icono-item">
+                  <div className={`vertical`}></div>
+                  <div className="horizontal"></div>
+                </div>
+                <div className={`iconos d-none d-md-flex`}>
+                  <Image src={icoGit} className="ico-conocimientos" alt="git" title="GIT" />
+                  <Image src={icoGitHub} className="ico-conocimientos" alt="github" title="Repositorio GitHub" />
+                  <Image src={icoAtlassian} className="ico-conocimientos" alt="atlassian" title="Repositorio Atlassian" />
+                  <Image src={icoGitLab} className="ico-conocimientos" alt="gitlab" title="Repositorio GitLab" />
+                </div>
                 Manejo de Repositorios y Gestión de Proyectos
               </button>
             </h2>
@@ -63,7 +134,19 @@ function Conocimientos() {
           </div>
           <div className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoCinco" aria-expanded="false" aria-controls="flush-collapseThree">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoCinco" aria-expanded="false" aria-controls="panelsAbierto-conocimientoTres">
+                <div className="icono-item">
+                  <div className={`vertical`}></div>
+                  <div className="horizontal"></div>
+                </div>
+                <div className={`iconos d-none d-md-flex`}>
+                  <Image src={icoFigma} className="ico-conocimientos" alt="figma" title="Figma" />
+                  <Image src={icoSketch} className="ico-conocimientos" alt="sketch" title="Sketch" />
+                  <Image src={icoXd} className="ico-conocimientos" alt="xd" title="Adobe XD" />
+                  <Image src={icoAdobe} className="ico-conocimientos" alt="adobe" title="Creative Cloud Adobe" />
+                  <Image src={icoIllustrator} className="ico-conocimientos" alt="illustrator" title="Adobe Illustrator" />
+                  <Image src={icoPhotoshop} className="ico-conocimientos" alt="photoshop" title="Adobe Photoshop" />
+                </div>
                 Software de Diseño
               </button>
             </h2>
@@ -75,7 +158,15 @@ function Conocimientos() {
           </div>
           <div className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoSeis" aria-expanded="false" aria-controls="flush-collapseThree">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoSeis" aria-expanded="false" aria-controls="panelsAbierto-conocimientoTres">
+                <div className="icono-item">
+                  <div className={`vertical`}></div>
+                  <div className="horizontal"></div>
+                </div>
+                <div className={`iconos d-none d-md-flex`}>
+                  <Image src={icoScrum} className="ico-conocimientos" alt="scrum" title="Scrum" />
+                  <Image src={icoKanban} className="ico-conocimientos" alt="kanban" title="Kanban" />
+                </div>
                 Metodologías Ágiles
               </button>
             </h2>
