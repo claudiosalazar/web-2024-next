@@ -39,36 +39,47 @@ a {
     display: flex;
     align-items: center;
     width: fit-content;
+  
     span {
       &.texto-link-inicio {
         margin-left: 5px;
         transition: all .2s ease-in;
+        opacity: .6;
         &:hover {
           letter-spacing: .2rem;
+          opacity: 1;
         }
       }
-      
+  
+      &.ico-mas-blanco, &.ico-mas-dorado-oscuro {
+        background-size: 8px 8px;
+        background-repeat: no-repeat;
+        width: 8px;
+        height: 8px;
+        position: relative;
+        top: -1px;
+        opacity: .6;
+        transition: opacity .2s ease-in; // Añade la transición para la opacidad
+      }
+  
       &.ico-mas-blanco {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='none'%3E%3Cpath fill='%23fff' d='M8 5.056H5.076V8H2.908V5.056H0V2.944h2.908V0h2.168v2.944H8v2.112Z'/%3E%3C/svg%3E");
-        background-size: 8px 8px;
-        background-repeat: no-repeat;
-        width: 8px;
-        height: 8px;
-        display: inline-block; // Asegura que el span pueda ser animado
       }
-      
+  
       &.ico-mas-dorado-oscuro {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='none'%3E%3Cpath fill='%239E6503' d='M8 5.056H5.076V8H2.908V5.056H0V2.944h2.908V0h2.168v2.944H8v2.112Z'/%3E%3C/svg%3E");
-        background-size: 8px 8px;
-        background-repeat: no-repeat;
-        width: 8px;
-        height: 8px;
       }
     }
-    
+  
     &:hover {
+      span.texto-link-inicio {
+        letter-spacing: .2rem;
+        opacity: 1;
+      }
+  
       span.ico-mas-blanco, span.ico-mas-dorado-oscuro {
         animation: rotateBackground .2s linear;
+        opacity: 1;
       }
     }
   }
