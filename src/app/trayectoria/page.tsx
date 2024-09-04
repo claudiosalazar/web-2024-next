@@ -3,8 +3,8 @@ function Trayectoria() {
     <section className="info-trayectoria trayectoria row d-flex align-items-center">
 
       <div className="col-5 offset-1">
-        <h1 className="my-5">Trayectoria</h1>
-        <p className="resumen">Tengo más de 15 años de experiencia profesional en proyectos web. Desde 2017, he participado activamente en proyectos de transformación digital dentro de equipos multidisciplinarios, siempre trabajando bajo metodologías ágiles. En los últimos 7 años, he colaborado en proyectos para importantes entidades bancarias nacionales como Banco Estado, BCI e Itaú Chile. A lo largo de mi carrera, mi enfoque ha estado siempre centrado en la mejora continua de mis conocimientos en las últimas tecnologías para el desarrollo frontend.</p>
+        <h1 className="mb-5">Trayectoria</h1>
+        <p className="resumen mb-5">Tengo más de 15 años de experiencia profesional en proyectos web. Desde 2017, he participado activamente en proyectos de transformación digital dentro de equipos multidisciplinarios, siempre trabajando bajo metodologías ágiles. En los últimos 7 años, he colaborado en proyectos para importantes entidades bancarias nacionales como Banco Estado, BCI e Itaú Chile. A lo largo de mi carrera, mi enfoque ha estado siempre centrado en la mejora continua de mis conocimientos en las últimas tecnologías para el desarrollo frontend.</p>
         <a className="curriculum" href="/claudio-salazar-cv2024.pdf" target="new">
           <span className="material-symbols-outlined me-2">
             picture_as_pdf

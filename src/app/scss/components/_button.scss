@@ -18,9 +18,9 @@ a {
   text-decoration: none;
   &.nav-link {
     transition: all .3s linear;
-    letter-spacing: normal !important;
+    letter-spacing: .08rem !important;
     &:hover {
-      letter-spacing: .05rem !important;
+      letter-spacing: .12rem !important;
     }
     &.active {
       letter-spacing: .05rem !important;
@@ -32,35 +32,58 @@ a {
   }
 
   &.link-inicio {
-    transition: all .2s linear;
-    &::before {
-      content: '+';
-      font-size: 1.2rem;
-      position: relative;
-      margin-right: 2px;
-      top: 2px;
-      display: inline-block; // Asegura que el pseudo-elemento pueda ser animado
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: .75rem !important;
+    font-weight: 600 !important;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    span {
+      &.texto-link-inicio {
+        margin-left: 5px;
+        transition: all .2s ease-in;
+        &:hover {
+          letter-spacing: .2rem;
+        }
+      }
+      
+      &.ico-mas-blanco {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='none'%3E%3Cpath fill='%23fff' d='M8 5.056H5.076V8H2.908V5.056H0V2.944h2.908V0h2.168v2.944H8v2.112Z'/%3E%3C/svg%3E");
+        background-size: 8px 8px;
+        background-repeat: no-repeat;
+        width: 8px;
+        height: 8px;
+        display: inline-block; // Asegura que el span pueda ser animado
+      }
+      
+      &.ico-mas-dorado-oscuro {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='none'%3E%3Cpath fill='%239E6503' d='M8 5.056H5.076V8H2.908V5.056H0V2.944h2.908V0h2.168v2.944H8v2.112Z'/%3E%3C/svg%3E");
+        background-size: 8px 8px;
+        background-repeat: no-repeat;
+        width: 8px;
+        height: 8px;
+      }
     }
-
+    
     &:hover {
-      letter-spacing: .05rem;
-      &::before {
-        animation: rotateAnimation 0.2s linear;
-        bottom: 2px;
+      span.ico-mas-blanco, span.ico-mas-dorado-oscuro {
+        animation: rotateBackground .2s linear;
+      }
     }
+  }
+  
+  // Define la animación
+  @keyframes rotateBackground {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
     }
   }
 }
 
-// Define la animación
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(90deg);
-  }
-}
 
 .curriculum {
   padding: 10px 18px !important;
