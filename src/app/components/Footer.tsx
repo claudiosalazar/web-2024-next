@@ -17,10 +17,10 @@ function Footer (){
           <a href="https://github.com/claudiosalazar" target="new" className="btn-footer github" title="Mi repositorio en GitHub"></a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/claudiosv/" target="new" className="btn-footer linkedin" title="Mi perfil en LinkedIn"></a>
+          <a href="https://www.instagram.com/claudiosvcl/" target="new" className="btn-footer instagram" title="Mi perfil en Intagram"></a>
         </li>
         <li>
-          <a href="https://github.com/claudiosalazar" target="new" className="btn-footer github" title="Mi repositorio en GitHub"></a>
+          <a href="https://www.behance.net/claudiosalazarcl" target="new" className="btn-footer behance" title="Mi portafolop en Behance"></a>
         </li>
       </ul>
     </footer>
