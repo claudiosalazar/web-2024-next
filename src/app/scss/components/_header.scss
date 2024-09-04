@@ -6,20 +6,17 @@ header {
   z-index: 500;
   background-repeat: repeat-x;
   background-position: center;
+  transition: all .8s;
   &.fondo-inicio {
-    transition: all .8s;
     background-color: $blanco;
   }
   &.fondo-trayectoria {
-    transition: all .8s;
     background-color: $dorado;
   }
   &.fondo-conocimientos {
-    transition: all .8s;
     background-color: $gris-100;
   }
   &.fondo-portafolio {
-    transition: all .8s;
     background-color: $gris-00;
   }
   .navbar {

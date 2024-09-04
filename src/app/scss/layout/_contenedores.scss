@@ -16,17 +16,17 @@
   }
   
   .info-trayectoria {
-    height: 100vh;
+    height: calc(100vh - 190px);
     background-color: $dorado;
   }
   
   .info-conocimientos {
-    height: 100vh;
+    height: calc(100vh - 190px);
     background-color: $gris-100;
   }
   
   .info-portafolio {
-    height: 100vh;
+    height: calc(100vh - 190px);
     background-color: $gris-00;
   }
   
