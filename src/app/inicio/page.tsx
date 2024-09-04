@@ -59,7 +59,7 @@ function Inicio() {
           <div className='col-8 mx-auto py-5'>
             <div className='d-flex align-items-stretch'>
               <div className='d-flex align-items-center'>
-                <h3>Conocimiento</h3>
+                <h3>Conocimientos</h3>
               </div>
               <div className='separador-resumen-conocimiento mx-5 px-5'>
                 <Image src={icoConocimientos} className="ico-conocimientos-resumen img-fluid" alt="HTML 5" title="HTML 5" />
