@@ -6,6 +6,42 @@ button {
 
 a {
   text-decoration: none;
+  &.nav-link {
+    letter-spacing: normal !important;
+    &::before {
+      content: '' !important;
+    }
+  }
+
+  &.link-inicio {
+    transition: all .2s linear;
+    &::before {
+      content: '+';
+      font-size: 1.2rem;
+      position: relative;
+      margin-right: 2px;
+      top: 2px;
+      display: inline-block; // Asegura que el pseudo-elemento pueda ser animado
+    }
+
+    &:hover {
+      letter-spacing: .05rem;
+      &::before {
+        animation: rotateAnimation 0.2s linear;
+        bottom: 2px;
+    }
+    }
+  }
+}
+
+// Define la animación
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
 }
 
 .curriculum {

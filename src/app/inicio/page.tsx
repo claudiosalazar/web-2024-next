@@ -42,8 +42,8 @@ function Inicio() {
                   <p className='ms-4 mb-4'>
                     Con más de 20 años de experiencia, he participado en muchos proyectos web para rubros como banca, corporativos y marketing. Durante los últimos años he trabajado en proyectos con metodologías ágiles utilizando las últimas tecnologías para proyectos de la banca nacional como Banco Estado, BCI e Itaú.
                   </p>
-                  <p className='ms-4 mb-0 link'>
-                    <a href='#'>+ Más información</a>
+                  <p className='ms-4 mb-0'>
+                    <a href='#' className='link-inicio'>Más información</a>
                   </p>
                 </div>
               </div>
@@ -64,8 +64,8 @@ function Inicio() {
                 <p>
                   Mis mejores conocimientos al día de hoy están enfocados al desarrollo Frontend, utilizando frameworks como Angular y bibliotecas como React. También años de experiencia en el uso de software de diseño para proyectos web. 
                 </p>
-                <p className='mb-0 link'>
-                  <a href='#'>+ Más información</a>
+                <p className='mb-0'>
+                  <a href='#' className='link-inicio'>Más información</a>
                 </p>
               </div>
             </div>
@@ -88,7 +88,7 @@ function Inicio() {
           </ul>
           <hr className='mx-auto' />
           <p className='mt-5 text-center'>
-            <a href='#'>+ Ver más</a>
+            <a href='#' className='link-inicio'>Ver más</a>
           </p>
         </section>
         
