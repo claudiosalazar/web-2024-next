@@ -11,7 +11,6 @@
     h1 {
       color: $dorado;
       font-size: 1.5rem;
-      letter-spacing: 0;
       margin-bottom: 20px;
     }
   
@@ -60,10 +59,7 @@
         z-index: 0;
       }
     }
-    
   }
-
-
   
   .ico-saludo {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='43' fill='none'%3E%3Cpath fill='%23CF8300' d='M25.906 43a2.73 2.73 0 0 1-1.767-.618c-.51-.411-.764-.965-.764-1.661 0-.327.077-.688.23-1.084.155-.396.386-.724.694-.985l10.059-9.19-1.353-1.237-10.051 9.19a3.096 3.096 0 0 1-1.046.634c-.39.14-.783.211-1.183.211-.704 0-1.3-.223-1.79-.67-.488-.445-.733-.99-.733-1.634 0-.384.086-.759.258-1.125a2.85 2.85 0 0 1 .651-.91l10.06-9.19-1.35-1.231-10.058 9.175c-.273.25-.613.453-1.02.61a3.375 3.375 0 0 1-1.223.235c-.693 0-1.287-.225-1.78-.676-.494-.452-.741-.994-.741-1.627 0-.365.077-.725.23-1.08a2.8 2.8 0 0 1 .695-.955l9.428-8.614-1.354-1.233-9.412 8.615c-.263.24-.598.438-1.004.595-.406.157-.82.235-1.24.235-.738 0-1.343-.216-1.814-.649a2.113 2.113 0 0 1-.707-1.623c0-.358.083-.72.249-1.085.166-.366.39-.68.675-.94L22.24 12.155l5.397 4.904a4.7 4.7 0 0 0 1.663.997 6.14 6.14 0 0 0 1.996.311c1.317 0 2.403-.384 3.26-1.152.857-.769 1.285-1.769 1.285-3 0-.593-.13-1.17-.39-1.732-.26-.561-.652-1.085-1.174-1.572l-7.232-6.608 2.812-2.579c.598-.538 1.323-.96 2.174-1.264A7.511 7.511 0 0 1 34.584 0c.904 0 1.786.153 2.647.459.862.305 1.597.736 2.207 1.293l11.697 10.702a5.674 5.674 0 0 1 1.364 1.92c.334.755.501 1.591.501 2.51a5.59 5.59 0 0 1-.51 2.358 5.778 5.778 0 0 1-1.355 1.884l-23.001 21.03c-.294.268-.64.476-1.035.623-.396.147-.794.221-1.193.221ZM5.737 24.712l-3.4-3.106a6.689 6.689 0 0 1-1.75-2.515C.197 18.11 0 17.155 0 16.22c0-.985.175-1.88.525-2.683.35-.803.797-1.452 1.34-1.948l10.752-9.838a7.104 7.104 0 0 1 1.965-1.28A5.822 5.822 0 0 1 16.94 0c.914 0 1.752.148 2.516.444.763.296 1.46.732 2.09 1.308l11.373 10.39c.318.29.564.628.74 1.013.174.385.261.736.261 1.053 0 .713-.239 1.303-.717 1.772-.479.468-1.124.702-1.937.702-.41 0-.828-.08-1.254-.24a3.234 3.234 0 0 1-1.138-.726l-6.65-6.066L5.737 24.712Z'/%3E%3C/svg%3E");
@@ -105,32 +101,66 @@
   h3 {
     color: $blanco;
   }
-  p {
-    color: $blanco;
-    font-size: .9rem;
-    line-height: 1.6rem;
-    font-weight: 200;
-    a {
-      font-size: .8rem;
-      font-weight: 400;
-      color: $blanco;
-      text-transform: uppercase;
-      cursor: pointer;
+  h4 {
+    font-weight: 800;
+    color: $dorado-claro-10;
+    text-align: justify;
+    .span-texto {
+      font-size: 2rem;
+    }
+    .span-anho {
+      font-size: 2.85rem;
     }
   }
-  
+  .texto-resumen-trayectoria {
+    display: flex;
+    justify-items: space-between;
+    flex-direction: column;
+    border-left: 1px solid $dorado-claro-10;
+    p {
+      color: $blanco;
+      font-size: .9rem;
+      line-height: 1.6rem;
+      font-weight: 200;
+      &.link {
+        line-height: .8rem;
+      }
+      a {
+        font-size: .8rem;
+        font-weight: 400;
+        color: $blanco;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .resumen-conocimiento {
   background-color: $gris-100;
+  position: relative;
+  z-index: 100;
+  height: fit-content;
+  .separador-resumen-conocimiento {
+    border-left: 1px solid $gris-80;
+    border-right: 1px solid $gris-80;
+    &:first-child {
+      border: none;
+    }
+  }
   h3 {
     color: $dorado;
+    margin: 0;
+    display: block;
   }
   p {
     color: $blanco;
-    font-size: .9rem;
+    font-size: .95rem;
     line-height: 1.6rem;
     font-weight: 200;
+    &.link {
+      line-height: .8rem;
+    }
     a {
       font-size: .8rem;
       font-weight: 400;
@@ -139,13 +169,8 @@
     }
   }
   .ico-conocimientos-resumen {
-    padding-left: 36px;
-    padding-right: 36px;
-    border-left: 1px solid $gris-30;
-    border-right: 1px solid $gris-30;
-    margin-left: 36px;
-    margin-right: 36px;
     width: fit-content;
+    height: fit-content;
   }
 }
 

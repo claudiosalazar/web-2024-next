@@ -18,7 +18,7 @@ function Inicio() {
                 <h1 className='text-center'>DISEÑADOR / FRONTEND DEV</h1>
                 <div className='nombre-inicio'></div>
               </div>
-            </div>
+            </div> 
             <div className='fondo-video'>
               <VideoInicio />
             </div>
@@ -29,15 +29,19 @@ function Inicio() {
           <h3 className='mb-5'>Trayectoria</h3>
           <div className='row'>
             <div className='col-6 mx-auto'>
-              <div className='row'>
+              <div className='row pb-4'>
                 <div className='col-2'>
-                  2024
+                  <h4>
+                    <span className='span-texto'>DESDE</span>
+                    <br />
+                    <span className='span-anho'>2024</span>
+                  </h4>
                 </div>
-                <div className='col-10'>
-                  <p>
+                <div className='col-10 texto-resumen-trayectoria'>
+                  <p className='ms-4 mb-4'>
                     Con más de 20 años de experiencia, he participado en muchos proyectos web para rubros como banca, corporativos y marketing. Durante los últimos años he trabajado en proyectos con metodologías ágiles utilizando las últimas tecnologías para proyectos de la banca nacional como Banco Estado, BCI e Itaú.
                   </p>
-                  <p>
+                  <p className='ms-4 mb-0 link'>
                     <a href='#'>+ Más información</a>
                   </p>
                 </div>
@@ -48,18 +52,18 @@ function Inicio() {
 
         <section className='resumen-conocimiento py-5 col-12'>
           <div className='col-8 mx-auto py-5'>
-            <div className='d-flex flex-row align-items-center'>
-              <div>
+            <div className='d-flex align-items-stretch'>
+              <div className='d-flex align-items-center'>
                 <h3>Conocimiento</h3>
               </div>
-              <div>
-                <Image src={icoConocimientos} className="ico-conocimientos-resumen" alt="HTML 5" title="HTML 5" />
+              <div className='separador-resumen-conocimiento mx-5 px-5'>
+                <Image src={icoConocimientos} className="ico-conocimientos-resumen img-fluid" alt="HTML 5" title="HTML 5" />
               </div>
-              <div>
+              <div className='d-flex flex-column justify-content-between align-items-baseline'>
                 <p>
                   Mis mejores conocimientos al día de hoy están enfocados al desarrollo Frontend, utilizando frameworks como Angular y bibliotecas como React. También años de experiencia en el uso de software de diseño para proyectos web. 
                 </p>
-                <p>
+                <p className='mb-0 link'>
                   <a href='#'>+ Más información</a>
                 </p>
               </div>
