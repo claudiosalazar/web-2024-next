@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import icoConocimientos from '../assets/resumen-icon-conocimientos.png';
 import VideoInicio from '../ui/video-inicio';
+import miBanco1 from '../assets/portafolio/mi-banco-1.jpg';
 
 
 function Inicio() {
@@ -73,6 +74,22 @@ function Inicio() {
           
         <section className='resumen-portafolio py-5 col-12'>
           <h3 className='mb-5'>Portafolio</h3>
+          <hr className='mx-auto' />
+          <ul className='d-flex justify-content-center mx-auto my-5'>
+            <li>
+              <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+            </li>
+            <li>
+              <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+            </li>
+            <li>
+              <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+            </li>
+          </ul>
+          <hr className='mx-auto' />
+          <p className='mt-5 text-center'>
+            <a href='#'>+ Ver más</a>
+          </p>
         </section>
         
       </main>
