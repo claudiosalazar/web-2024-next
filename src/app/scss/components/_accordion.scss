@@ -4,7 +4,7 @@
     background-color: transparent;
     border: none;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 
     .accordion-header {
       background-color: transparent;
@@ -65,14 +65,10 @@
           box-shadow: none;
           font-size: 24px;
           color: $blanco;
-          
           // Elimina icono por defecto de bootstrap
-          &.collapsed {
-            color: $gris-30;
-            &::after {
-              content: '';
-              background-image: none;
-            }
+          &::after {
+            content: '';
+            background-image: none !important;
           }
 
           .iconos {

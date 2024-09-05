@@ -21,7 +21,8 @@
   }
   
   .info-conocimientos {
-    height: calc(100vh - 190px);
+    min-height: calc(100vh - 190px);
+    height: auto;
     background-color: $gris-100;
   }
   
