@@ -2,7 +2,7 @@ function Trayectoria() {
   return (
     <section className="info-trayectoria trayectoria row d-flex align-items-center">
 
-      <div className="col-10 mx-auto">
+      <div className="col-10 mx-auto py-5">
         <div className="row">
           <div className="col-6">
             <div className="me-5">

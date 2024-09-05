@@ -7,7 +7,7 @@ import miBanco4 from '../assets/portafolio/mi-banco-4.jpg';
 function Portafolio () {
   return (
     <section className="info-portafolio portafolio row d-flex align-items-center">
-      <div className="col-8 offset-2">
+      <div className="col-8 mx-auto py-5">
         <div className="row">
           <div className="col-4">
             <h1 className='mb-5'>Portafolio</h1>
