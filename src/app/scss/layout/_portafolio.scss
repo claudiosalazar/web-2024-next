@@ -2,4 +2,60 @@
   h1 {
     color: $dorado-oscuro;
   }
+  .carousel-portafolio-container {
+    border: 1px solid RED;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-portafolio-viewport {
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-portafolio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex a columna */
+  }
+  
+  .carousel-portafolio-item {
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+  }
+  
+  .carousel-portafolio-controls {
+    margin: auto;
+    list-style: none;
+    padding: 0;
+    height: 500px;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .carousel-portafolio-controls li {
+    display: flex;
+    direction: row;
+  }
+  
+  .carousel-portafolio-controls a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .carousel-portafolio-controls a:hover {
+    background-color: #bbb;
+  }
 }
