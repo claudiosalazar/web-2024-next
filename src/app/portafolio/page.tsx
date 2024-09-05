@@ -19,11 +19,11 @@ function Portafolio() {
       <div className='row'>
         <div className='col-6 mx-auto'>
           <div className='row'>
-            <div className='col-1'>
+            <div className='col-1 d-flex flex-column justify-content-center'>
               <ul className="carousel-portafolio-controls">
-                {[0, 1, 2, 3].map((index) => (
-                  <li key={index}>
-                    <a href="#" onClick={() => handleSelect(index)}>{index + 1}</a>
+                {['01', '02', '03', '04'].map((index) => (
+                  <li key={index} className='d-block'>
+                    <a href="#" onClick={() => handleSelect(Number(index) - 1)}>{index}</a>
                   </li>
                 ))}
               </ul>
@@ -34,85 +34,156 @@ function Portafolio() {
                   <ul className="carousel-portafolio-list" style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
                     <li key={0} className="carousel-portafolio-item">
                       <div className='card'>
-                        <div className='row'>
-                          <div className='col-4'>
-                            <h2>Proyecto 1</h2>
-                            <p>Descripción de la imagen 1</p>
-                            <p>
-                              <a href="#" className="btn btn-primary">Ver más</a>
-                            </p>
-                          </div>
-                          <div className='col-8'>
-                          <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
-                            <div className="carousel-indicators">
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <div className='container-fluid p-0'>
+                          <div className='row m-0 p-0'>
+                            <div className='col-3'>
+                              <h2>Mi Banco</h2>
+                              <p>Descripción de la imagen 1</p>
+                              <p>
+                                <a href="#" className="btn btn-primary">Ver más</a>
+                              </p>
                             </div>
-                            <div className="carousel-inner">
-                              <div className="carousel-item active">
-                                <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                            <div className='col-9 p-0'>
+                            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+                              <div className="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                               </div>
-                              <div className="carousel-item">
-                                <Image src={miBanco2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
-                              </div>
-                              <div className="carousel-item">
-                                <Image src={miBanco3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
-                              </div>
-                              <div className="carousel-item">
-                                <Image src={miBanco4} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                              <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                  <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco4} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
                               </div>
                             </div>
-                          </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </li>
                     <li key={1} className="carousel-portafolio-item">
-                      <div className='card'>
-                        <div className='row'>
-                          <div className='col-4'>
-                            <h2>Proyecto 2</h2>
-                            <p>Descripción de la imagen 2</p>
-                            <p>
-                              <a href="#" className="btn btn-primary">Ver más</a>
-                            </p>
-                          </div>
-                          <div className='col-8'>
-                            asdad
+                    <div className='card'>
+                        <div className='container-fluid p-0'>
+                          <div className='row m-0 p-0'>
+                            <div className='col-3'>
+                              <h2>Proyecto 2</h2>
+                              <p>Descripción de la imagen 1</p>
+                              <p>
+                                <a href="#" className="btn btn-primary">Ver más</a>
+                              </p>
+                            </div>
+                            <div className='col-9 p-0'>
+                            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+                              <div className="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              </div>
+                              <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                  <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco4} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                              </div>
+                            </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </li>
                     <li key={2} className="carousel-portafolio-item">
-                      <div className='card'>
-                        <div className='row'>
-                          <div className='col-4'>
-                            <h2>Proyecto 3</h2>
-                            <p>Descripción de la imagen 3</p>
-                            <p>
-                              <a href="#" className="btn btn-primary">Ver más</a>
-                            </p>
-                          </div>
-                          <div className='col-8'>
-                            asdad
+                    <div className='card'>
+                        <div className='container-fluid p-0'>
+                          <div className='row m-0 p-0'>
+                            <div className='col-3'>
+                              <h2>Proyecto 3</h2>
+                              <p>Descripción de la imagen 1</p>
+                              <p>
+                                <a href="#" className="btn btn-primary">Ver más</a>
+                              </p>
+                            </div>
+                            <div className='col-9 p-0'>
+                            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+                              <div className="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              </div>
+                              <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                  <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco4} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                              </div>
+                            </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </li>
                     <li key={3} className="carousel-portafolio-item">
-                      <div className='card'>
-                        <div className='row'>
-                          <div className='col-4'>
-                            <h2>Proyecto 4</h2>
-                            <p>Descripción de la imagen 4</p>
-                            <p>
-                              <a href="#" className="btn btn-primary">Ver más</a>
-                            </p>
-                          </div>
-                          <div className='col-8'>
-                            asdasd
+                    <div className='card'>
+                        <div className='container-fluid p-0'>
+                          <div className='row m-0 p-0'>
+                            <div className='col-3'>
+                              <h2>Proyecto 4</h2>
+                              <p>Descripción de la imagen 1</p>
+                              <p>
+                                <a href="#" className="btn btn-primary">Ver más</a>
+                              </p>
+                            </div>
+                            <div className='col-9 p-0'>
+                            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+                              <div className="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              </div>
+                              <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                  <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                                <div className="carousel-item">
+                                  <Image src={miBanco4} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+                                </div>
+                              </div>
+                            </div>
+                            </div>
                           </div>
                         </div>
                       </div>
