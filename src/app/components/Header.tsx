@@ -4,11 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
-interface HeaderProps {
-  onLinkClick: () => void;
-}
-
-function Header({ onLinkClick }: HeaderProps) {
+function Header() {
   const pathname = usePathname();
   const [menuColor, setColor] = useState<string>('link-inicio');
   const [fondoHeader, setFondoHeader] = useState<string>('');
@@ -76,7 +72,7 @@ function Header({ onLinkClick }: HeaderProps) {
             <ul className="navbar-nav">
               <li className='separador-lista'></li>
               <li className='boton'>
-                <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
+                <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
                   Bienvenida
                 </Link>
               </li>
@@ -84,7 +80,7 @@ function Header({ onLinkClick }: HeaderProps) {
                 <div className='separador-menu'></div>
               </li>
               <li className='boton'>
-                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
+                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
                   Trayectoria
                 </Link>
               </li>
@@ -92,15 +88,15 @@ function Header({ onLinkClick }: HeaderProps) {
                 <div className='separador-menu'></div>
               </li>
               <li className="nav-item logo">
-                <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
-                  <div className='logo-header' onClick={onLinkClick}></div>
+                <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
+                  <div className='logo-header'></div>
                 </Link>
               </li>
               <li className='separador-menu'>
                 <div className='separador-menu'></div>
               </li>
               <li className='boton'>
-                <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
+                <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`}>
                   Conocimientos
                 </Link>
               </li>
@@ -108,7 +104,7 @@ function Header({ onLinkClick }: HeaderProps) {
                 <div className='separador-menu'></div>
               </li>
               <li className='boton'>
-                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`} onClick={onLinkClick}>
+                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
                   Portafolio
                 </Link>
               </li>
