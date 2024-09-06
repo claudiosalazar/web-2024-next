@@ -30,6 +30,7 @@ import icoScrum from '../assets/iconos/ico-scrum.png';
 import icoSketch from '../assets/iconos/ico-sketch.png';
 import icoTs from '../assets/iconos/ico-ts.png';
 import icoXd from '../assets/iconos/ico-xd.png';
+import icoNode from '../assets/iconos/ico-nodejs.png';
 import React, { useState } from 'react';
 
 
@@ -116,6 +117,7 @@ function Conocimientos() {
               <div className={`iconos d-none d-md-flex ${isOpen2 ? 'active' : ''}`}>
                 <Image src={icoJs} className="ico-conocimientos" alt="javascript" title="JavaScript" />
                 <Image src={icoTs} className="ico-conocimientos" alt="typescript" title="TypeScript" />
+                <Image src={icoNode} className="ico-conocimientos" alt="nodejs" title="Node.js" />
                 <Image src={icoPhp} className="ico-conocimientos" alt="php" title="PHP" />
                 <Image src={icoApi} className="ico-api" alt="api" title="API" />
                 <Image src={icoMysql} className="ico-conocimientos" alt="mysql" title="MySQL" />
