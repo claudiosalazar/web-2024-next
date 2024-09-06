@@ -2,10 +2,38 @@
   h1 {
     color: $dorado-oscuro;
   }
-  .carousel-portafolio-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+
+  ul.carousel-portafolio-controls {
+    margin: auto;
+    list-style: none;
+    padding: 32px 0;
+    // border-right: 1px solid $gris-30;
+    li {
+      display: flex;
+      direction: row;
+      justify-content: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 2rem;
+      width: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        text-decoration: none;
+        color: $dorado-oscuro;
+        &:hover {
+          color: $dorado;
+        }
+        &.active {
+          font-weight: 800;
+          color: $dorado;
+        }
+      }
+    }
   }
   
   .carousel-portafolio-viewport {
@@ -13,51 +41,59 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-  }
-  
-  .carousel-portafolio-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    transition: transform 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column; /* Cambia la dirección del flex a columna */
-  }
-  
-  .carousel-portafolio-item {
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    .card {
-      border: none;
-      border-radius: 0;
+    .carousel-portafolio-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      transition: transform 0.5s ease-out;
+      display: flex;
+      flex-direction: column; /* Cambia la dirección del flex a columna */
+    }
+    
+    .carousel-portafolio-item {
+      border-left: 1px solid $gris-30;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px;
+      margin: 0;
       height: 500px;
+      h2 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 200;
+        color: $dorado-oscuro;
+      }
+      p {
+        font-size: .8rem;
+        margin-bottom: 1.5rem;
+        color: $gris-80;
+        strong {
+          color: $dorado-oscuro;
+          font-weight: 500;
+        }
+      }
+      ul.tecnologias {
+        padding: 0;
+        li {
+          list-style: none;
+          margin-right: 10px;
+          img {
+            width: auto;
+            height: 22px;
+          }
+        }
+      }
+      hr {
+        width: 20%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .muestra-proyecto {
+        height: 500px;
+      }
     }
   }
-  
-  .carousel-portafolio-controls {
-    margin: auto;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .carousel-portafolio-controls li {
-    display: flex;
-    direction: row;
-  }
-  
-  .carousel-portafolio-controls a {
-    text-decoration: none;
-    color: $dorado-oscuro;
-    width: 20px;
-    height: 24px;
-    border: 1px solid red;
-  }
-  
-  .carousel-portafolio-controls a:hover {
-    color: $dorado;
-  }
+
 }

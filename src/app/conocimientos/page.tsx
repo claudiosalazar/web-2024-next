@@ -82,7 +82,7 @@ function Conocimientos() {
         
         <div className="accordion" id="accordionFlushExample">
           <div className="accordion-item">
-            <h2 className="accordion-header">
+            <div className="accordion-header">
               <button className="accordion-button collapsed" onClick={handleClick1}  type="button" data-bs-toggle="collapse" data-bs-target="#panelsAbierto-conocimientoUno" aria-expanded="true" aria-controls="panelsAbierto-conocimientoUno">
                 <div className="icono-item">
                   <div className={`vertical ${isOpen1 ? 'item-abierto' : ''}`}></div>
@@ -96,7 +96,7 @@ function Conocimientos() {
                 </div>
                 Códigos estructurales
               </button>
-            </h2>
+            </div>
             <div id="panelsAbierto-conocimientoUno" className="accordion-collapse collapse">
               <div className="accordion-body">
                 <p>
