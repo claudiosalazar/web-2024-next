@@ -18,6 +18,9 @@ function Contactame() {
       
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: isActive ? 1 : 0 }} transition={{ duration: 0.35 }} className={isActive ? "contactamen-activo" : "contactamen-oculto"}>
         <div className='contenido-contactame'>
+        <button onClick={handleClick} className='cerrar'>
+          <div className='icono-cerrar'></div>
+        </button>
           <span className='titulo'>
             Contáctame
           </span>

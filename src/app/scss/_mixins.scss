@@ -112,7 +112,7 @@
 // Boton cerrar contactame
 @mixin rotated-in {
   transition: transform .3s linear;
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 @mixin rotated-out {
