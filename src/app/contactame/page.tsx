@@ -13,10 +13,10 @@ function Contactame() {
   return (
     <>
       <div className="contactame">
-        <a href="#" className="material-symbols-outlined" onClick={handleClick}></a>
+        <a href="javascript:void(0)" className="material-symbols-outlined" onClick={handleClick}></a>
       </div>
       
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: isActive ? 1 : 0 }} transition={{ duration: 0.35 }} className={isActive ? "contactamen-activo" : "contactamen-oculto"}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: isActive ? 1 : 0 }} transition={{ duration: 0.35 }} className={isActive ? "contactame-activo" : "contactame-oculto"}>
         <div className='contenido-contactame'>
         <button onClick={handleClick} className='cerrar'>
           <div className='icono-cerrar'></div>

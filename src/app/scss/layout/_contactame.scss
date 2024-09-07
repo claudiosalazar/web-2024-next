@@ -28,19 +28,21 @@
     }
   }
 }
-.contactamen-oculto {
-  z-index: -1 !important;
+
+.contactame-oculto {
+  width: 0 !important;
+  height: 0 !important;
 }
-.contactamen-oculto, .contactamen-activo {
+.contactame-oculto, .contactame-activo {
   position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   overflow: none;
-  background-color: rgb(207, 131, 0, .5);
+  background-color: rgb(207, 131, 0, .6);
   .contenido-contactame {
     position: absolute;
     background-color: $negro;

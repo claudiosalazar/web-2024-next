@@ -97,7 +97,7 @@
 .resumen-trayectoria {
   background-color: $dorado;
   position: relative;
-  z-index: 100;
+  z-index: 0;
   h3 {
     color: $blanco;
   }
@@ -131,7 +131,7 @@
 .resumen-conocimiento {
   background-color: $gris-100;
   position: relative;
-  z-index: 100;
+  z-index: 0;
   height: fit-content;
   .separador-resumen-conocimiento {
     border-left: 1px solid $gris-80;
@@ -162,7 +162,7 @@
 .resumen-portafolio {
   background-color: $gris-00;
   position: relative;
-  z-index: 100;
+  z-index: 0;
   h3 {
     color: $dorado-oscuro;
   }
