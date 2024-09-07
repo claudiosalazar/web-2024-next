@@ -5,27 +5,44 @@ import { motion } from 'framer-motion';
 
 function Contactame() {
   const [isActive, setIsActive] = useState(false);
+  const [zIndex, setZIndex] = useState(-1);
 
   const handleClick = () => {
+    if (!isActive) {
+      setZIndex(1000);
+    }
     setIsActive(!isActive);
+  };
+
+  const handleAnimationComplete = () => {
+    if (!isActive) {
+      setZIndex(-1);
+    }
   };
 
   return (
     <>
       <div className="contactame">
-        <a href="javascript:void(0)" className="material-symbols-outlined" onClick={handleClick}></a>
+        <button className="material-symbols-outlined" onClick={handleClick}></button>
       </div>
       
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: isActive ? 1 : 0 }} transition={{ duration: 0.35 }} className={isActive ? "contactame-activo" : "contactame-oculto"}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isActive ? 1 : 0 }}
+        transition={{ duration: 0.35 }}
+        onAnimationComplete={handleAnimationComplete}
+        style={{ zIndex: zIndex }}
+        className={isActive ? "contactame-activo" : "contactame-oculto"}
+      >
         <div className='contenido-contactame'>
-        <button onClick={handleClick} className='cerrar'>
-          <div className='icono-cerrar'></div>
-        </button>
+          <button onClick={handleClick} className='cerrar'>
+            <div className='icono-cerrar'></div>
+          </button>
           <span className='titulo'>
             Contáctame
           </span>
           <span className='subtitulo my-2 my-md-3'>
-            !Hablemos!
+            ¡Hablemos!
           </span>
           <p className='parrafo'>
             Envíame un mensaje a WhatsApp, contáctame en LinkedIn o si prefieres envíame un email a mi correo personal.
