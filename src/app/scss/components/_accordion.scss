@@ -57,7 +57,7 @@
         }
         &.accordion-button {
           background-color: transparent;
-          font-weight: 100 !important;
+          font-weight: 200 !important;
           transition: all .2s ease-in-out;
           box-shadow: none;
           font-size: 24px;
@@ -69,7 +69,7 @@
           }
 
           &.collapsed {
-            color: $gris-30;
+            color: $gris-40;
             font-weight: 100 !important;
           }
 
