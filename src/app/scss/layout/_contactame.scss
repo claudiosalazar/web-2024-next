@@ -38,9 +38,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   overflow: none;
-  background-color: rgb(207, 131, 0, .6);
+  background-color: rgb(207, 131, 0, .5);
   .contenido-contactame {
     position: absolute;
     background-color: $negro;

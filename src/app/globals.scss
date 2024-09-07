@@ -28,6 +28,11 @@
   border-color: $gris-40;
 }
 
+:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
 /*@import "./scss/components/accordion";
 @import "./scss/components/button";
 
