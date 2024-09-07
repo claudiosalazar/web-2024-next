@@ -36,7 +36,7 @@ function Inicio() {
                   <h4>
                     <span className='span-texto'>DESDE</span>
                     <br />
-                    <span className='span-anho'>2024</span>
+                    <span className='span-anho'>2004</span>
                   </h4>
                 </div>
                 <div className='col-10 texto-resumen-trayectoria'>
