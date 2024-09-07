@@ -28,7 +28,7 @@ function Contactame() {
     <>
       <div className="contactame">
         <button 
-          className={`material-symbols-outlined ${isActive ? 'active' : ''}`} 
+          className={`${isActive ? 'active' : ''}`} 
           onClick={handleClick} 
           disabled={isButtonDisabled}
         ></button>
