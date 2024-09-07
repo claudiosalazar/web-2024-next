@@ -4,7 +4,7 @@
   background-color: $blanco;
   border-radius: 50%;
   position: fixed;
-  z-index: 2000;
+  z-index: 1001;
   bottom: 24px;
   right: 24px;
   display: flex;
@@ -27,13 +27,21 @@
       height: 22px;
       background-size: 22px 22px;
     }
+    &.active {
+      color: $gris-100;
+    }
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+      &:hover {
+        width: 18px;
+        height: 18px;
+        background-size: 18px 18px;
+      }
+    }
   }
 }
 
-.contactame-oculto {
-  width: 0 !important;
-  height: 0 !important;
-}
 .contactame-oculto, .contactame-activo {
   position: fixed;
   z-index: 1000;

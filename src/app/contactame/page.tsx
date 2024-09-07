@@ -6,36 +6,43 @@ import { motion } from 'framer-motion';
 function Contactame() {
   const [isActive, setIsActive] = useState(false);
   const [zIndex, setZIndex] = useState(-1);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const handleClick = () => {
     if (!isActive) {
       setZIndex(1000);
     }
     setIsActive(!isActive);
+    setIsButtonDisabled(true);
   };
 
-  const handleAnimationComplete = () => {
-    if (!isActive) {
+  const handleClose = () => {
+    setIsActive(false);
+    setTimeout(() => {
       setZIndex(-1);
-    }
+      setIsButtonDisabled(false);
+    }, 350); // Retraso de 0.35 segundos
   };
 
   return (
     <>
       <div className="contactame">
-        <button className="material-symbols-outlined" onClick={handleClick}></button>
+        <button 
+          className={`material-symbols-outlined ${isActive ? 'active' : ''}`} 
+          onClick={handleClick} 
+          disabled={isButtonDisabled}
+        ></button>
       </div>
       
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isActive ? 1 : 0 }}
         transition={{ duration: 0.35 }}
-        onAnimationComplete={handleAnimationComplete}
-        style={{ zIndex: zIndex }}
         className={isActive ? "contactame-activo" : "contactame-oculto"}
+        style={{ zIndex: zIndex }}
       >
         <div className='contenido-contactame'>
-          <button onClick={handleClick} className='cerrar'>
+          <button onClick={handleClose} className='cerrar'>
             <div className='icono-cerrar'></div>
           </button>
           <span className='titulo'>
