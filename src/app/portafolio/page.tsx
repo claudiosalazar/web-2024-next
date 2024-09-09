@@ -30,19 +30,19 @@ function Portafolio() {
       <div className='row'>
         <div className='col-8 mx-auto'>
           <div className='row'>
-          <div className='col-1 d-flex flex-column justify-content-center'>
-            <ul className="carousel-portafolio-controls">
-              {['•', '•', '•', '•'].map((index, i) => (
-                <li key={index}>
-                  <a href="#" className={`d-block ${activeIndex === i ? 'active' : ''}`} onClick={() => handleSelect(i)}>{index}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-            <div className="col-11 mx-auto">
+            <div className='col-1 d-flex flex-column justify-content-center pe-0'>
+              <ul className="carousel-portafolio-controls">
+                {['•', '•', '•', '•'].map((dot, i) => (
+                  <li key={`dot-${i}`}>
+                    <a href="#" className={`d-block ${activeIndex === i ? 'active' : ''}`} onClick={() => handleSelect(i)}>{dot}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="col-11 ps-0">
               <div className="carousel-portafolio-viewport">
                 <ul className="carousel-portafolio-list" style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
-                  <li key={0} className="carousel-portafolio-item">
+                  <li key={0} className="carousel-portafolio-item ps-5">
                     <div className='row'>
                       <div className='col-4'>
                         <h2>Mi Banco</h2>
@@ -102,7 +102,7 @@ function Portafolio() {
                       </div>
                     </div>
                   </li>
-                  <li key={1} className="carousel-portafolio-item">
+                  <li key={1} className="carousel-portafolio-item ps-5">
                     <div className='row'>
                       <div className='col-4'>
                         <h2>Mi Banco</h2>
@@ -119,7 +119,7 @@ function Portafolio() {
                       </div>
                     </div>
                   </li>
-                  <li key={2} className="carousel-portafolio-item">
+                  <li key={2} className="carousel-portafolio-item ps-5">
                     <div className='row'>
                       <div className='col-4'>
                         <h2>Mi Banco</h2>
@@ -136,7 +136,7 @@ function Portafolio() {
                       </div>
                     </div>
                   </li>
-                  <li key={3} className="carousel-portafolio-item">
+                  <li key={3} className="carousel-portafolio-item ps-5">
                     <div className='row'>
                       <div className='col-4'>
                         <h2>Mi Banco</h2>

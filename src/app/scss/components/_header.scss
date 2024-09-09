@@ -45,13 +45,16 @@ header {
           width: 5.5%;
         }
         &.separador-menu {
-          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' fill='none'%3E%3Ccircle cx='3' cy='3' r='3' fill='%23ECBD6C'/%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' fill='none'%3E%3Ccircle cx='3' cy='3' r='3' fill='%23CF8300'/%3E%3C/svg%3E");
           background-repeat: no-repeat;
           background-size: 6px 6px;
           background-position: center center;
           width: 1%;
           height: 55px;
           display: block;
+          &.blanco {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' fill='none'%3E%3Ccircle cx='3' cy='3' r='3' fill='%23fff'/%3E%3C/svg%3E");
+          }
         }
         
         a {
@@ -71,6 +74,7 @@ header {
           }
           &.link-inicio {
             color: $gris-inicio;
+
             &.logo-link {
               background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='59' fill='none'%3E%3Cpath fill='%23CF8300' d='m18.5 1.763.738.39 15.351 8.076.837.439v37.654l-.837.439-15.351 8.076-.738.39-.738-.39L2.411 48.77l-.837-.438V10.678l.837-.439 15.351-8.086.738-.39ZM18.5 0l-.738.39-.738.39L1.673 8.855l-.837.438L0 9.733v39.525l.836.438.837.438 15.35 8.077.739.39.738.39.738-.39.738-.39 15.351-8.077.837-.438.836-.438V9.733l-.836-.439-.837-.438L19.977.779l-.739-.39L18.5 0Z'/%3E%3Cpath fill='%23CF8300' d='M29.915 30.698v14.35L18.5 51.06 7.085 45.049V13.95L18.5 7.941l11.415 6.01v12.354l3.936 2.075V11.613L18.5 3.527 3.149 11.613v35.784L18.5 55.473l15.351-8.076V32.783l-3.936-2.085Z'/%3E%3Cpath fill='%23CF8300' d='M24.404 32.238v9.537L18.5 44.883l-5.904-3.108v-8.251h5.855L8.66 28.36v15.754l9.84 5.183 9.84-5.183V29.87l-15.744-8.28v-4.356l5.904-3.108 5.904 3.108v3.06H18.5l9.84 5.182v-10.59L18.5 9.713l-9.84 5.173v9.06l15.744 8.292Z'/%3E%3C/svg%3E");
             }
@@ -119,15 +123,15 @@ header {
           }
           
           &.link-portafolio {
-            color: $dorado;
+            color: $dorado-oscuro;
             &.logo-link {
               background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='59' fill='none'%3E%3Cpath fill='%23CF8300' d='m18.5 1.763.738.39 15.351 8.076.837.439v37.654l-.837.439-15.351 8.076-.738.39-.738-.39L2.411 48.77l-.837-.438V10.678l.837-.439 15.351-8.086.738-.39ZM18.5 0l-.738.39-.738.39L1.673 8.855l-.837.438L0 9.733v39.525l.836.438.837.438 15.35 8.077.739.39.738.39.738-.39.738-.39 15.351-8.077.837-.438.836-.438V9.733l-.836-.439-.837-.438L19.977.779l-.739-.39L18.5 0Z'/%3E%3Cpath fill='%23CF8300' d='M29.915 30.698v14.35L18.5 51.06 7.085 45.049V13.95L18.5 7.941l11.415 6.01v12.354l3.936 2.075V11.613L18.5 3.527 3.149 11.613v35.784L18.5 55.473l15.351-8.076V32.783l-3.936-2.085Z'/%3E%3Cpath fill='%23CF8300' d='M24.404 32.238v9.537L18.5 44.883l-5.904-3.108v-8.251h5.855L8.66 28.36v15.754l9.84 5.183 9.84-5.183V29.87l-15.744-8.28v-4.356l5.904-3.108 5.904 3.108v3.06H18.5l9.84 5.182v-10.59L18.5 9.713l-9.84 5.173v9.06l15.744 8.292Z'/%3E%3C/svg%3E");
             }
             &:hover {
-              color: $blanco;
+              color: $dorado-oscuro;
             }
             &.active {
-              color: $dorado-oscuro;
+              color: $gris-100;
               .indicador-boton {
                 background-color: $dorado-portafolio;
               }

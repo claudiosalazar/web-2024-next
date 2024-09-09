@@ -76,33 +76,25 @@ function Header() {
                   Bienvenida
                 </Link>
               </li>
-              <li className='separador-menu'>
-                <div className='separador-menu'></div>
-              </li>
+              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
               <li className='boton'>
                 <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
                   Trayectoria
                 </Link>
               </li>
-              <li className='separador-menu'>
-                <div className='separador-menu'></div>
-              </li>
+              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
               <li className="nav-item logo">
                 <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
                   <div className='logo-header'></div>
                 </Link>
               </li>
-              <li className='separador-menu'>
-                <div className='separador-menu'></div>
-              </li>
+              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
               <li className='boton'>
                 <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`}>
                   Conocimientos
                 </Link>
               </li>
-              <li className='separador-menu'>
-                <div className='separador-menu'></div>
-              </li>
+              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
               <li className='boton'>
                 <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
                   Portafolio
