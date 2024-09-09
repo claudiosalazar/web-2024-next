@@ -26,7 +26,7 @@ function Contactame() {
 
   return (
     <>
-      <div className="contactame">
+      <div className={`contactame ${isActive ? 'active' : ''}`}>
         <button 
           className={`${isActive ? 'active' : ''}`} 
           onClick={handleClick} 
