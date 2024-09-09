@@ -1,13 +1,15 @@
 .inicio {
-  aspect-ratio: 9/16;
-  @media (min-width: $md) {
+  // aspect-ratio: 9/16;
+  height: 80vh;
+  // position: relative;
+  @media (min-width: $lg) {
     aspect-ratio: 16/9;
   }
   .contenido-portada {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    height: 80vh;
+    position: absolute;
     z-index: 10;
+    width: 100%;
     
     h1 {
       color: $dorado;
@@ -36,37 +38,6 @@
       background-size: 300px 23px;
       @media (min-width: $md) {
         background-size: 403px 30px;
-      }
-    }
-  }
-
-  .fondo-video {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    .yt-embed {
-      max-width: 100% !important;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      position: relative;
-      z-index: 0;
-    
-      iframe {
-        width: 100%;
-        height: 100%;
-        transform: scale(1.2);
-      }
-    
-      .yt-embed-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
       }
     }
   }

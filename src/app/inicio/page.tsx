@@ -12,7 +12,7 @@ function Inicio() {
   return (
     <>
       <main className='info-inicio row'>
-        <section className='info-portada col-12'>
+        <section className='info-portada col-12 p-0'>
           <div className='inicio'>
             <div className='contenido-portada d-flex align-items-center justify-content-center'>
               <div>
@@ -26,9 +26,7 @@ function Inicio() {
                 <div className='nombre-inicio'></div>
               </div>
             </div> 
-            <div className='fondo-video'>
-              <VideoInicio />
-            </div>
+            <VideoInicio />
           </div>
         </section>
 
@@ -66,7 +64,7 @@ function Inicio() {
               <div className='d-flex align-items-center mb-5 mb-md-0'>
                 <h3>Conocimientos</h3>
               </div>
-              <div className='separador-resumen-conocimiento mx-5 mb-5 mb-md-0 mx-md-5 px-md-5'>
+              <div className='separador-resumen-conocimiento mx-5 mb-5 mb-md-0 mx-md-3 px-md-5'>
                 <Image src={icoConocimientos} className="ico-conocimientos-resumen img-fluid" alt="HTML 5" title="HTML 5" />
               </div>
               <div className='d-flex flex-column justify-content-between align-items-baseline mx-4 mx-md-0'>
