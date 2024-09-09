@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
+import Footer from "./components/Footer";
 
 export default function Template ({
   children
@@ -14,6 +15,7 @@ export default function Template ({
     transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {children}
+      <Footer />
     </motion.div>
   )
 }

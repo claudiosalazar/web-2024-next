@@ -6,7 +6,6 @@ import './globalicons.scss';
 
 // Components
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Contactame from "./contactame/page";
 
 const montserrat = Montserrat({ 
@@ -32,9 +31,8 @@ function RootLayout({
           <Header />
           <div className="container-fluid">
             {children}
-            <Footer />
-            <Contactame />
           </div>
+          <Contactame />
         </div>
       </body>
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" />
