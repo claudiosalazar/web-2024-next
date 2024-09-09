@@ -32,8 +32,13 @@ a.curriculum {
 
 a {
   text-decoration: none;
+
   &.nav-link {
     transition: all .3s linear;
+    a {
+      height: 45px !important;
+      letter-spacing: 0rem !important;
+    }
     @media (min-width: $md) {
       letter-spacing: .08rem !important;
     }

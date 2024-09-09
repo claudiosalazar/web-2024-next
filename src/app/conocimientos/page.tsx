@@ -78,7 +78,7 @@ function Conocimientos() {
 
   return (
     <section className="info-conocimientos conocimientos row d-flex align-items-center">
-      <div className="col-6 mx-auto py-5">
+      <div className="col-10 col-md-6 mx-auto py-5">
         <h1 className="my-5">Conocimientos</h1>
         
         <div className="accordion" id="accordionFlushExample">

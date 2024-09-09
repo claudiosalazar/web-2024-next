@@ -37,7 +37,7 @@ function Header() {
     updateMenuState(pathname);
 
     const handleScroll = () => {
-      if (window.scrollY >= 79) {
+      if (window.scrollY >= 50) {
         if (pathname === '/') {
           setFondoHeader('fondo-inicio');
         } else if (pathname === '/trayectoria') {

@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import Link from "next/link";
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 import miBanco1 from '../assets/portafolio/mi-banco-1.jpg';
 import miBanco2 from '../assets/portafolio/mi-banco-2.jpg';
 import miBanco3 from '../assets/portafolio/mi-banco-3.jpg';
@@ -20,6 +21,8 @@ import icoIllustrator from '../assets/iconos/ico-illustrator.png';
 
 function Portafolio() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
 
   const handleSelect = useCallback((index: number) => {
     setActiveIndex(index);
@@ -28,7 +31,7 @@ function Portafolio() {
   return (
     <section className="info-portafolio portafolio row d-flex align-items-center">
       <div className='row'>
-        <div className='col-8 mx-auto'>
+        <div className='col-12 col-md-8 mx-auto'>
           <div className='row'>
             <div className='col-1 d-flex flex-column justify-content-center pe-0'>
               <ul className="carousel-portafolio-controls">
@@ -41,10 +44,10 @@ function Portafolio() {
             </div>
             <div className="col-11 ps-0">
               <div className="carousel-portafolio-viewport">
-                <ul className="carousel-portafolio-list" style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
+                <ul className={`carousel-portafolio-list ${isMobile ? 'mobile-height' : ''}`} style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
                   <li key={0} className="carousel-portafolio-item ps-5">
                     <div className='row'>
-                      <div className='col-4'>
+                      <div className='col-12 col-md-4'>
                         <h2>Mi Banco</h2>
                         <p>
                           Proyecto personal de sitio bancario ficticio. Creación de diseño UI y desarrollo frontend y backend (Node.js). En el se pueden realizar transferencias, pagos de productos y modificación de datos del usuario con se ingresa al sitio. Los datos para poder ingresar y visualizar el proyecto son:
@@ -97,14 +100,14 @@ function Portafolio() {
                           </Link>
                         </p>
                       </div>
-                      <div className='col-8 muestra-proyecto'>
+                      <div className='col-12 col-md-8 muestra-proyecto'>
                         <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="Mi Banco" title="Mi Banco" />
                       </div>
                     </div>
                   </li>
                   <li key={1} className="carousel-portafolio-item ps-5">
                     <div className='row'>
-                      <div className='col-4'>
+                      <div className='col-12 col-md-4'>
                         <h2>Mi Banco</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id tellus libero. Nam pretium lobortis quam, eget lobortis erat sagittis non.</p>
                         <p>
@@ -114,14 +117,14 @@ function Portafolio() {
                           </Link>
                         </p>
                       </div>
-                      <div className='col-8 muestra-proyecto'>
+                      <div className='col-12 col-md-8 muestra-proyecto'>
                         <Image src={miBanco2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
                       </div>
                     </div>
                   </li>
                   <li key={2} className="carousel-portafolio-item ps-5">
                     <div className='row'>
-                      <div className='col-4'>
+                      <div className='col-12 col-md-4'>
                         <h2>Mi Banco</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id tellus libero. Nam pretium lobortis quam, eget lobortis erat sagittis non.</p>
                         <p>
@@ -138,7 +141,7 @@ function Portafolio() {
                   </li>
                   <li key={3} className="carousel-portafolio-item ps-5">
                     <div className='row'>
-                      <div className='col-4'>
+                      <div className='col-12 col-md-4'>
                         <h2>Mi Banco</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id tellus libero. Nam pretium lobortis quam, eget lobortis erat sagittis non.</p>
                         <p>
@@ -148,7 +151,7 @@ function Portafolio() {
                           </Link>
                         </p>
                       </div>
-                      <div className='col-8 muestra-proyecto'>
+                      <div className='col-12 col-md-8 muestra-proyecto'>
                         <Image src={miBanco4} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
                       </div>
                     </div>

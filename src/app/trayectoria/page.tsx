@@ -4,9 +4,9 @@ function Trayectoria() {
 
       <div className="col-10 mx-auto py-5">
         <div className="row">
-          <div className="col-6">
-            <div className="me-5">
-              <h1 className="mb-5">Trayectoria</h1>
+          <div className="col-12 col-md-6">
+            <div className="mb-5 mb-md-0 me-md-5">
+              <h1 className="my-5 mt-md-0 mb-md-5">Trayectoria</h1>
               <p className="resumen mb-5">Tengo más de 15 años de experiencia profesional en proyectos web. Desde 2017, he participado activamente en proyectos de transformación digital dentro de equipos multidisciplinarios, siempre trabajando bajo metodologías ágiles. En los últimos 7 años, he colaborado en proyectos para importantes entidades bancarias nacionales como Banco Estado, BCI e Itaú Chile. A lo largo de mi carrera, mi enfoque ha estado siempre centrado en la mejora continua de mis conocimientos en las últimas tecnologías para el desarrollo frontend.</p>
               <a className="curriculum" href="/claudio-salazar-cv2024.pdf" target="new">
                 <span className="me-2 ico-pdf"></span>
@@ -15,7 +15,7 @@ function Trayectoria() {
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <ul>
               <li>
                 <div className="d-flex justify-content-between">
