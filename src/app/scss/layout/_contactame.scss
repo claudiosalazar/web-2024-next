@@ -22,13 +22,12 @@
     background-size: 18px 18px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 18px;
-    height: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     transition: all .2s linear;
     border: none;
     &:hover {
-      width: 22px;
-      height: 22px;
       background-size: 22px 22px;
     }
     &.active {
@@ -38,8 +37,6 @@
       cursor: default;
       opacity: .5;
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='21' fill='none'%3E%3Cpath fill='%23fff' d='M4.278 12.912h8.555v-1.23H4.278v1.23Zm0-3.69h13.444V7.994H4.278v1.23Zm0-3.688h13.444v-1.23H4.278v1.23ZM0 21V1.987C0 1.42.188.947.565.569.942.189 1.412 0 1.975 0h18.05c.563 0 1.033.19 1.41.569.377.379.565.852.565 1.418v13.242c0 .567-.188 1.04-.565 1.418-.377.38-.847.57-1.41.57H3.762L0 21Zm3.239-5.014h16.787c.188 0 .36-.078.517-.236a.725.725 0 0 0 .235-.52V1.986a.725.725 0 0 0-.235-.52c-.157-.158-.33-.237-.517-.237H1.974c-.188 0-.36.079-.517.236a.725.725 0 0 0-.235.52v16.022l2.017-2.022Z'/%3E%3C/svg%3E");
-      width: 18px;
-      height: 18px;
       background-size: 18px 18px;
     }
   }
