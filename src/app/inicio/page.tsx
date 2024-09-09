@@ -17,7 +17,12 @@ function Inicio() {
             <div className='contenido-portada d-flex align-items-center justify-content-center'>
               <div>
                 <div className='logo-inicio mx-auto'></div>
-                <h1 className='text-center'>DISEÑADOR / FRONTEND DEV</h1>
+                {/* <h1 className='d-flex flex-column flex-md-row align-content-center'> */}
+                <h1 className='d-flex flex-column flex-md-row mx-auto'>
+                  <span >DISEÑADOR</span> 
+                  <span className='d-none d-md-block mx-3'>/</span>
+                  <span >FRONTEND DEV</span>
+                </h1>
                 <div className='nombre-inicio'></div>
               </div>
             </div> 
@@ -27,23 +32,23 @@ function Inicio() {
           </div>
         </section>
 
-        <section className='resumen-trayectoria py-5 col-12'>
-          <h3 className='mb-5'>Trayectoria</h3>
+        <section className='resumen-trayectoria pt-5 pb-4 py-md-5 col-12'>
+          <h3 className='mb-3 mb-md-5'>Trayectoria</h3>
           <div className='row'>
-            <div className='col-6 mx-auto'>
+            <div className='col-12 col-md-6 mx-auto'>
               <div className='row pb-4'>
-                <div className='col-2'>
+                <div className='col-12 col-md-2 mx-auto mx-md-0 mb-3 mb-md-0'>
                   <h4>
                     <span className='span-texto'>DESDE</span>
-                    <br />
+                    <br className='d-none d-md-block' />
                     <span className='span-anho'>2004</span>
                   </h4>
                 </div>
-                <div className='col-10 texto-resumen-trayectoria'>
-                  <p className='ms-4 mb-4'>
+                <div className='col-12 col-md-10 texto-resumen-trayectoria'>
+                  <p className='ms-0 ms-md-4 mb-4 px-4 px-md-0'>
                     Con más de 20 años de experiencia, he participado en muchos proyectos web para rubros como banca, corporativos y marketing. Durante los últimos años he trabajado en proyectos con metodologías ágiles utilizando las últimas tecnologías para proyectos de la banca nacional como Banco Estado, BCI e Itaú.
                   </p>
-                  <p className='mb-0 ps-4'>
+                  <p className='mb-0 ps-4 mx-auto mx-md-0 mt-2 mt-md-0'>
                     <Link href="/trayectoria" className="link-inicio-resumenes">
                       <span className='ico-mas-blanco'></span>
                       <span className='texto-link-inicio'>Más información</span>
@@ -55,20 +60,20 @@ function Inicio() {
           </div>
         </section>
 
-        <section className='resumen-conocimiento py-5 col-12'>
-          <div className='col-8 mx-auto py-5'>
-            <div className='d-flex align-items-stretch'>
-              <div className='d-flex align-items-center'>
+        <section className='resumen-conocimiento py-2 py-md5 col-12'>
+          <div className='col-12 col-md-8 mx-auto py-5'>
+            <div className='d-flex align-items-md-stretch flex-column flex-md-row'>
+              <div className='d-flex align-items-center mb-5 mb-md-0'>
                 <h3>Conocimientos</h3>
               </div>
-              <div className='separador-resumen-conocimiento mx-5 px-5'>
+              <div className='separador-resumen-conocimiento mx-5 mb-5 mb-md-0 mx-md-5 px-md-5'>
                 <Image src={icoConocimientos} className="ico-conocimientos-resumen img-fluid" alt="HTML 5" title="HTML 5" />
               </div>
-              <div className='d-flex flex-column justify-content-between align-items-baseline'>
+              <div className='d-flex flex-column justify-content-between align-items-baseline mx-4 mx-md-0'>
                 <p>
                   Mis mejores conocimientos al día de hoy están enfocados al desarrollo Frontend, utilizando frameworks como Angular y bibliotecas como React. También años de experiencia en el uso de software de diseño para proyectos web. 
                 </p>
-                <p className='mb-0'>
+                <p className='mb-0 mx-auto mx-md-0 mt-4 mt-md-0'>
                   <Link href="/conocimientos" className="link-inicio-resumenes">
                     <span className='ico-mas-blanco'></span>
                     <span className='texto-link-inicio'>Más información</span>
@@ -82,7 +87,7 @@ function Inicio() {
         <section className='resumen-portafolio py-5 col-12'>
           <h3 className='mb-5'>Portafolio</h3>
           <hr className='mx-auto' />
-          <ul className='d-flex justify-content-center mx-auto my-5'>
+          <ul className='d-flex justify-content-center flex-column flex-md-row mx-auto my-3 my-md-5'>
             <li>
               <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
             </li>
@@ -94,7 +99,7 @@ function Inicio() {
             </li>
           </ul>
           <hr className='mx-auto' />
-          <p className='mb-0 mt-4 d-flex justify-content-center'>
+          <p className='mb-0 mt-4 d-flex justify-content-center mt-4 mt-md-5'>
             <Link href="/portafolio" className="link-inicio-resumenes">
               <span className='ico-mas-dorado-oscuro'></span>
               <span className='texto-link-inicio'>Ver más</span>
