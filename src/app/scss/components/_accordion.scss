@@ -19,6 +19,9 @@
         text-transform: uppercase;
         letter-spacing: 0rem;
         @media (min-width: $md) {
+          letter-spacing: 0.1rem;
+        }
+        @media (min-width: $lg) {
           letter-spacing: 0.2rem;
         }
         .icono-item {
@@ -57,10 +60,13 @@
           font-weight: 200 !important;
           transition: all .2s ease-in-out;
           box-shadow: none;
-          font-size: 18px;
+          font-size: 1.1rem;
           color: $blanco;
           @media (min-width: $md) {
-            font-size: 26px;
+            font-size: 1.3rem;
+          }
+          @media (min-width: $xl) {
+            font-size: 1.5rem;
           }
           &::after {
             content: '';

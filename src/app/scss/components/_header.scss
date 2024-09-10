@@ -6,7 +6,7 @@ header {
   z-index: 500;
   background-repeat: repeat-x;
   background-position: center;
-  transition: all .8s;
+  transition: all .3s linear;
   height: 45px;
   @media (min-width: $md) {
     height: 55px;
