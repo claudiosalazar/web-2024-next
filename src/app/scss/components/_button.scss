@@ -46,6 +46,9 @@ a {
       @media (min-width: $md) {
         letter-spacing: .12rem !important;
       }
+      @media (min-width: $lg) {
+        letter-spacing: .18rem !important;
+      }
     }
     &.active {
       font-weight: 600;

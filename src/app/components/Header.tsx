@@ -37,7 +37,7 @@ function Header() {
     updateMenuState(pathname);
 
     const handleScroll = () => {
-      if (window.scrollY >= 50) {
+      if (window.scrollY >= 10) {
         if (pathname === '/') {
           setFondoHeader('fondo-inicio');
         } else if (pathname === '/trayectoria') {
@@ -63,7 +63,7 @@ function Header() {
   return (
     <header className={`${fondoHeader} ${menuColor}`}>
       <nav className="navbar">
-        <div className="container-fluid px-0 px-md-2">
+        <div className="container-fluid px-0 px-md-4">
           <div className="col-12 d-flex justify-content-center flex-row" id="navbarNav">
             <ul className="navbar-nav">
               <li className='separador-lista'></li>
