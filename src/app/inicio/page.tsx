@@ -83,30 +83,6 @@ function Inicio() {
             </div>
           </div>
         </section>
-
-        {/* <section className='resumen-conocimiento py-2 py-md5 col-12'>
-          <div className='col-12 col-md-8 mx-auto py-5'>
-            <div className='d-flex align-items-md-stretch flex-column flex-xxl-row'>
-              <div className='d-flex align-items-center mb-5 mb-md-0'>
-                <h3>Conocimientos</h3>
-              </div>
-              <div className='separador-resumen-conocimiento mx-5 mb-5 mb-md-0 mx-md-3 px-md-5'>
-                <Image src={icoConocimientos} className="ico-conocimientos-resumen img-fluid" alt="HTML 5" title="HTML 5" />
-              </div>
-              <div className='d-flex flex-column justify-content-between align-items-baseline mx-4 mx-md-0'>
-                <p>
-                  Mis mejores conocimientos al día de hoy están enfocados al desarrollo Frontend, utilizando frameworks como Angular y bibliotecas como React. También años de experiencia en el uso de software de diseño para proyectos web. 
-                </p>
-                <p className='mb-0 mx-auto mx-md-0 mt-4 mt-md-0'>
-                  <Link href="/conocimientos" className="link-inicio-resumenes">
-                    <span className='ico-mas-blanco'></span>
-                    <span className='texto-link-inicio'>Más información</span>
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section> */}
           
         <section className='resumen-portafolio py-5 col-12'>
           <h3 className='mb-5'>Portafolio</h3>
