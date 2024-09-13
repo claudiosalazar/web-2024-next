@@ -123,7 +123,17 @@ a {
     font-weight: 600 !important;
     display: flex;
     align-items: center;
-    width: fit-content;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 12px;
+    @media (min-width: $md) {
+      width: fit-content;
+      padding-top:0;
+      padding-bottom: 0;
+      margin-top: 0;
+    }
   
     span {
       &.texto-link-portafolio {

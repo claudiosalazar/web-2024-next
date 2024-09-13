@@ -4,69 +4,103 @@
   }
 
   ul.carousel-portafolio-controls {
-    margin: auto;
     list-style: none;
-    padding: 32px 0;
-    // border-right: 1px solid $gris-40;
-    li {
-      display: flex;
-      direction: row;
-      justify-content: center;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      font-size: 2rem;
-      width: 20px;
-      &:first-child {
-        margin-top: 0;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
-      a {
-        text-decoration: none;
-        color: $gris-10;
-        &:hover {
-          color: $dorado;
+    display: none;
+  
+    @media (min-width: $md) {
+      display: inline;
+      margin: auto;
+      li {
+        display: flex;
+        direction: row;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        width: 20px;
+        &:first-child {
+          margin-top: 0;
         }
-        &.active {
-          font-weight: 800;
-          color: $dorado;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          text-decoration: none;
+          color: $gris-10;
+          &:hover {
+            color: $dorado;
+          }
+          &.active {
+            font-weight: 800;
+            color: $dorado;
+          }
         }
       }
     }
   }
   
   .carousel-portafolio-viewport {
-    height: 500px; /* Ajusta la altura según tus necesidades */
+    height: fit-content;
     width: 100%;
     overflow: hidden;
     position: relative;
-
-    &.mobile-height {
-      @media (max-width: 767px) { // Ajusta el ancho según tus necesidades
-        height: 100%;
-      }
+    
+    @media (min-width: $md) {
+      height: 500px !important;
+      max-height: 500px !important;
     }
+
+    @media (min-width: $lg) {
+      height: 500px !important;
+      max-height: 500px !important;
+    }
+
+
     .carousel-portafolio-list {
       list-style: none;
       padding: 0;
       margin: 0;
       transition: transform 0.5s ease-out;
       display: flex;
-      flex-direction: column; /* Cambia la dirección del flex a columna */
+      flex-direction: column;
     }
     
     .carousel-portafolio-item {
-      border-left: 1px solid $gris-30;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 32px;
+      border-left: 0;
+      width: 100%;
       margin: 0;
+      margin-bottom: 36px;
       height: fit-content;
-      @media (max-width: 767px) { // Ajusta el ancho según tus necesidades
-        height: 500px;
+      border-bottom: 1px solid $gris-30;
+      &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
       }
+      @media (min-width: $md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid $gris-30;
+        min-height: fit-content;
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+      @media (min-width: $lg) { // Ajusta el ancho según tus necesidades
+        height: 500px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-right: 0 !important;
+      }
+      
+      .info-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        @media (min-width: $md) { 
+          flex-direction: row;
+        }
+      }
+
+
       h2 {
         text-transform: uppercase;
         font-size: 1.5rem;
@@ -85,9 +119,20 @@
       }
       ul.tecnologias {
         padding: 0;
+        width: 100%;
+        padding-bottom: 42px;
+        @media (min-width: $md) {
+          padding-bottom: 0;
+        }
         li {
           list-style: none;
-          margin-right: 10px;
+          margin-right: 6px;
+          margin-bottom: 6px;
+          float: left;
+          @media (min-width: $lg) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
           img {
             width: auto;
             height: 22px;
@@ -95,14 +140,43 @@
         }
       }
       hr {
+        display: none;
         border-color: $gris-30;
         opacity: 1;
         width: 20%;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        @media (min-width: $md) {
+          display: block;
+        }
+        @media (min-width: $lg) {
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
       }
       .muestra-proyecto {
-        height: 500px;
+        height: fit-content;
+        margin-bottom: 24px;
+        @media (min-width: $md) {
+          height: auto;
+          padding-left: 24px;
+          padding-right: 24px;
+          margin-bottom: 0;
+        }
+        @media (min-width: $md) {
+          height: 500px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @media (min-width: $md) {
+            height: auto;
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+        }
       }
     }
   }

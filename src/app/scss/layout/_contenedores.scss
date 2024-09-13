@@ -27,9 +27,11 @@
   }
   
   .info-portafolio {
-    min-height: calc(100vh - 190px);
-    height: auto;
     background-color: $gris-00;
+    @media (min-width: $md) {
+      min-height: calc(100vh - 190px);
+      height: auto;
+    }
   }
 }
 
