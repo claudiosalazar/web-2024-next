@@ -88,7 +88,7 @@ function Trayectoria() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.6,
+        //delayChildren: 0.6,
         staggerChildren: 0.05
       }
     }
