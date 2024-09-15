@@ -12,10 +12,10 @@ export default function Template ({
     <>
       <motion.div
         /*initial={{ y: -30, scale: 1.01 }}
-        animate={{ y: 0, scale: 1 }}*/ initial={{ y: -20 }} animate={{ y: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+        animate={{ y: 0, scale: 1 }}*/ initial={{ y: -20 }} animate={{ y: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
         {children}
       </motion.div>
-      <motion.div initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+      <motion.div initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.2, ease: "easeOut" }}>
         <Footer />
       </motion.div>
     </>
