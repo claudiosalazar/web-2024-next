@@ -19,7 +19,7 @@ footer {
     border: none;
     border-top: 1px solid #9A9A9A;
     height: 1px;
-    width: 12%;
+    // width: 12%;
     margin-top: 24px;
     margin-bottom: 24px;
   }
@@ -27,6 +27,8 @@ footer {
   ul {
     transition: all 0.3s;
     margin: 0;
+    height: 18px;
+    padding-top: 6px;
     li {
       display: inline-block;
       height: 18px;

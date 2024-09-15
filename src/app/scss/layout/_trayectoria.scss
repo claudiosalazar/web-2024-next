@@ -9,7 +9,10 @@
   p.resumen {
     font-weight: 200;
     color: $dorado-claro-00;
-    line-height: 2;
+    line-height: 1.45;
+    @media (min-width: $lg) {
+      line-height: 2;
+    }
     strong {
       color: $blanco;
     }
