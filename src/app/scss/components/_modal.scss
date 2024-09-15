@@ -1,63 +1,146 @@
-.modal-backdrop {
-  display: none;
-}
+.modal-trayectoria {
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  background-color: rgb(207, 131, 0, .6);
+  display: none !important;
 
-.modal {
-  .modal-dialog {
-    min-width: 100vw;
-    min-height: 100vh;
-    max-height: 100vh;
-    height: 100vh;
-    position: relative;
-    display: flex;
+  &.activo {
+    display: flex !important;
     justify-content: center;
     align-items: center;
-    z-index: 9900;
-    transform: none !important;
-    .modal-content {
-      padding: 40px 44px;
+  }
+
+  .modal-trayectoria-content {
+    position: relative;
+    z-index: 3001;
+    width: 30%;
+    height: fit-content;
+    background-color: rgb(0, 0, 0, .8);
+    padding: 30px 40px 36px 40px;
+    border-radius: 20px 28px 20px 20px;
+    color: $gris-20;
+
+    img {
+      height: 32px;
+      width: auto;
+    }
+
+    h4 {
+      color: $dorado;
+      font-weight: 200;
+      font-size: 1.6rem;
+      letter-spacing: .1rem;
+      margin-bottom: 24px;
+      &::before {
+        content: '|';
+        margin-right: 12px;
+        color: $gris-00;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: .95rem;
+      line-height: 1.65rem;
+      color: $blanco;
+    }
+
+    .cerrar-modal {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: none;
+      right: 12px;
+      top: 12px;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $gris-30;
+      .icono-cerrar {
+        width: 32px;
+        height: 32px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.785423 14L0 13.2146L6.21458 7L0 0.785423L0.785423 0L7 6.21458L13.2146 0L14 0.785423L7.78542 7L14 13.2146L13.2146 14L7 7.78542L0.785423 14Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+        background-size: 14px 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        cursor: pointer;
+        @include rotated-out;
+
+        &:hover {
+          @include rotated-in;
+        }
+      }
+
+      @media (max-width: $md) {
+        width: 28px;
+        height: 28px;
+        right: 6px;
+        top: 6px;
+      }
+    }
+  }
+
+  /*.modal-dialog {
+    position: relative;
+    background-color: $negro;
+    z-index: 1001;
+    height: fit-content;
+    width: 85%;
+    margin: 0 10% 0 5%;
+    border-radius: 45px 24px 0px 45px !important;
+    padding: 40px;
+    text-align: center;
+    bottom: 76px;
+
+    @media (min-width: $md) {
+      margin: 0;
+      padding: 50px !important;
+      border-radius: 18px;
+      width: 419px;
+      height: 339px;
+      padding: 30px 20px;
+      height: fit-content;
+      bottom: 70px !important;
+    }
+
+    @media (min-width: $lg) {
+      top: calc(50% - 380px);
+      right: 70px;
+    }
+
+    .modal-trayectoria-content{
+      position: relative;
       background-color: $negro;
-      border-radius: 45px 0px 45px 45px;
-      margin-left: 20%;
-      margin-right: 20%;
-      @media (min-width: $lg) {
-        margin-left: 25%;
-        margin-right: 25%;
-      }
-      @media (min-width: $xl) {
-        margin-left: 30%;
-        margin-right: 30%;
-      }
-      @media (min-width: $xxl) {
-        margin-left: 35%;
-        margin-right: 35%;
-      }
-      p {
-        font-size: 14px;
-        color: $blanco;
-        line-height: 24px;
-        text-align: justify;
-      }
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+
       .cerrar-modal {
         position: absolute;
-        width:34px;
-        height:34px;
-        max-width:34px;
-        max-height:34px;
-        min-width:34px;
-        min-height:34px;
+        width: 34px;
+        height: 34px;
         border-radius: 50%;
         border: none;
-        right: -16px;
-        top: -16px;
+        right: 12px;
+        top: 12px;
         z-index: 500;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $gris-40;
+        background-color: $gris-30;
+
         .icono-cerrar {
-          width:32px;
-          height:32px;
+          width: 32px;
+          height: 32px;
           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.785423 14L0 13.2146L6.21458 7L0 0.785423L0.785423 0L7 6.21458L13.2146 0L14 0.785423L7.78542 7L14 13.2146L13.2146 14L7 7.78542L0.785423 14Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
           background-size: 14px 14px;
           background-position: center;
@@ -65,18 +148,30 @@
           border-radius: 50%;
           cursor: pointer;
           @include rotated-out;
+
           &:hover {
             @include rotated-in;
           }
         }
+
         @media (max-width: $md) {
-          width:28px;
-          height:28px;
+          width: 28px;
+          height: 28px;
           right: 6px;
-          top: 6px; 
+          top: 6px;
+        }
+      }
+
+      p {
+        line-height: 20px;
+        color: $gris-30;
+        font-size: 16px;
+
+        @media (max-width: $md) {
+          font-size: 12px;
+          margin: auto 20px;
         }
       }
     }
-  }
+  }*/
 }
-

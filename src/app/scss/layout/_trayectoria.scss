@@ -62,10 +62,22 @@
           z-index: 10;
           width: fit-content;
           padding-right: 10px;
-          color: $blanco !important;
           font-weight: 500 !important;
           letter-spacing: 0.5px;
           background-color: $dorado;
+          margin-bottom: .4rem !important;
+          a {
+            color: $blanco;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+              text-decoration: none;
+              color: $dorado-claro-00;
+            }
+          }
+        }
+        &.rol {
+          font-size: .9rem !important;
         }
         &.duracion-trabajo {
           color: $dorado-claro-00;

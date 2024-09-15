@@ -1,8 +1,15 @@
 'use client';
 
-import { easeIn, motion, useAnimation, AnimatePresence } from "framer-motion";
-import React from "react";
-import { useEffect, useState } from "react";
+import { AnimatePresence, easeIn, motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import Image from 'next/image';
+
+import logoItau from '../assets/logos/logo-itau.png';
+import logoNtt from '../assets/logos/logo-ntt-data.png';
+import logoBbk from '../assets/logos/logo-bbk.png';
+import logoMayo from '../assets/logos/logo-mayo.png';
+import logoKi from '../assets/logos/logo-ki.png';
+import logoNuestragencia from '../assets/logos/logo-nuestragencia.png';
 
 function Trayectoria() {
   const controlTitulo = useAnimation();
@@ -10,8 +17,9 @@ function Trayectoria() {
   const controlbotonCv = useAnimation();
   const controlContainerList = useAnimation();
   const controlItem = useAnimation();
-  const controlFondoStrongAnho = useAnimation();
   const controlFondoItem = useAnimation();
+
+  const [visibleModal, setVisibleModal] = useState<string | null>(null);
 
   const titulo = {
     hidden: { 
@@ -111,31 +119,13 @@ function Trayectoria() {
     sequence();
   }, [controlTitulo, controlResumen, controlbotonCv, controlContainerList, controlItem, controlFondoItem]);
 
-  useEffect(() => {
-    // 1. Selecciona todos los elementos que tengan la clase `modal`.
-    const modals = document.querySelectorAll('.modal');
-  
-    const observers: MutationObserver[] = [];
-  
-    // 2. Itera sobre cada modal encontrado.
-    modals.forEach((modal) => {
-      // 3. Para cada modal, crea un `MutationObserver`.
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.attributeName === 'class') {
-            const target = mutation.target as HTMLElement;
-          }
-        });
-      });
-  
-      observer.observe(modal, { attributes: true });
-      observers.push(observer);
-    });
-  
-    // 5. Desconecta cada `MutationObserver` cuando el componente se desmonte.
-    return () => observers.forEach(observer => observer.disconnect());
-  }, []);
+  const handleOpenModal = (modalId: string) => {
+    setVisibleModal(modalId);
+  };
 
+  const handleCloseModal = () => {
+    setVisibleModal(null);
+  };
 
   return (
     <>
@@ -156,7 +146,7 @@ function Trayectoria() {
             </div>
 
             <div className="col-12 col-md-6">
-              <motion.ul  className="mt-4 mt-md-0 ps-md-2 ps-lg-0 containerList" initial="hidden" variants={containerList} animate={controlContainerList}>
+              <motion.ul className="mt-4 mt-md-0 ps-md-2 ps-lg-0 containerList" initial="hidden" variants={containerList} animate={controlContainerList}>
                 {[0].map((index) => (
                   <React.Fragment key={index}>
                     <motion.li className="item" variants={item}></motion.li>
@@ -164,9 +154,9 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <div>
                           <p className="nombre-empresa">
-                            ITAU
+                            <a href="#" onClick={() => handleOpenModal('modalItau')}>ITAÚChile</a>
                           </p>
-                          <p>UI Developer</p>
+                          <p className="rol">UI Developer</p>
                         </div>
                         <p className="duracion-trabajo text-end">
                           2021 - 2023
@@ -179,7 +169,7 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <div>
                           <p className="nombre-empresa">
-                            everis / NTT DATA
+                            <a href="#" onClick={() => handleOpenModal('modalEveris')}>NTT DATA</a>
                           </p>
                           <p>UI Developer</p>
                         </div>
@@ -194,9 +184,9 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            BBK Group
+                            <a href="#" onClick={() => handleOpenModal('modalBbk')}>BBK Group</a>
                           </p>
-                          <p>Frontend / UX</p>
+                          <p className="rol">Frontend / UX</p>
                         </span>
                         <p className="duracion-trabajo text-end">
                           2017
@@ -209,9 +199,9 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            MAYO Group
+                            <a href="#" onClick={() => handleOpenModal('modalMayo')}>MAYO Group Chile</a>
                           </p>
-                          <p>Frontend / UX</p>
+                          <p className="rol">Frontend / UX</p>
                         </span>
                         <p className="duracion-trabajo text-end">
                           2009 - 2016
@@ -224,9 +214,9 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            KITEKNOLOGY
+                            <a href="#" onClick={() => handleOpenModal('modalKi')}>Ki Technologies</a>
                           </p>
-                          <p>Frontend / UX</p>
+                          <p className="rol">Frontend / UX</p>
                         </span>
                         <p className="duracion-trabajo text-end">
                           2008 - 2009
@@ -239,9 +229,9 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            NUESTRAGENCIA
+                            <a href="#" onClick={() => handleOpenModal('modalNuestragencia')}>nuestraAgencia</a>
                           </p>
-                          <p>Frontend / UX</p>
+                          <p className="rol">Frontend / UX</p>
                         </span>
                         <p className="duracion-trabajo text-end">
                           2004 - 2007
@@ -259,71 +249,145 @@ function Trayectoria() {
       </section>
 
       {/* Modales trayectoria */}
-      <div className="modal fade" id="modalItau" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <button type="button" className="cerrar-modal" data-bs-dismiss="modal" aria-label="Close">
-              <div className='icono-cerrar'></div>
-            </button>
-            <p>Desempeñé el rol de desarrollador web, colaborando estrechamente con el equipo de UX/UI para transformar diseños en código HTML. Mi trabajo se centró en el desarrollo de la interfaz del sitio privado del banco, asegurando que fuera responsive y cumpliendo con los estándares de calidad exigidos. Además, trabajé bajo metodologías ágiles, lo que facilitó la entrega iterativa y eficiente de funcionalidades clave. Esta experiencia me permitió fortalecer mis habilidades en desarrollo web y en la colaboración efectiva dentro de equipos multidisciplinarios.</p>
-          </div>
-        </div>
-      </div>
+      <AnimatePresence>
+        {visibleModal === 'modalItau' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className="modal-trayectoria activo"
+          >
+            <div className="modal-trayectoria-content">
+              <button type="button" className="cerrar-modal" onClick={handleCloseModal}>
+                <div className='icono-cerrar'></div>
+              </button>
+              <div className="d-flex">
+                <div className="me-3 ">
+                  <Image src={logoItau} alt="itau logo" title="Itau" />
+                </div>
+                <h4>ITAU</h4>
+              </div>
+              <p>Desempeñé el rol de desarrollador web, colaborando estrechamente con el equipo de UX/UI para transformar diseños en código HTML. Mi trabajo se centró en el desarrollo de la interfaz del sitio privado del banco, asegurando que fuera responsive y cumpliendo con los estándares de calidad exigidos. Además, trabajé bajo metodologías ágiles, lo que facilitó la entrega iterativa y eficiente de funcionalidades clave. Esta experiencia me permitió fortalecer mis habilidades en desarrollo web y en la colaboración efectiva dentro de equipos multidisciplinarios.</p>
+            </div>
+          </motion.div>
+        )}
 
-      <div className="modal fade" id="modalEveris" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <button type="button" className="cerrar-modal" data-bs-dismiss="modal" aria-label="Close">
-              <div className='icono-cerrar'></div>
-            </button>
-            <p>Durante mi trayectoria en everis Chile, me desempeñé como desarrollador web especializado en la creación de HTML a partir de diseños proporcionados por el equipo UX. Utilicé principalmente Angular como framework para desarrollar interfaces de usuario, principalmente en proyectos para Banco Estado y BCI. Mi rol implicó asegurar la implementación efectiva de los diseños en soluciones web robustas y responsive, contribuyendo así al éxito y la calidad de los proyectos entregados. Esta experiencia consolidó mi habilidad para trabajar en entornos exigentes y multidisciplinarios.</p>
-          </div>
-        </div>
-      </div>
+        {visibleModal === 'modalEveris' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className="modal-trayectoria activo"
+          >
+            <div className="modal-trayectoria-content">
+              <button type="button" className="cerrar-modal" onClick={handleCloseModal}>
+                <div className='icono-cerrar'></div>
+              </button>
+              <div className="d-flex">
+                <div className="me-3 ">
+                  <Image src={logoNtt} alt="everis ntt data logo" title="everis / NTT DATA" />
+                </div>
+                <h4>NTT DATA</h4>
+              </div>
+              <p>Durante mi trayectoria en everis Chile, me desempeñé como desarrollador web especializado en la creación de HTML a partir de diseños proporcionados por el equipo UX. Utilicé principalmente Angular como framework para desarrollar interfaces de usuario, principalmente en proyectos para Banco Estado y BCI. Mi rol implicó asegurar la implementación efectiva de los diseños en soluciones web robustas y responsive, contribuyendo así al éxito y la calidad de los proyectos entregados. Esta experiencia consolidó mi habilidad para trabajar en entornos exigentes y multidisciplinarios.</p>
+            </div>
+          </motion.div>
+        )}
 
-      <div className="modal fade" id="modalBbk" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <button type="button" className="cerrar-modal" data-bs-dismiss="modal" aria-label="Close">
-              <div className='icono-cerrar'></div>
-            </button>
-            <p>En BBK Group, desempeñé un rol dual como Diseñador UX y Frontend Developer. Como diseñador UX, fui responsable de crear wireframes que guiaron el diseño y la funcionalidad de interfaces web centradas en la experiencia del usuario. Además, como desarrollador frontend, participé activamente en la implementación del sitio web enfocado en estrategias de marketing. Esta experiencia me permitió integrar mis habilidades creativas con sólidas capacidades técnicas.</p>
-          </div>
-        </div>
-      </div>
+        {visibleModal === 'modalBbk' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className="modal-trayectoria activo"
+          >
+            <div className="modal-trayectoria-content">
+              <button type="button" className="cerrar-modal" onClick={handleCloseModal}>
+                <div className='icono-cerrar'></div>
+              </button>
+              <div className="d-flex">
+                <div className="me-3 ">
+                  <Image src={logoBbk} alt="bbk group logo" title="BBK Group" />
+                </div>
+                <h4>BBK Group</h4>
+              </div>
+              <p>En BBK Group, desempeñé un rol dual como Diseñador UX y Frontend Developer. Como diseñador UX, fui responsable de crear wireframes que guiaron el diseño y la funcionalidad de interfaces web centradas en la experiencia del usuario. Además, como desarrollador frontend, participé activamente en la implementación del sitio web enfocado en estrategias de marketing. Esta experiencia me permitió integrar mis habilidades creativas con sólidas capacidades técnicas.</p>
+            </div>
+          </motion.div>
+        )}
 
-      <div className="modal fade" id="modalMayo" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <button type="button" className="cerrar-modal" data-bs-dismiss="modal" aria-label="Close">
-              <div className='icono-cerrar'></div>
-            </button>
-            <p>Como Diseñador Web Senior y Productor Digital, lideré la creación y desarrollo frontend de minisitios, landing pages y campañas de email marketing. También gestioné la producción integral de campañas de marketing digital, incluyendo la creación de banners y emails promocionales. Mi enfoque se centró en combinar creatividad visual con funcionalidad técnica para optimizar la experiencia del usuario y maximizar el impacto de las estrategias digitales.</p>
-          </div>
-        </div>
-      </div>
+        {visibleModal === 'modalMayo' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className="modal-trayectoria activo"
+          >
+            <div className="modal-trayectoria-content">
+              <button type="button" className="cerrar-modal" onClick={handleCloseModal}>
+                <div className='icono-cerrar'></div>
+              </button>
+              <div className="d-flex">
+                <div className="me-3 ">
+                  <Image src={logoMayo} alt="mayo group logo" title="MAYO Group" />
+                </div>
+                <h4>MAYO Group Chile</h4>
+              </div>
+              <p>Como Diseñador Web Senior y Productor Digital, lideré la creación y desarrollo frontend de minisitios, landing pages y campañas de email marketing. También gestioné la producción integral de campañas de marketing digital, incluyendo la creación de banners y emails promocionales. Mi enfoque se centró en combinar creatividad visual con funcionalidad técnica para optimizar la experiencia del usuario y maximizar el impacto de las estrategias digitales.</p>
+            </div>
+          </motion.div>
+        )}
 
-      <div className="modal fade" id="modalKi" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <button type="button" className="cerrar-modal" data-bs-dismiss="modal" aria-label="Close">
-              <div className='icono-cerrar'></div>
-            </button>
-            <p>Como Diseñador Web Senior, me especialicé en la creación de diseños UI y el desarrollo frontend de sitios corporativos construidos principalmente en PHP y ASP.net. Mi enfoque se centró en combinar un diseño visual atractivo con una funcionalidad robusta, asegurando una experiencia de usuario intuitiva y efectiva en entornos corporativos.Como Diseñador Web Senior, me especialicé en la creación de diseños UI y el desarrollo frontend de sitios corporativos construidos principalmente en PHP y ASP.net. Mi enfoque se centró en combinar un diseño visual atractivo con una funcionalidad robusta, asegurando una experiencia de usuario intuitiva y efectiva en entornos corporativos.</p>
-          </div>
-        </div>
-      </div>
+        {visibleModal === 'modalKi' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className="modal-trayectoria activo"
+          >
+            <div className="modal-trayectoria-content">
+              <button type="button" className="cerrar-modal" onClick={handleCloseModal}>
+                <div className='icono-cerrar'></div>
+              </button>
+              <div className="d-flex">
+                <div className="me-3 ">
+                  <Image src={logoKi} alt="ki technologies logo" title="Ki Technologies" />
+                </div>
+                <h4>Ki Technologies</h4>
+              </div>
+              <p>Como Diseñador Web Senior, me especialicé en la creación de diseños UI y el desarrollo frontend de sitios corporativos construidos principalmente en PHP y ASP.net. Mi enfoque se centró en combinar un diseño visual atractivo con una funcionalidad robusta, asegurando una experiencia de usuario intuitiva y efectiva en entornos corporativos.Como Diseñador Web Senior, me especialicé en la creación de diseños UI y el desarrollo frontend de sitios corporativos construidos principalmente en PHP y ASP.net. Mi enfoque se centró en combinar un diseño visual atractivo con una funcionalidad robusta, asegurando una experiencia de usuario intuitiva y efectiva en entornos corporativos.</p>
+            </div>
+          </motion.div>
+        )}
 
-      <div className="modal fade" id="modalNuestragencia" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <button type="button" className="cerrar-modal" data-bs-dismiss="modal" aria-label="Close">
-              <div className='icono-cerrar'></div>
-            </button>
-            <p>Como Diseñador Gráfico Junior, lideré proyectos que incluyeron la creación de avisos de prensa, desarrollo de imagen corporativa y diseño de sitios web en HTML4 y Flash. Mi enfoque se centró en la combinación de creatividad visual con soluciones técnicas innovadoras para alcanzar los objetivos de comunicación visual de manera efectiva.</p>
-          </div>
-        </div>
-      </div>
+        {visibleModal === 'modalNuestragencia' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className="modal-trayectoria activo"
+          >
+            <div className="modal-trayectoria-content">
+              <button type="button" className="cerrar-modal" onClick={handleCloseModal}>
+                <div className='icono-cerrar'></div>
+              </button>
+              <div className="d-flex">
+                <div className="me-3 ">
+                  <Image src={logoNuestragencia} alt="nuestragencia logo" title="nuestrAgencia" />
+                </div>
+                <h4>nuestrAgencia</h4>
+              </div>
+              <p>Como Diseñador Gráfico Junior, lideré proyectos que incluyeron la creación de avisos de prensa, desarrollo de imagen corporativa y diseño de sitios web en HTML4 y Flash. Mi enfoque se centró en la combinación de creatividad visual con soluciones técnicas innovadoras para alcanzar los objetivos de comunicación visual de manera efectiva.</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
