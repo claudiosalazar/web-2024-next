@@ -88,7 +88,6 @@ function Trayectoria() {
     visible: {
       opacity: 1,
       transition: {
-        //delayChildren: 0.6,
         staggerChildren: 0.05
       }
     }
@@ -154,7 +153,7 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <div>
                           <p className="nombre-empresa">
-                            <a href="#" onClick={() => handleOpenModal('modalItau')}>ITAÚChile</a>
+                          <a href="#" onClick={(e) => { e.preventDefault(); handleOpenModal('modalItau'); }}>Itaú Chile</a>
                           </p>
                           <p className="rol">UI Developer</p>
                         </div>
@@ -169,7 +168,7 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <div>
                           <p className="nombre-empresa">
-                            <a href="#" onClick={() => handleOpenModal('modalEveris')}>NTT DATA</a>
+                            <a href="#" onClick={(e) => { e.preventDefault(); handleOpenModal('modalEveris'); }}>NTT DATA</a>
                           </p>
                           <p>UI Developer</p>
                         </div>
@@ -184,7 +183,7 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            <a href="#" onClick={() => handleOpenModal('modalBbk')}>BBK Group</a>
+                            <a href="#" onClick={(e) => { e.preventDefault(); handleOpenModal('modalBbk'); }}>BBK Group</a>
                           </p>
                           <p className="rol">Frontend / UX</p>
                         </span>
@@ -199,7 +198,7 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            <a href="#" onClick={() => handleOpenModal('modalMayo')}>MAYO Group Chile</a>
+                            <a href="#" onClick={(e) => { e.preventDefault(); handleOpenModal('modalMayo'); }}>MAYO Group Chile</a>
                           </p>
                           <p className="rol">Frontend / UX</p>
                         </span>
@@ -214,7 +213,7 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            <a href="#" onClick={() => handleOpenModal('modalKi')}>Ki Technologies</a>
+                            <a href="#" onClick={(e) => { e.preventDefault(); handleOpenModal('modalKi'); }}>Ki Technologies</a>
                           </p>
                           <p className="rol">Frontend / UX</p>
                         </span>
@@ -229,7 +228,7 @@ function Trayectoria() {
                       <div className="d-flex justify-content-between">
                         <span className="d-block">
                           <p className="nombre-empresa">
-                            <a href="#" onClick={() => handleOpenModal('modalNuestragencia')}>nuestraAgencia</a>
+                            <a href="#" onClick={(e) => { e.preventDefault(); handleOpenModal('modalNuestragencia'); }}>nuestraAgencia</a>
                           </p>
                           <p className="rol">Frontend / UX</p>
                         </span>

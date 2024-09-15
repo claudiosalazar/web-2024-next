@@ -3,6 +3,47 @@
     color: $dorado-oscuro;
   }
 
+  ul.tipo-proyecto {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 1px solid $gris-30;
+    width: fit-content;
+    margin: 0 auto 30px auto;
+    padding-bottom: 18px;
+    @media (min-width: $md) {
+      border: none;
+    }
+    li {
+      margin: 0 6px;
+      color: $blanco;
+      @media (min-width: $md) {
+        margin: 0 12px;
+      }
+      a {
+        text-transform: uppercase;
+        color: $blanco;
+        font-size: .7rem;
+        @media (min-width: $md) {
+          letter-spacing: 0.2rem;
+          font-size: .8rem;
+        }
+        &.active {
+          font-weight: 600;
+          color: $dorado;
+        }
+      }
+    }
+  }
+
+  /*.profesional {
+    display: inherit;
+  }
+
+  .personal {
+    display: none;
+  }*/
+
   ul.carousel-portafolio-controls {
     list-style: none;
     display: none;
