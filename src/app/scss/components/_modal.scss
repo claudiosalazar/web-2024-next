@@ -103,11 +103,19 @@
   display: none !important;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
 
-  &.activo {
+  &.imagen-visible {
     display: flex !important;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+  }
+
+  &.ocultar {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
   }
 
   .item-modal {

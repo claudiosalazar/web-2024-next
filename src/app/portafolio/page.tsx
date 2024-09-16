@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
-import { easeIn, motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, easeIn, motion, useAnimation } from 'framer-motion';
 import Link from "next/link";
 import Image from 'next/image';
 import miBanco1 from '../assets/portafolio/mi-banco-1.jpg';
@@ -43,6 +43,11 @@ import foto6 from '../assets/portafolio/foto/foco.jpg';
 import foto7 from '../assets/portafolio/foto/moto.jpg';
 import foto8 from '../assets/portafolio/foto/pelota.jpg';
 
+const modalVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+};
+
 function Portafolio() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeSection, setActiveSection] = useState(0); // Estado para controlar la sección activa
@@ -79,6 +84,10 @@ function Portafolio() {
         duration: 0.1
       }
     },
+  };
+
+  const handleClose = () => {
+    setActiveImage(null);
   };
 
   const handleImageClick = useCallback((imageSrc: string) => {
@@ -595,22 +604,31 @@ function Portafolio() {
       </section>
 
       {/* Modales */}
-      {activeImage && (
-        <div className={`modal-portafolio ${activeImage ? 'activo' : ''}`} onClick={() => setActiveImage(null)}>
-          <div className='item-modal'>
-            <div className='cerrar-modal' onClick={() => setActiveImage(null)}>
-              <div className='icono-cerrar'></div>
+      <AnimatePresence>
+        {activeImage && (
+          <motion.div 
+            className="modal-portafolio imagen-visible"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={modalVariants}
+            onClick={handleClose}
+          >
+            <div className='item-modal'>
+              <div className='cerrar-modal' onClick={handleClose}>
+                <div className='icono-cerrar'></div>
+              </div>
+              <Image 
+                src={activeImage} 
+                className="ico-conocimientos img-fluid" 
+                alt="fotografía" 
+                width={800} // Ajusta el ancho según sea necesario
+                height={600} // Ajusta la altura según sea necesario
+              />
             </div>
-            <Image 
-              src={activeImage} 
-              className="ico-conocimientos img-fluid" 
-              alt="fotografía" 
-              width={800} // Ajusta el ancho según sea necesario
-              height={600} // Ajusta la altura según sea necesario
-            />
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
