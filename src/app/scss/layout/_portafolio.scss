@@ -16,33 +16,30 @@
     }
     li {
       margin: 0 6px;
-      color: $blanco;
+      color: $gris-40;
       @media (min-width: $md) {
         margin: 0 12px;
       }
       a {
         text-transform: uppercase;
-        color: $blanco;
+        color: $gris-40;
         font-size: .7rem;
+        transition: all .3s linear;
         @media (min-width: $md) {
-          letter-spacing: 0.2rem;
+          letter-spacing: 0.05rem;
           font-size: .8rem;
         }
+        &:hover {
+          letter-spacing: 0.1rem;
+        }
         &.active {
-          font-weight: 600;
-          color: $dorado;
+          font-weight: 500;
+          color: $dorado-oscuro;
+          letter-spacing: 0.1rem;
         }
       }
     }
   }
-
-  /*.profesional {
-    display: inherit;
-  }
-
-  .personal {
-    display: none;
-  }*/
 
   ul.carousel-portafolio-controls {
     list-style: none;
@@ -137,8 +134,11 @@
         list-style: none;
         padding: 0;
         li {
-          width: 25%;
+          width: 50%;
           display: inline-block;
+          @media (min-width: $md) {
+            width: 25%;
+          }
           img {
             width: 100%;
             padding: 0;

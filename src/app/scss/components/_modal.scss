@@ -114,6 +114,12 @@
     max-width: 1500px;
     max-height: 1500px;
     position: relative;
+    margin-left: 12px;
+    margin-right: 12px;
+    @media (min-width: $md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
     img {
       width: auto;
       height: auto;

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import Link from "next/link";
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
@@ -19,6 +19,9 @@ import icoFigma from '../assets/iconos/ico-figma.png';
 import icoPhotoshop from '../assets/iconos/ico-photoshop.png';
 import icoIllustrator from '../assets/iconos/ico-illustrator.png';
 import icoStudioPain from '../assets/iconos/ico-clip-studio-paint.png';
+
+// Diseño
+import loveRockBeer from '../assets/portafolio/disenho/love-rock-beer.jpg';
 
 // Ilustraciones
 import manchester from '../assets/portafolio/ilustraciones/manchester-logo.jpg';
@@ -43,7 +46,6 @@ import foto8 from '../assets/portafolio/foto/pelota.jpg';
 function Portafolio() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeSection, setActiveSection] = useState(0); // Estado para controlar la sección activa
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   const handleImageClick = useCallback((imageSrc: string) => {
@@ -82,7 +84,7 @@ function Portafolio() {
             <div className='row'>
               <div className='col-md-1 d-flex flex-column justify-content-center pe-md-0'>
                 <ul className="carousel-portafolio-controls">
-                  {['•', '•', '•', '•'].map((dot, i) => (
+                  {['•', '•', '•', '•', '•'].map((dot, i) => (
                     <li key={`dot-${i}`}>
                       <a href="#" className={`d-block ${activeIndex === i ? 'active' : ''}`} onClick={() => handleSelect(i)}>{dot}</a>
                     </li>
@@ -91,7 +93,7 @@ function Portafolio() {
               </div>
               <div className="col-11 mx-auto col-md-11">
                 <div className="carousel-portafolio-viewport">
-                  <ul className={`carousel-portafolio-list ${isMobile ? 'mobile-height' : ''}`} style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
+                  <ul className="carousel-portafolio-list" style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
                     <li key={0} className="carousel-portafolio-item">
                       <div className='row info-mobile'>
                         <div className='col-12 col-md-4 ps-md-5 pe-md-0 d-md-flex align-items-md-start flex-md-column'>
@@ -99,6 +101,47 @@ function Portafolio() {
                           <p className='mb-3 mb-xl-4'>
                             Proyecto personal de sitio bancario ficticio. Creación de diseño UI y desarrollo frontend y backend (Node.js). En el se pueden realizar transferencias, pagos de productos y modificación de datos del usuario con se ingresa al sitio. Los datos para poder ingresar y visualizar el proyecto son:
                           </p>
+                          <p className='mb-3 mb-xl-4'>
+                            <span>Usuario: <strong>12.840.432-5</strong></span>
+                            <br />
+                            <span>Clave: <strong>Usuario-123</strong></span>
+                          </p>
+                          <p className='mb-3 mb-xl-4'>
+                            <span>Usuario: <strong>9.328.275-2</strong></span>
+                            <br />
+                            <span>Clave: <strong>Usuario-123</strong></span>
+                          </p>
+                          <p className='mb-2'><span>Tecnologías y software utilizados:</span></p>
+                          <ul className='tecnologias'>
+                            <li>
+                              <Image src={icoAngular} alt="Angular" title="Angular" />
+                            </li>
+                            <li>
+                              <Image src={icoNode} alt="Node.js" title="Node.js" />
+                            </li>
+                            <li>
+                              <Image src={icoMysql} alt="MySql" title="MySql" />
+                            </li>
+                            <li>
+                              <Image src={icoHtml} alt="HTML 5" title="HTML 5" />
+                            </li>
+                            <li>
+                              <Image src={icoBootstrap} alt="Bootstrap 5" title="Bootstrap 5" />
+                            </li>
+                            <li>
+                              <Image src={icoSass} alt="Sass" title="Sass" />
+                            </li>
+                            <li>
+                              <Image src={icoFigma} alt="Figma" title="Figma" />
+                            </li>
+                            <li>
+                              <Image src={icoPhotoshop} alt="Photoshop" title="Photoshop" />
+                            </li>
+                            <li>
+                              <Image src={icoIllustrator} alt="Illustrator" title="Illustrator" />
+                            </li>
+                          </ul>
+                          <hr />
                           <p>
                             <Link href="https://mi-banco.claudiosalazar.cl" target='new' className="link-portafolio-proyectos">
                               <span className='ico-mas-proyecto'></span>
@@ -129,6 +172,76 @@ function Portafolio() {
                       </div>
                     </li>
                     <li key={2} className="carousel-portafolio-item">
+                      <div className='row info-mobile'>
+                        <div className='col-12 col-md-4 ps-md-5 d-md-flex align-items-md-start flex-md-column'>
+                          <h2>Diseño Gráfico</h2>
+                          <p className='mb-3 mb-xl-4'>
+                            Ilustraciones de personajes de películas y animaciones de mis gustos personales.
+                          </p>
+                          <p className='mb-2'><span>Software utilizados:</span></p>
+                          <ul className='tecnologias'>
+                            <li>
+                              <Image src={icoPhotoshop} alt="Photoshop" title="Photoshop" />
+                            </li>
+                            <li>
+                              <Image src={icoIllustrator} alt="Illustrator" title="Illustrator" />
+                            </li>
+                          </ul>
+                          <hr />
+                          <p>
+                            <Link href="https://www.artstation.com/claudiosvcl" target='new' className="link-portafolio-proyectos">
+                              <span className='ico-mas-proyecto'></span>
+                              <span className='texto-link-portafolio'>Ver más</span>
+                            </Link>
+                          </p>
+                        </div>
+                        <div className='col-12 col-md-8 muestra-proyecto'>
+                          <ul className='galeria-item-portafolio'>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(manchester.src); }}>
+                                <Image src={manchester} className="ico-conocimientos img-fluid" alt="logo manchester united" title="Logo Manchester United" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(aguilaAudax.src); }}>
+                                <Image src={aguilaAudax} className="ico-conocimientos img-fluid" alt="logo audax italiano" title="Ilustracion logo Audax Italiano" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(skeletor.src); }}>
+                                <Image src={skeletor} className="ico-conocimientos img-fluid" alt="skeletor" title="Skeletor" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(wonderWoman.src); }}>
+                                <Image src={wonderWoman} className="ico-conocimientos img-fluid" alt="retrato wonde woman" title="Retrato Wonde Woman" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(darkMaul.src); }}>
+                                <Image src={darkMaul} className="ico-conocimientos img-fluid" alt="retrato dark maul" title="Retrato Dark Maul Star Wars" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(scar.src); }}>
+                                <Image src={scar} className="ico-conocimientos img-fluid" alt="postrait wonde woman" title="Retrato Wonde Woman" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(witchKing.src); }}>
+                                <Image src={witchKing} className="ico-conocimientos img-fluid" alt="logo manchester united" title="Logo Manchester United" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(loveRockBeer.src); }}>
+                                <Image src={loveRockBeer} className="ico-conocimientos img-fluid" alt="postrait wonde woman" title="Retrato Wonde Woman" />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li key={3} className="carousel-portafolio-item">
                       <div className='row info-mobile'>
                         <div className='col-12 col-md-4 ps-md-5 d-md-flex align-items-md-start flex-md-column'>
                           <h2>Ilustraciones</h2>
@@ -201,10 +314,17 @@ function Portafolio() {
                         </div>
                       </div>
                     </li>
-                    <li key={3} className="carousel-portafolio-item">
+                    <li key={4} className="carousel-portafolio-item">
                       <div className='row info-mobile'>
                         <div className='col-12 col-md-4 ps-md-5 d-md-flex align-items-md-start flex-md-column'>
-                          <h2>Fotografía</h2>
+                          <h2 className='mb-0'>Fotografía</h2>
+                          <hr />
+                          <p>
+                            <Link href="https://www.instagram.com/claudiosvcl/l" target='new' className="link-portafolio-proyectos">
+                              <span className='ico-mas-proyecto'></span>
+                              <span className='texto-link-portafolio'>Ver más</span>
+                            </Link>
+                          </p>
                         </div>
                         <div className='col-12 col-md-8 muestra-proyecto'>
                           <ul className='galeria-item-portafolio'>
@@ -272,11 +392,11 @@ function Portafolio() {
               </div>
               <div className="col-11 mx-auto col-md-11">
                 <div className="carousel-portafolio-viewport">
-                  <ul className={`carousel-portafolio-list ${isMobile ? 'mobile-height' : ''}`} style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
+                  <ul className='carousel-portafolio-list' style={{ transform: `translateY(-${activeIndex * 500}px)` }}>
                     <li key={0} className="carousel-portafolio-item">
                       <div className='row info-mobile'>
-                      <div className='col-12 col-md-4 ps-md-5 pe-md-0 d-md-flex align-items-md-start flex-md-column'>
-                          <h2>Mi Banco</h2>
+                        <div className='col-12 col-md-4 ps-md-5 pe-md-0 d-md-flex align-items-md-start flex-md-column'>
+                          <h2>Proyecto 1</h2>
                           <p className='mb-3 mb-xl-4'>
                             Proyecto personal de sitio bancario ficticio. Creación de diseño UI y desarrollo frontend y backend (Node.js). En el se pueden realizar transferencias, pagos de productos y modificación de datos del usuario con se ingresa al sitio. Los datos para poder ingresar y visualizar el proyecto son:
                           </p>
