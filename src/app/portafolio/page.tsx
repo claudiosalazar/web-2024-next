@@ -21,7 +21,14 @@ import icoIllustrator from '../assets/iconos/ico-illustrator.png';
 import icoStudioPain from '../assets/iconos/ico-clip-studio-paint.png';
 
 // Diseño
+import cym from '../assets/portafolio/disenho/cym.jpg';
 import loveRockBeer from '../assets/portafolio/disenho/love-rock-beer.jpg';
+import adidas from '../assets/portafolio/disenho/adidas.jpg';
+import katarsis from '../assets/portafolio/disenho/katarsis.jpg';
+import alacranes from '../assets/portafolio/disenho/alacranes.jpg';
+import bigMark from '../assets/portafolio/disenho/bigmark.jpg';
+import megasalud from '../assets/portafolio/disenho/megasalud.jpg';
+import aflorar from '../assets/portafolio/disenho/aflorar.jpg';
 
 // Ilustraciones
 import manchester from '../assets/portafolio/ilustraciones/manchester-logo.jpg';
@@ -34,7 +41,7 @@ import witchKing from '../assets/portafolio/ilustraciones/witch-king.jpg';
 import skullBatman from '../assets/portafolio/ilustraciones/skull-batman.jpg';
 
 // Fotos
-import foto1 from '../assets/portafolio/foto/adidas.jpg';
+import foto1 from '../assets/portafolio/foto/constanera.jpg';
 import foto2 from '../assets/portafolio/foto/constanera.jpg';
 import foto3 from '../assets/portafolio/foto/carretera.jpg';
 import foto4 from '../assets/portafolio/foto/macbook.jpg';
@@ -277,43 +284,43 @@ function Portafolio() {
                           <div className='col-12 col-md-8 muestra-proyecto'>
                             <ul className='galeria-item-portafolio'>
                               <li>
-                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(manchester.src); }}>
-                                  <Image src={manchester} className="ico-conocimientos img-fluid" alt="logo manchester united" title="Logo Manchester United" />
+                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(cym.src); }}>
+                                  <Image src={cym} className="ico-conocimientos img-fluid" alt="logo c&m" title="Logo C&M" />
                                 </a>
                               </li>
                               <li>
-                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(aguilaAudax.src); }}>
-                                  <Image src={aguilaAudax} className="ico-conocimientos img-fluid" alt="logo audax italiano" title="Ilustracion logo Audax Italiano" />
+                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(alacranes.src); }}>
+                                  <Image src={alacranes} className="ico-conocimientos img-fluid" alt="logo c&m" title="Logo C&M" />
                                 </a>
                               </li>
                               <li>
-                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(skeletor.src); }}>
-                                  <Image src={skeletor} className="ico-conocimientos img-fluid" alt="skeletor" title="Skeletor" />
+                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(bigMark.src); }}>
+                                  <Image src={bigMark} className="ico-conocimientos img-fluid" alt="logo c&m" title="Logo BigMark" />
                                 </a>
                               </li>
                               <li>
-                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(wonderWoman.src); }}>
-                                  <Image src={wonderWoman} className="ico-conocimientos img-fluid" alt="retrato wonde woman" title="Retrato Wonde Woman" />
+                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(katarsis.src); }}>
+                                  <Image src={katarsis} className="ico-conocimientos img-fluid" alt="logo katarsis" title="Logo Katarsis" />
                                 </a>
                               </li>
                               <li>
-                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(darkMaul.src); }}>
-                                  <Image src={darkMaul} className="ico-conocimientos img-fluid" alt="retrato dark maul" title="Retrato Dark Maul Star Wars" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(scar.src); }}>
-                                  <Image src={scar} className="ico-conocimientos img-fluid" alt="postrait wonde woman" title="Retrato Wonde Woman" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(witchKing.src); }}>
-                                  <Image src={witchKing} className="ico-conocimientos img-fluid" alt="logo manchester united" title="Logo Manchester United" />
+                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(adidas.src); }}>
+                                  <Image src={adidas} className="ico-conocimientos img-fluid" alt="composicion adidas metro pedro de valdivia" title="Composicion adidas metro Pedro de Valdivia" />
                                 </a>
                               </li>
                               <li>
                                 <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(loveRockBeer.src); }}>
-                                  <Image src={loveRockBeer} className="ico-conocimientos img-fluid" alt="postrait wonde woman" title="Retrato Wonde Woman" />
+                                  <Image src={loveRockBeer} className="ico-conocimientos img-fluid" alt="ilustracion concepto" title="Diseño conceptual" />
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(aflorar.src); }}>
+                                  <Image src={aflorar} className="ico-conocimientos img-fluid" alt="logo aflorar" title="Diseño logo Aflorar" />
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" onClick={(e) => { e.preventDefault(); handleImageClick(megasalud.src); }}>
+                                  <Image src={megasalud} className="ico-conocimientos img-fluid" alt="infografia" title="Diseño infografía Megasalud" />
                                 </a>
                               </li>
                             </ul>
