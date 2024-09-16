@@ -259,7 +259,7 @@ function Portafolio() {
                             </ul>
                             <hr />
                             <p>
-                              <Link href="https://www.artstation.com/claudiosvcl" target='new' className="link-portafolio-proyectos">
+                              <Link href="https://www.behance.net/claudiosalazarcl" target='new' className="link-portafolio-proyectos">
                                 <span className='ico-mas-proyecto'></span>
                                 <span className='texto-link-portafolio'>Ver más</span>
                               </Link>
