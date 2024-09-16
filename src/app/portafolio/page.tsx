@@ -4,10 +4,12 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { AnimatePresence, easeIn, motion, useAnimation } from 'framer-motion';
 import Link from "next/link";
 import Image from 'next/image';
-import miBanco1 from '../assets/portafolio/mi-banco-1.jpg';
-import miBanco2 from '../assets/portafolio/mi-banco-2.jpg';
-import miBanco3 from '../assets/portafolio/mi-banco-3.jpg';
-import miBanco4 from '../assets/portafolio/mi-banco-4.jpg';
+
+// Desarrollo
+import miBanco1 from '../assets/portafolio/desarrollo/mi-banco-1.jpg';
+import miBanco2 from '../assets/portafolio/desarrollo/mi-banco-2.jpg';
+import miBanco3 from '../assets/portafolio/desarrollo/mi-banco-3.jpg';
+import miBanco4 from '../assets/portafolio/desarrollo/mi-banco-4.jpg';
 
 import icoAngular from '../assets/iconos/ico-angular.png';
 import icoMysql from '../assets/iconos/ico-mysql.png';
