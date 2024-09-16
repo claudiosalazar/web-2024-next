@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
+import { easeIn, motion, useAnimation } from 'framer-motion';
 import Link from "next/link";
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
 import miBanco1 from '../assets/portafolio/mi-banco-1.jpg';
 import miBanco2 from '../assets/portafolio/mi-banco-2.jpg';
 import miBanco3 from '../assets/portafolio/mi-banco-3.jpg';
@@ -48,6 +48,24 @@ function Portafolio() {
   const [activeSection, setActiveSection] = useState(0); // Estado para controlar la sección activa
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
+  const controlDetalle = useAnimation();
+  const controlItems = useAnimation();
+
+  const titulo = {
+    hidden: {
+      y: -10,
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        easeIn,
+        duration: 0.1
+      }
+    },
+  };
+
   const handleImageClick = useCallback((imageSrc: string) => {
     setActiveImage(imageSrc);
   }, []);
@@ -59,6 +77,7 @@ function Portafolio() {
   const handleSelect = useCallback((index: number) => {
     setActiveIndex(index);
   }, []);
+
 
   return (
     <>
@@ -80,7 +99,18 @@ function Portafolio() {
           </ul>
         </div>
         {activeSection === 0 && (
-          <div className='col-12 col-md-12 col-xl-10 mx-auto pb-5 personal'>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={
+              { 
+                opacity: 1,
+                transition: {
+                  duration: .8,
+                }
+              }
+            }
+            exit={{ opacity: 0 }}
+            className='col-12 col-md-12 col-xl-10 mx-auto pb-5 personal'>
             <div className='row'>
               <div className='col-md-1 d-flex flex-column justify-content-center pe-md-0'>
                 <ul className="carousel-portafolio-controls">
@@ -376,10 +406,21 @@ function Portafolio() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
         {activeSection === 1 && (
-          <div className='col-12 col-md-12 col-xl-10 mx-auto pb-5 profesional'>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={
+              { 
+                opacity: 1,
+                transition: {
+                  duration: .8,
+                }
+              }
+            }
+            exit={{ opacity: 0 }}
+            className='col-12 col-md-12 col-xl-10 mx-auto pb-5 profesional'>
             <div className='row'>
               <div className='col-md-1 d-flex flex-column justify-content-center pe-md-0'>
                 <ul className="carousel-portafolio-controls">
@@ -508,7 +549,7 @@ function Portafolio() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
       </section>
 
