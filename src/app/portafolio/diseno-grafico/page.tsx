@@ -55,13 +55,15 @@ import { useEffect } from "react";
   return (
     <section className="portafolio row d-flex align-items-center">
       <motion.div variants={titulo} initial='hidden' animate={controlTitulo} className='titulo col-11 ol-xl-10 mx-auto text-center pt-4 d-flex flex-column flex-md-row align-items-md-center'>
-      <h1 className='text-center text-md-end mb-4'>
+        <h1 className='text-center text-md-end mb-4'>
           <span className="titulo-seccion">Portafolio</span>
-          <span className="subtitulo-seccion">Diseño Gráfico</span>
+          <span className="subtitulo-seccion d-block">Diseño Gráfico</span>
         </h1>
-        <p className="parrafo-seccion">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna.
-        </p>
+        <div className="detalle-seccion">
+          <p className="parrafo-seccion">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna.
+          </p>
+        </div>
       </motion.div>
     </section>
   );

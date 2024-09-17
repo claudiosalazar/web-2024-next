@@ -4,6 +4,11 @@ import { easeIn, motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import Image from 'next/image';
 
+// Sofware
+import icoPhotoshop from '../../assets/iconos/ico-photoshop.png';
+import icoIllustrator from '../../assets/iconos/ico-illustrator.png';
+import icoStudioPain from '../../assets/iconos/ico-clip-studio-paint.png';
+
 // Ilustraciones
 import manchester from '../../assets/portafolio/ilustraciones/manchester-logo.jpg';
 import aguilaAudax from '../../assets/portafolio/ilustraciones/aguila-audax.jpg';
@@ -70,9 +75,22 @@ import skullBatman from '../../assets/portafolio/ilustraciones/skull-batman.jpg'
           <span className="titulo-seccion">Portafolio</span>
           <span className="subtitulo-seccion">Ilustraciones</span>
         </h1>
-        <p className="parrafo-seccion">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna.
-        </p>
+        <div className="detalle-seccion">
+          <p className="parrafo-seccion">
+            Uno de mis hobbies favoritos es dibujar desde mi infancia. Las ilustraciones en la galería esta hechas en su mayoria con los softwares:
+          </p>
+          <ul className="software-resumen ">
+            <li>
+              <Image className="img-fluid" src={icoStudioPain} alt="Studio Paing logo" />
+            </li>
+            <li>
+              <Image className="img-fluid" src={icoPhotoshop} alt="Adobe Photoshop" />
+            </li>
+            <li>
+              <Image className="img-fluid" src={icoIllustrator} alt="Adobe Illustrator" />
+            </li>
+          </ul>
+        </div>
       </motion.div>
 
       <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio col-11 mx-auto mt-5'>

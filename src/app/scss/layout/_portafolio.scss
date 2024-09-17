@@ -10,14 +10,22 @@
   }
   h1 {
     color: $dorado-oscuro;
+    @media (min-width: $md) {
+      margin-bottom: 0 !important;
+    }
     .titulo-seccion {
       display: block;
       font-size: 1.2rem;
+      letter-spacing: 0.2rem;
+      color: $gris-80;
     }
     .subtitulo-seccion {
-      display: block;
+      white-space: nowrap;
       margin-top: 5px;
       font-weight: 200;
+    }
+    span {
+      display: block !important;
     }
   }
   h2 {
@@ -27,18 +35,44 @@
     font-weight: 200;
     color: $dorado-oscuro;
   }
-  p {
-    font-size: .8rem;
-    color: $gris-80;
-    &.parrafo-seccion {
-      @media (min-width: $md) {
-        border-left: 1px solid $dorado-oscuro;
-        margin-left: 24px;
-        padding-left: 24px;
+  .detalle-seccion {
+    @media (min-width: $md) {
+      border-left: 1px solid $dorado-oscuro;
+      padding-left: 24px;
+      margin-left: 24px;
+    }
+    p {
+      &.parrafo-seccion {
+        font-size: .8rem;
+        color: $gris-80; 
+        @media (min-width: $md) {
+          font-size: .9rem;
+          margin-bottom: 0;
+        }
       }
     }
-    @media (min-width: $md) {
-      font-size: .9rem;
+    ul.software-resumen {
+      padding: 0;
+      width: 100%;
+      display: block;
+      min-height: 28px;
+      margin-top: 24px;
+      margin-bottom: 0;
+      @media (min-width: $md) {
+        padding-bottom: 0;
+      }
+      li {
+        margin-right: 12px;
+        margin-bottom: 6px;
+        float: left;
+        @media (min-width: $lg) {
+          margin-right: 10px;
+        }
+        img {
+          width: auto;
+          height: 22px;
+        }
+      }
     }
   }
   ul {
@@ -66,6 +100,16 @@
       margin-bottom: 12px;
       @media (min-width: $md) {
         margin-bottom: 24px;
+      }
+    }
+
+    p {
+      font-size: .8rem;
+      margin-bottom: 1.5rem;
+      color: $gris-80;
+      strong {
+        color: $dorado-oscuro;
+        font-weight: 500;
       }
     }
 
