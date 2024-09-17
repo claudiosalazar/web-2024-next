@@ -19,11 +19,11 @@ function Header() {
 
     if (path === '/') {
       nextColor = 'link-inicio';
-    } else if (path === '/portafolio') {
+    } else if (path.startsWith('/portafolio')) {
       nextColor = 'link-portafolio';
-    } else if (path === '/conocimientos') {
+    } else if (path.startsWith('/conocimientos')) {
       nextColor = 'link-conocimientos';
-    } else if (path === '/trayectoria') {
+    } else if (path.startsWith('/trayectoria')) {
       nextColor = 'link-trayectoria';
     }
 
@@ -40,11 +40,11 @@ function Header() {
       if (window.scrollY >= 10) {
         if (pathname === '/') {
           setFondoHeader('fondo-inicio');
-        } else if (pathname === '/trayectoria') {
+        } else if (pathname.startsWith('/trayectoria')) {
           setFondoHeader('fondo-trayectoria');
-        } else if (pathname === '/conocimientos') {
+        } else if (pathname.startsWith('/conocimientos')) {
           setFondoHeader('fondo-conocimientos');
-        } else if (pathname === '/portafolio') {
+        } else if (pathname.startsWith('/portafolio')) {
           setFondoHeader('fondo-portafolio');
         }
       } else {
@@ -72,27 +72,27 @@ function Header() {
                   Bienvenida
                 </Link>
               </li>
-              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
+              <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
               <li className='boton'>
-                <Link href="/trayectoria" className={`nav-link ${pathname === '/trayectoria' ? "active" : ""} ${menuColor}`}>
+                <Link href="/trayectoria" className={`nav-link ${pathname.startsWith('/trayectoria') ? "active" : ""} ${menuColor}`}>
                   Trayectoria
                 </Link>
               </li>
-              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
+              <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
               <li className="nav-item logo">
                 <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
                   <div className='logo-header'></div>
                 </Link>
               </li>
-              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
+              <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
               <li className='boton'>
-                <Link href="/conocimientos" className={`nav-link ${pathname === '/conocimientos' ? "active" : ""} ${menuColor}`}>
+                <Link href="/conocimientos" className={`nav-link ${pathname.startsWith('/conocimientos') ? "active" : ""} ${menuColor}`}>
                   Conocimientos
                 </Link>
               </li>
-              <li className={`separador-menu ${pathname === '/trayectoria' ? 'blanco' : ''}`}></li>
+              <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
               <li className='boton'>
-                <Link href="/portafolio" className={`nav-link ${pathname === '/portafolio' ? "active" : ""} ${menuColor}`}>
+                <Link href="/portafolio" className={`nav-link ${pathname.startsWith('/portafolio') ? "active" : ""} ${menuColor}`}>
                   Portafolio
                 </Link>
               </li>

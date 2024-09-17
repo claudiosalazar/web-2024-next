@@ -1,9 +1,116 @@
 .portafolio {
+  background-color: $gris-00;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  @media (min-width: $md) {
+    padding-top: 60px;
+  }
+  @media (min-width: $lg) {
+    padding-top: 90px;
+  }
   h1 {
     color: $dorado-oscuro;
+    .titulo-seccion {
+      display: block;
+      font-size: 1.2rem;
+    }
+    .subtitulo-seccion {
+      display: block;
+      margin-top: 5px;
+      font-weight: 200;
+    }
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 200;
+    color: $dorado-oscuro;
+  }
+  p {
+    font-size: .8rem;
+    color: $gris-80;
+    &.parrafo-seccion {
+      @media (min-width: $md) {
+        border-left: 1px solid $dorado-oscuro;
+        margin-left: 24px;
+        padding-left: 24px;
+      }
+    }
+    @media (min-width: $md) {
+      font-size: .9rem;
+    }
+  }
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  .tipo-proyecto {
+    border: 1px solid red;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
   }
 
-  ul.tipo-proyecto {
+  .detalle-proyecto {
+    border-top: 1px solid $gris-30;
+    padding-top: 32px;
+    margin-top: 32px;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 12px;
+      @media (min-width: $md) {
+        margin-bottom: 24px;
+      }
+    }
+
+    ul.tecnologias {
+      padding: 0;
+      width: 100%;
+      padding-bottom: 42px;
+      display: block;
+      min-height: 28px;
+      @media (min-width: $md) {
+        padding-bottom: 0;
+        margin-top: 10px;
+      }
+      li {
+        margin-right: 6px;
+        margin-bottom: 6px;
+        float: left;
+        @media (min-width: $lg) {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        img {
+          width: auto;
+          height: 22px;
+        }
+      }
+    }
+    hr {
+      display: none;
+      border-color: $gris-30;
+      opacity: 1;
+      width: 20%;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      @media (min-width: $md) {
+        display: block;
+      }
+      @media (min-width: $lg) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  /*ul.tipo-proyecto {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -236,6 +343,6 @@
         }
       }
     }
-  }
+  }*/
 
 }
