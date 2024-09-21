@@ -11,47 +11,6 @@ import miBanco2 from '../assets/portafolio/desarrollo/mi-banco-2.jpg';
 import miBanco3 from '../assets/portafolio/desarrollo/mi-banco-3.jpg';
 import miBanco4 from '../assets/portafolio/desarrollo/mi-banco-4.jpg';
 
-import icoAngular from '../assets/iconos/ico-angular.png';
-import icoMysql from '../assets/iconos/ico-mysql.png';
-import icoHtml from '../assets/iconos/ico-html.png';
-import icoSass from '../assets/iconos/ico-sass.png';
-import icoBootstrap from '../assets/iconos/ico-bootstrap.png';
-import icoNode from '../assets/iconos/ico-nodejs.png';
-import icoFigma from '../assets/iconos/ico-figma.png';
-import icoPhotoshop from '../assets/iconos/ico-photoshop.png';
-import icoIllustrator from '../assets/iconos/ico-illustrator.png';
-import icoStudioPain from '../assets/iconos/ico-clip-studio-paint.png';
-
-// Diseño
-import cym from '../assets/portafolio/disenho/cym.jpg';
-import loveRockBeer from '../assets/portafolio/disenho/love-rock-beer.jpg';
-import adidas from '../assets/portafolio/disenho/adidas.jpg';
-import katarsis from '../assets/portafolio/disenho/katarsis.jpg';
-import alacranes from '../assets/portafolio/disenho/alacranes.jpg';
-import bigMark from '../assets/portafolio/disenho/bigmark.jpg';
-import megasalud from '../assets/portafolio/disenho/megasalud.jpg';
-import aflorar from '../assets/portafolio/disenho/aflorar.jpg';
-
-// Ilustraciones
-import manchester from '../assets/portafolio/ilustraciones/manchester-logo.jpg';
-import aguilaAudax from '../assets/portafolio/ilustraciones/aguila-audax.jpg';
-import skeletor from '../assets/portafolio/ilustraciones/skeletor.jpg';
-import wonderWoman from '../assets/portafolio/ilustraciones/wonder-woman.jpg';
-import darkMaul from '../assets/portafolio/ilustraciones/darth-maul.jpg';
-import scar from '../assets/portafolio/ilustraciones/scar.jpg';
-import witchKing from '../assets/portafolio/ilustraciones/witch-king.jpg';
-import skullBatman from '../assets/portafolio/ilustraciones/skull-batman.jpg';
-
-// Fotos
-import foto1 from '../assets/portafolio/foto/constanera.jpg';
-import foto2 from '../assets/portafolio/foto/constanera.jpg';
-import foto3 from '../assets/portafolio/foto/carretera.jpg';
-import foto4 from '../assets/portafolio/foto/macbook.jpg';
-import foto5 from '../assets/portafolio/foto/reflejo.jpg';
-import foto6 from '../assets/portafolio/foto/foco.jpg';
-import foto7 from '../assets/portafolio/foto/moto.jpg';
-import foto8 from '../assets/portafolio/foto/pelota.jpg';
-
 function Portafolio() {
 
   const controlTitulo = useAnimation();
@@ -115,24 +74,29 @@ function Portafolio() {
           </div>
         </motion.div>
 
-        <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio col-11 mx-auto mt-5'>
+        <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio contenido-portafolio col-12 col-md-11 mx-auto mt-5'>
           <div className='row'>
-            <Link className='col-11 col-lg-6 tipo-proyecto mx-auto' href='/portafolio/desarrollo'>
+            <Link className='dev col-11 col-lg-6 tipo-proyecto mx-auto d-flex flex-column' href='/portafolio/desarrollo'>
               Desarrollo
+              <span className='ico-tipo-proyecto ico-dev'></span>
             </Link>
             <div className='col-11 col-lg-6 mx-auto'>
               <div className='row'>
-                <Link className='col-6 tipo-proyecto' href='/portafolio/diseno-ui'>
+                <Link className='ui col-6 tipo-proyecto d-flex flex-column' href='/portafolio/diseno-ui'>
                   Diseño UI
+                  <span className='ico-tipo-proyecto ico-ui'></span>
                 </Link>
-                <Link className='col-6 tipo-proyecto' href='/portafolio/diseno-grafico'>
+                <Link className='diseno col-6 tipo-proyecto d-flex flex-column' href='/portafolio/diseno-grafico'>
                   Diseño Gráfico
+                  <span className='ico-tipo-proyecto ico-diseno'></span>
                 </Link>
-                <Link className='col-6 tipo-proyecto' href='/portafolio/ilustraciones'>
+                <Link className='ilustracion col-6 tipo-proyecto d-flex flex-column' href='/portafolio/ilustraciones'>
                   Ilustraciones
+                  <span className='ico-tipo-proyecto ico-ilustracion'></span>
                 </Link>
-                <Link className='col-6 tipo-proyecto' href='/portafolio/fotografia'>
+                <Link className='foto col-6 tipo-proyecto d-flex flex-column' href='/portafolio/fotografia'>
                   Fotos
+                  <span className='ico-tipo-proyecto ico-foto'></span>
                 </Link>
               </div>
             </div>
