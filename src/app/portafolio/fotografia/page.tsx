@@ -68,7 +68,10 @@ function Fotografia () {
     <section className="portafolio row d-flex align-items-center">
       <motion.div variants={titulo} initial='hidden' animate={controlTitulo} className='titulo col-11 ol-xl-10 mx-auto text-center pt-4 d-flex flex-column flex-md-row align-items-md-center'>
         <h1 className='text-center text-md-end mb-4'>
-          <span className="titulo-seccion">Portafolio</span>
+          <Link href='/portafolio' className="titulo-seccion d-flex align-items-center justify-content-center justify-content-md-end mb-3 mb-md-0">
+            <span className="ico-atras d-block"></span>
+            <span className=" d-block">Portafolio</span>
+          </Link>
           <span className="subtitulo-seccion">Fotografía</span>
         </h1>
         <div className="detalle-seccion">

@@ -117,7 +117,7 @@ function Portafolio() {
 
         <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio col-11 mx-auto mt-5'>
           <div className='row'>
-            <Link className='col-11 col-lg-6 tipo-proyecto  mx-auto' href='/portafolio/desarrollo'>
+            <Link className='col-11 col-lg-6 tipo-proyecto mx-auto' href='/portafolio/desarrollo'>
               Desarrollo
             </Link>
             <div className='col-11 col-lg-6 mx-auto'>

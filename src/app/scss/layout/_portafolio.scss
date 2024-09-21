@@ -13,11 +13,34 @@
     @media (min-width: $md) {
       margin-bottom: 0 !important;
     }
-    .titulo-seccion {
+    a.titulo-seccion {
       display: block;
       font-size: 1.2rem;
       letter-spacing: 0.2rem;
       color: $gris-80;
+      line-height: 1rem;
+      transition: all .15s linear;
+      letter-spacing: .2rem;
+      .ico-atras {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='19' fill='none'%3E%3Cpath fill='%239E6503' d='M9.308 18.616 0 9.308 9.308 0l1.063 1.063-8.244 8.245 8.244 8.244-1.063 1.064Z'/%3E%3C/svg%3E");
+        background-size: 14px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;
+        opacity: 0.5;
+      }
+      span {
+        width: fit-content;
+      }
+      &:hover {
+        color: $dorado-oscuro;
+        letter-spacing: .25rem;
+        .ico-atras {
+          opacity: 1;
+        }
+      }
     }
     .subtitulo-seccion {
       white-space: nowrap;
