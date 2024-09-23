@@ -107,7 +107,7 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
               <div className="col-12 p-4 p-md-5 detalle-proyecto">
                 <div className="row d-lg-flex justify-content-xxl-center">
                   <div className="col-12 col-md-6 col-xxl-4">
-                    <Image src={miBanco1} alt="Mi Banco" className="img-fluid" />
+                    <Image src={miBanco1} alt="Mi Banco" title="Mi Banco" className="img-fluid" />
                   </div>
                   <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
                     <h2 className="mt-4 mt-md-0">Mi Banco</h2>
@@ -175,7 +175,7 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
               <div className="col-12 p-4 p-md-5 detalle-proyecto">
                 <div className="row d-lg-flex justify-content-xxl-center">
                   <div className="col-12 col-md-6 col-xxl-4">
-                    <Image src={itau} alt="Itau" className="img-fluid" />
+                    <Image src={itau} alt="Itau" title="Itau Sitio Publico" className="img-fluid" />
                   </div>
                   <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
                     <h2 className="mt-4 mt-md-0">ITAU - Sitio publico</h2>
@@ -218,7 +218,7 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
               <div className="col-12 p-4 p-md-5 detalle-proyecto">
                 <div className="row d-lg-flex justify-content-xxl-center">
                   <div className="col-12 col-md-6 col-xxl-4">
-                    <Image src={bci} alt="BCI" className="img-fluid" />
+                    <Image src={bci} alt="BCI" className="img-fluid" title="Plataforma comercial 360 | Connect - BCI" />
                   </div>
                   <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
                     <h2 className="mt-4 mt-md-0">BCI - 360 | Connect</h2>
@@ -279,7 +279,7 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
               <div className="col-12 p-4 p-md-5 detalle-proyecto mb-0">
                 <div className="row d-lg-flex justify-content-xxl-center">
                   <div className="col-12 col-md-6 col-xxl-4">
-                    <Image src={cym} alt="BCI" className="img-fluid" />
+                    <Image src={cym} alt="C&M Consultores" title="C&M Consultores" className="img-fluid" />
                   </div>
                   <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
                     <h2 className="mt-4 mt-md-0">C&M Consultores</h2>
