@@ -25,6 +25,7 @@ import icoKanban from '../assets/iconos/ico-kanban.png';
 import icoNpm from '../assets/iconos/ico-npm.png';
 import icoPhotoshop from '../assets/iconos/ico-photoshop.png';
 import icoReact from '../assets/iconos/ico-react.png';
+import icoJira from '../assets/iconos/ico-jira.png';
 
 import icoScrum from '../assets/iconos/ico-scrum.png';
 import icoSketch from '../assets/iconos/ico-sketch.png';
@@ -182,6 +183,7 @@ function Conocimientos() {
                       <>
                         <Image src={icoScrum} className="ico-conocimientos" alt="scrum" title="Scrum" />
                         <Image src={icoKanban} className="ico-conocimientos" alt="kanban" title="Kanban" />
+                        <Image src={icoJira} className="ico-conocimientos" alt="jira" title="Jira" />
                       </>
                     )}
                   </div>

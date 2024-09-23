@@ -65,7 +65,7 @@ function Portafolio() {
     <>
       <section className="portafolio row d-flex align-items-center">
 
-        <motion.div variants={titulo} initial='hidden' animate={controlTitulo} className='titulo col-11 ol-xl-10 mx-auto text-center pt-4 d-flex flex-column flex-md-row align-items-md-center'>
+        <motion.div variants={titulo} initial='hidden' animate={controlTitulo} className='titulo col-11 ol-xl-9 mx-auto text-center pt-4 d-flex flex-column flex-md-row align-items-md-center'>
           <h1 className='text-center mb-4'>Portafolio</h1>
           <div className="detalle-seccion">
             <p className="parrafo-seccion">
