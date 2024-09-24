@@ -70,7 +70,33 @@
       color: $dorado;
       font-size: .95rem;
       font-weight: 200;
-      position: relative;
+
+      &.dev {
+        background-image: url('../../assets/portafolio/link/link-dev.jpg');
+        background-size: cover;
+        background-position: 0 0;
+      }
+      &.ui {
+        background-image: url('../../assets/portafolio/link/link-dev.jpg');
+        background-size: cover;
+        background-position: 0 0;
+      }
+      &.diseno {
+        background-image: url('../../assets/portafolio/link/link-dev.jpg');
+        background-size: cover;
+        background-position: 0 0;
+      }
+      &.ilustracion {
+        background-image: url('../../assets/portafolio/link/link-ilustracion.jpg');
+        background-size: cover;
+        background-position: 0 0;
+      }
+      &.foto {
+        background-image: url('../../assets/portafolio/link/link-dev.jpg');
+        background-size: cover;
+        background-position: 0 0;
+      }
+      
       @media (min-width: $md) {
         font-size: 1.5rem;
       }
@@ -83,9 +109,10 @@
         width: 100%;
         height: 100%;
         position: relative;
+        
         .info-link {
           position: relative; // Asegura que el video se posicione correctamente
-          z-index: 500;
+          z-index: 1;
           width: 100%;
           height: 100%;
           display: flex;
@@ -93,59 +120,20 @@
           justify-content: center;
           flex-direction: column;
           color: $dorado;
-          &.dev {
-            background-image: url('../../assets/portafolio/link/link-dev.jpg');
-            background-size: cover;
-            background-position: 0 0;
+          transition: opacity 0.3s ease-in-out;
+          .texto-link-porfafolio {
             width: 100%;
             height: 100%;
-            position: relative;
-            &:hover {
-              background-image: none; // Oculta la imagen de fondo al hacer hover
+            display: flex;
+            flex-direction: column;
+            justify-content: center !important;
+            font-size: 1.5rem;
+            font-weight: 200;
+            @media (min-width: $md) {
+              font-size: 2rem;
             }
-          }
-          &.ui {
-            background-image: url('../../assets/portafolio/link/link-dev.jpg');
-            background-size: cover;
-            background-position: 0 0;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            &:hover {
-              background-image: none; // Oculta la imagen de fondo al hacer hover
-            }
-          }
-          &.diseno {
-            background-image: url('../../assets/portafolio/link/link-dev.jpg');
-            background-size: cover;
-            background-position: 0 0;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            &:hover {
-              background-image: none; // Oculta la imagen de fondo al hacer hover
-            }
-          }
-          &.ilustracion {
-            background-image: url('../../assets/portafolio/link/link-dev.jpg');
-            background-size: cover;
-            background-position: 0 0;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            &:hover {
-              background-image: none; // Oculta la imagen de fondo al hacer hover
-            }
-          }
-          &.foto {
-            background-image: url('../../assets/portafolio/link/link-dev.jpg');
-            background-size: cover;
-            background-position: 0 0;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            &:hover {
-              background-image: none; // Oculta la imagen de fondo al hacer hover
+            span {
+              margin: 0 auto;
             }
           }
     
@@ -156,6 +144,7 @@
             background-position: 0 center;
             background-repeat: no-repeat;
             transition: all .15s ease-in;
+            margin: 0 auto;
             @media (min-width: $md) {
               width: 30px;
               height: 30px;
@@ -177,24 +166,13 @@
               background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='16' fill='none'%3E%3Cpath fill='%23CF8300' d='M9 12.73c1.045 0 1.928-.36 2.649-1.081.721-.721 1.082-1.604 1.082-2.649s-.36-1.928-1.082-2.649C10.928 5.63 10.045 5.269 9 5.269s-1.928.36-2.649 1.082C5.63 7.072 5.269 7.955 5.269 9s.36 1.928 1.082 2.649c.721.721 1.604 1.082 2.649 1.082Zm0-1c-.777 0-1.426-.26-1.948-.782S6.269 9.777 6.269 9c0-.777.261-1.426.783-1.948S8.223 6.269 9 6.269c.777 0 1.426.261 1.948.783s.783 1.171.783 1.948c0 .777-.261 1.426-.783 1.948s-1.171.783-1.948.783ZM1.615 16c-.46 0-.844-.154-1.153-.463A1.565 1.565 0 0 1 0 14.384V3.616c0-.46.154-.845.463-1.154A1.565 1.565 0 0 1 1.615 2h2.957l1.85-2h5.154l1.85 2h2.957c.46 0 .845.154 1.154.462.308.309.462.693.462 1.153v10.77c0 .46-.154.844-.462 1.152a1.565 1.565 0 0 1-1.154.463H1.616Zm0-1h14.77a.6.6 0 0 0 .442-.173.6.6 0 0 0 .173-.443V3.616a.6.6 0 0 0-.173-.443.6.6 0 0 0-.443-.173h-3.396l-1.844-2H6.856L5.01 3H1.615a.6.6 0 0 0-.442.173.6.6 0 0 0-.173.442v10.77a.6.6 0 0 0 .173.442.6.6 0 0 0 .442.173Z'/%3E%3C/svg%3E");
             }
           }
-    
+
           &:hover {
-            font-weight: 500;
-            @media (min-width: $md) {
-              letter-spacing: .05rem;
-              font-size: 1.35rem; 
-              .ico-tipo-proyecto {
-                opacity: 1;
-                width: 50px;
-                height: 50px;
-                background-size: 50px auto;
-              }
-            }
+            opacity: 0;
           }
         }
       
-        .video-hover {
-          display: none; // Oculta el video por defecto
+        .fnd-video-link {
           position: absolute;
           top: 0;
           left: 0;
@@ -203,12 +181,6 @@
           object-fit: cover;
           z-index: 0;
         }
-      
-        &:hover .video-hover {
-          display: block; // Muestra el video al hacer hover
-        }
-        position: relative;
-       
       }      
     }
 
