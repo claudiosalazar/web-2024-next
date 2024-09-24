@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from 'next/image';
 import { useEffect } from "react";
 
-import cym from '../../assets/portafolio/disenho/cym.jpg';
-import loveRockBeer from '../../assets/portafolio/disenho/love-rock-beer.jpg';
+import cym from '../../assets/portafolio/ui/cym.jpg';
+import mibanco from '../../assets/portafolio/ui/mi-banco.jpg';
 
  function Ui () {
   const controlTitulo = useAnimation();
@@ -80,16 +80,15 @@ import loveRockBeer from '../../assets/portafolio/disenho/love-rock-beer.jpg';
         <div className="row">
           <div className="col-12">
             <div className="row">
-
+              
               <div className="col-12 p-4 p-md-5 detalle-proyecto">
                 <div className="row d-lg-flex justify-content-xxl-center">
                   <div className="col-12 col-md-8 col-xxl-7">
-                    <Image src={cym} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                    <Image src={mibanco} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
                   </div>
                   <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
-                    <h2 className="mt-4 mt-md-0">C&M Consultores</h2>
-                    <p><strong>Tipo proyecto:</strong></p>
-                    <p>Imagen corporativa</p>
+                    <h2 className="mt-4 mt-md-0">Mi Banco</h2>
+                    <p><strong>Flayer informativo</strong></p>
                     <p>
                       Proyecto personal de sitio bancario ficticio. Creación de diseño UI y desarrollo frontend y backend (Node.js). En el se pueden realizar transferencias, pagos de productos y modificación de datos del usuario con se ingresa al sitio. Los datos para poder ingresar y visualizar el proyecto son:
                     </p>
@@ -100,10 +99,11 @@ import loveRockBeer from '../../assets/portafolio/disenho/love-rock-beer.jpg';
               <div className="col-12 p-4 p-md-5 detalle-proyecto mb-0">
                 <div className="row d-lg-flex justify-content-xxl-center">
                   <div className="col-12 col-md-8 col-xxl-7">
-                    <Image src={loveRockBeer} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                    <Image src={cym} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
                   </div>
                   <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
-                    <h2 className="mt-4 mt-md-0">Mi Banco</h2>
+                    <h2 className="mt-4 mt-md-0">C&M</h2>
+                    <p><strong>Ilustración conceptual</strong></p>
                     <p>
                       Proyecto personal de sitio bancario ficticio. Creación de diseño UI y desarrollo frontend y backend (Node.js). En el se pueden realizar transferencias, pagos de productos y modificación de datos del usuario con se ingresa al sitio. Los datos para poder ingresar y visualizar el proyecto son:
                     </p>

@@ -63,8 +63,9 @@ function Portafolio() {
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     const video = e.currentTarget.querySelector('.fnd-video-link') as HTMLVideoElement;
+    video.currentTime = 0;
     if (video) {
-      video.style.transition = 'opacity 0.3s ease-in-out';
+      video.style.transition = 'opacity 0.3s ease-in';
       video.style.opacity = '1';
       video.play();
     }
@@ -73,16 +74,18 @@ function Portafolio() {
   const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     const video = e.currentTarget.querySelector('.fnd-video-link') as HTMLVideoElement;
     if (video) {
-      video.style.transition = 'opacity 0.3s ease-in-out';
+      video.style.transition = 'opacity 0.3s ease-out';
       video.style.opacity = '0';
   
       // Espera a que la transición termine antes de reiniciar el video
-      video.addEventListener('transitionend', function handleTransitionEnd() {
+      const handleTransitionEnd = () => {
         if (video.style.opacity === '0') {
           video.currentTime = 0; // Reinicia el video al principio
         }
         video.removeEventListener('transitionend', handleTransitionEnd);
-      });
+      };
+  
+      video.addEventListener('transitionend', handleTransitionEnd);
     }
   };
   
@@ -99,45 +102,41 @@ function Portafolio() {
           </div>
         </motion.div>
 
-        <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio contenido-portafolio col-12 col-md-11 mx-auto mt-5'>
+        <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio contenido-portafolio col-12 col-md-11 mx-auto mt-5 pb-md-4'>
           <div className='row'>
             <div className='col-11 col-lg-6 tipo-proyecto dev mx-auto p-0' >
               <Link className='link-portada-portafolio' href='/portafolio/desarrollo' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <div className='info-link'>
-                  <div className='texto-link-porfafolio'>
-                    <span>Desarrollo</span>
-                    <span className='ico-tipo-proyecto ico-dev'></span>
-                  </div>
+                  <span>Desarrollo</span>
+                  <span className='ico-tipo-proyecto ico-dev'></span>
                 </div>
-                <video className='fnd-video-link fnd-dev' src='/video/link-dev.mp4' muted loop></video>
+                <video className='fnd-video-link' src='/video/link-dev.mp4' muted loop></video>
               </Link>
             </div>
 
             <div className='col-11 col-lg-6 mx-auto'>
               <div className='row'>
-                <div className='col-6 tipo-proyecto ui p-0' >
+                <div className='ui col-12 col-md-6 tipo-proyecto p-0' >
                   <Link className='link-portada-portafolio' href='/portafolio/diseno-ui' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <div className='info-link ui'>
-                      <span>
-                        <span>Diseño UI</span>
-                        <span className='ico-tipo-proyecto ico-ui'></span>
-                      </span>
+                      <span>Diseño UX/UI</span>
+                      <span className='ico-tipo-proyecto ico-ui'></span>
                     </div>
-                    <video className='fnd-video-link' src='/video/link-dev.mp4' muted loop></video>
+                    <video className='fnd-video-link' src='/video/link-ui.mp4' muted loop></video>
                   </Link>
                 </div>
 
-                <div className='diseno col-6 tipo-proyecto p-0' >
+                <div className='diseno col-12 col-md-6 tipo-proyecto p-0' >
                   <Link className='link-portada-portafolio' href='/portafolio/diseno-grafico' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <div className='info-link'>
                       <span>Diseño Gráfico</span>
                       <span className='ico-tipo-proyecto ico-diseno'></span>
                     </div>
-                    <video className='fnd-video-link' src='/video/link-dev.mp4' muted loop></video>
+                    <video className='fnd-video-link' src='/video/link-diseno.mp4' muted loop></video>
                   </Link>
                 </div>
 
-                <div className='ilustracion col-6 tipo-proyecto p-0' >
+                <div className='ilustracion col-12 col-md-6 tipo-proyecto p-0' >
                   <Link className='link-portada-portafolio' href='/portafolio/ilustraciones' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <div className='info-link'>
                       <span>Ilustraciones</span>
@@ -147,13 +146,13 @@ function Portafolio() {
                   </Link>
                 </div>
 
-                <div className='foto col-6 tipo-proyecto p-0' >
+                <div className='foto col-12 col-md-6 tipo-proyecto p-0' >
                   <Link className='link-portada-portafolio' href='/portafolio/fotografia' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <div className='info-link'>
                       <span>Fotografía</span>
                       <span className='ico-tipo-proyecto ico-foto'></span>
                     </div>
-                    <video className='fnd-video-link' src='/video/link-dev.mp4' muted loop></video>
+                    <video className='fnd-video-link' src='/video/link-foto.mp4' muted loop></video>
                   </Link>
                 </div>
 

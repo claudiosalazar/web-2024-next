@@ -102,6 +102,21 @@ import aflorar from '../../assets/portafolio/disenho/aflorar.jpg';
                   </div>
                 </div>
               </div>
+
+              <div className="col-12 p-4 p-md-5 detalle-proyecto">
+                <div className="row d-lg-flex justify-content-xxl-center">
+                  <div className="col-12 col-md-8 col-xxl-7">
+                    <Image src={megasalud} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                  </div>
+                  <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
+                    <h2 className="mt-4 mt-md-0">Megasalud</h2>
+                    <p><strong>Flayer informativo</strong></p>
+                    <p>
+                      Proyecto personal de sitio bancario ficticio. Creación de diseño UI y desarrollo frontend y backend (Node.js). En el se pueden realizar transferencias, pagos de productos y modificación de datos del usuario con se ingresa al sitio. Los datos para poder ingresar y visualizar el proyecto son:
+                    </p>
+                  </div>
+                </div>
+              </div>
               
               <div className="col-12 p-4 p-md-5 detalle-proyecto mb-0">
                 <div className="row d-lg-flex justify-content-xxl-center">
