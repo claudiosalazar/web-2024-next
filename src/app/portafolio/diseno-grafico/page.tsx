@@ -77,7 +77,7 @@ import aflorar from '../../assets/portafolio/disenho/aflorar.jpg';
           </h1>
           <div className="detalle-seccion">
             <p className="parrafo-seccion">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna.
+              Proyectos de diseño gráfico que reflejan mi enfoque en crear logos, imagen corporativa, ilustraciones y diseños para imprenta. Aplicando adaptabilidad y precisión, busco lograr piezas visuales impactantes y coherentes que transmitan identidad y dejen una impresión duradera.
             </p>
           </div>
         </motion.div>

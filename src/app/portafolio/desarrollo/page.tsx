@@ -93,7 +93,7 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
           </h1>
           <div className="detalle-seccion">
             <p className="parrafo-seccion">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna.
+              Proyectos más recientes y relevantes en frontend bancario reflejan mi dominio en HTML, CSS y JavaScript, aplicando adaptabilidad y precisión, esenciales en finanzas. He trabajado con equipos multidisciplinarios bajo metodologías ágiles, logrando eficiencia y un trabajo altamente colaborativo.
             </p>
           </div>
         </motion.div>

@@ -70,7 +70,7 @@ import mibanco from '../../assets/portafolio/ui/mi-banco.jpg';
           </h1>
           <div className="detalle-seccion">
             <p className="parrafo-seccion">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna.
+              Proyectos UI en donde se refleja mi enfoque en crear experiencias de usuario intuitivas y atractivas. Aplicando adaptabilidad y precisión, busco lograr interfaces eficientes y funcionales que optimicen la interacción y generen un impacto visual positivo.
             </p>
           </div>
         </motion.div>
