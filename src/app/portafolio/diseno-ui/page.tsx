@@ -83,8 +83,8 @@ import mibanco from '../../assets/portafolio/ui/mi-banco.jpg';
               
               <div className="col-12 p-4 p-md-5 detalle-proyecto">
                 <div className="row d-lg-flex justify-content-xxl-center">
-                  <div className="col-12 col-md-8 col-xxl-7">
-                    <Image src={mibanco} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                  <div className="col-12 col-md-8 col-xxl-7 pe-md-4">
+                    <Image src={mibanco} alt="Mi Banco" className="img-fluid diseno-thumbnail" />
                   </div>
                   <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
                     <h2 className="mt-4 mt-md-0">Mi Banco</h2>
@@ -98,8 +98,8 @@ import mibanco from '../../assets/portafolio/ui/mi-banco.jpg';
               
               <div className="col-12 p-4 p-md-5 detalle-proyecto mb-0">
                 <div className="row d-lg-flex justify-content-xxl-center">
-                  <div className="col-12 col-md-8 col-xxl-7">
-                    <Image src={cym} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                  <div className="col-12 col-md-8 col-xxl-7 pe-md-4">
+                    <Image src={cym} alt="Mi Banco" className="img-fluid diseno-thumbnail" />
                   </div>
                   <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
                     <h2 className="mt-4 mt-md-0">C&M</h2>

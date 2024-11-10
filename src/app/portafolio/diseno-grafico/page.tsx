@@ -90,8 +90,8 @@ import aflorar from '../../assets/portafolio/disenho/aflorar.jpg';
 
               <div className="col-12 p-4 p-md-5 detalle-proyecto">
                 <div className="row d-lg-flex justify-content-xxl-center">
-                  <div className="col-12 col-md-8 col-xxl-7">
-                    <Image src={cym} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                  <div className="col-12 col-md-8 col-xxl-7 pe-md-4">
+                    <Image src={cym} alt="Mi Banco" className="img-fluid diseno-thumbnail" />
                   </div>
                   <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
                     <h2 className="mt-4 mt-md-0">C&M Consultores</h2>
@@ -105,8 +105,8 @@ import aflorar from '../../assets/portafolio/disenho/aflorar.jpg';
 
               <div className="col-12 p-4 p-md-5 detalle-proyecto">
                 <div className="row d-lg-flex justify-content-xxl-center">
-                  <div className="col-12 col-md-8 col-xxl-7">
-                    <Image src={megasalud} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                  <div className="col-12 col-md-8 col-xxl-7 pe-md-4">
+                    <Image src={megasalud} alt="Mi Banco" className="img-fluid diseno-thumbnail" />
                   </div>
                   <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
                     <h2 className="mt-4 mt-md-0">Megasalud</h2>
@@ -120,8 +120,8 @@ import aflorar from '../../assets/portafolio/disenho/aflorar.jpg';
               
               <div className="col-12 p-4 p-md-5 detalle-proyecto mb-0">
                 <div className="row d-lg-flex justify-content-xxl-center">
-                  <div className="col-12 col-md-8 col-xxl-7">
-                    <Image src={loveRockBeer} alt="Mi Banco" className="img-fluid pe-md-4 diseno-thumbnail" />
+                  <div className="col-12 col-md-8 col-xxl-7 pe-md-4">
+                    <Image src={loveRockBeer} alt="Mi Banco" className="img-fluid diseno-thumbnail" />
                   </div>
                   <div className="col-12 col-12 col-md-4 col-xxl-3 ps-md-4 descripcion-proyecto">
                     <h2 className="mt-4 mt-md-0">Love, Rock & Beer</h2>

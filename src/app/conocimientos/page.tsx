@@ -198,34 +198,68 @@ function Conocimientos() {
               <div id={`panelsAbierto-conocimiento${index}`} className="accordion-collapse collapse">
                 <div className="accordion-body">
                   {index === 1 && (
-                    <p>
-                      Con más de 15 años de experiencia en desarrollo web, domino <strong>HTML5</strong> semántico y <strong>CSS3</strong> para crear proyectos responsivos. Utilizo <strong>preprocesadores CSS</strong> y <strong>Bootstrap (4 y versiones superiores)</strong> para optimizar el flujo de trabajo y garantizar interfaces consistentes en diversos dispositivos.
-                    </p>
+                    // <p>
+                    //   Con más de 15 años de experiencia en desarrollo web, domino <strong>HTML5</strong> semántico y <strong>CSS3</strong> para crear proyectos responsivos. Utilizo <strong>preprocesadores CSS</strong> y <strong>Bootstrap (4 y versiones superiores)</strong> para optimizar el flujo de trabajo y garantizar interfaces consistentes en diversos dispositivos.
+                    // </p>
+                    <div>
+                      <p className="mb-0">HTML 5</p>
+                      <p className="mb-0">CSS 3</p>
+                      <p className="mb-0">Prepocesadores CSS (SASS)</p>
+                      <p>Bootstrap</p>
+                    </div>
                   )}
                   {index === 2 && (
-                    <p>
-                      Tengo conocimientos en el desarrollo de proyectos web utilizando <strong>JavaScript</strong>, <strong>PHP</strong> y <strong>NodeJs</strong>. Además, tengo experiencia en la integración y <strong>consumo de datos provenientes de APIs</strong>, así como en el manejo de bases de datos  <strong>MySQL</strong>, lo que me permite crear aplicaciones dinámicas y conectadas a servicios externos de manera eficiente.
-                    </p>
+                    // <p>
+                    //   Tengo conocimientos en el desarrollo de proyectos web utilizando <strong>JavaScript</strong>, <strong>PHP</strong> y <strong>NodeJs</strong>. Además, tengo experiencia en la integración y <strong>consumo de datos provenientes de APIs</strong>, así como en el manejo de bases de datos  <strong>MySQL</strong>, lo que me permite crear aplicaciones dinámicas y conectadas a servicios externos de manera eficiente.
+                    // </p>
+                    <div>
+                      <p className="mb-0">JavaScript (TypeScript y NodeJS)</p>
+                      <p className="mb-0">PHP</p>
+                      <p className="mb-0">Manejo de APis</p>
+                      <p>MySql</p>
+                    </div>
                   )}
                   {index === 3 && (
-                    <p>
-                      Poseo experiencia sólida en el desarrollo de proyectos web en frameworks como <strong>Angular (15 y versiones superiores)</strong>, <strong>React (18)</strong> y <strong>WordPress</strong>. Además, tengo conocimientos en el manejo de dependencias a través de <strong>NPM</strong>, lo que me permite construir aplicaciones robustas y escalables eficientemente. También tengo experiencia en la <strong>Modularización de proyectos</strong>.
-                    </p>
+                    // <p>
+                    //   Poseo experiencia sólida en el desarrollo de proyectos web en frameworks como <strong>Angular (15 y versiones superiores)</strong>, <strong>React (18)</strong> y <strong>WordPress</strong>. Además, tengo conocimientos en el manejo de dependencias a través de <strong>NPM</strong>, lo que me permite construir aplicaciones robustas y escalables eficientemente. También tengo experiencia en la <strong>Modularización de proyectos</strong>.
+                    // </p>
+                    <div>
+                      <p className="mb-0">Angular</p>
+                      <p className="mb-0">React (Native y Next.js)</p>
+                      <p className="mb-0">WordPress</p>
+                      <p>NPM</p>
+                    </div>
                   )}
                   {index === 4 && (
-                    <p>
-                      Tengo experiencia sólida en el manejo de repositorios utilizando <strong>Git</strong>, lo que me permite gestionar eficientemente el control de versiones en proyectos de desarrollo. Además, cuento con habilidades profesionales en el uso de herramientas de gestión de proyectos como <strong>Atlassian</strong>, <strong>GitHub</strong> y <strong>GitLab</strong>, lo que facilita la colaboración y el seguimiento de tareas en equipos de trabajo distribuidos.
-                    </p>
+                    // <p>
+                    //   Tengo experiencia sólida en el manejo de repositorios utilizando <strong>Git</strong>, lo que me permite gestionar eficientemente el control de versiones en proyectos de desarrollo. Además, cuento con habilidades profesionales en el uso de herramientas de gestión de proyectos como <strong>Atlassian</strong>, <strong>GitHub</strong> y <strong>GitLab</strong>, lo que facilita la colaboración y el seguimiento de tareas en equipos de trabajo distribuidos.
+                    // </p>
+                    <div>
+                      <p className="mb-0">GIT</p>
+                      <p className="mb-0">Atlassian (Bitbucket y Jira)</p>
+                      <p className="mb-0">GitHUB</p>
+                      <p>GitLab</p>
+                    </div>
                   )}
                   {index === 5 && (
-                    <p>
-                      Tengo un dominio profesional en el uso de herramientas de diseño UI como <strong>Figma</strong>, <strong>Sketch</strong> y <strong>Adobe XD</strong>. Con más de 15 años de experiencia, también tengo un amplio conocimiento en el uso de software de diseño y edición de imágenes de la suite <strong>Creative Cloud</strong> de <strong>Adobe</strong>, lo que me permite crear y desarrollar proyectos visuales de alta calidad y precisión.
-                    </p>
+                    // <p>
+                    //   Tengo un dominio profesional en el uso de herramientas de diseño UI como <strong>Figma</strong>, <strong>Sketch</strong> y <strong>Adobe XD</strong>. Con más de 15 años de experiencia, también tengo un amplio conocimiento en el uso de software de diseño y edición de imágenes de la suite <strong>Creative Cloud</strong> de <strong>Adobe</strong>, lo que me permite crear y desarrollar proyectos visuales de alta calidad y precisión.
+                    // </p>
+                    <div>
+                      <p className="mb-0">Figma</p>
+                      <p className="mb-0">Sketch</p>
+                      <p className="mb-0">Adobe XD</p>
+                      <p>Adobe Creative Cloud (Photoshop, Illustrator, After Effects, Premiere)</p>
+                    </div>
                   )}
                   {index === 6 && (
-                    <p>
-                      Cuento con más de 6 años de experiencia en el desarrollo de proyectos bajo <strong>Metodologías Ágiles</strong>, incluyendo <strong>Scrum</strong> y <strong>Kanban</strong>. Además, tengo experiencia práctica en el uso de herramientas de gestión como <strong>Jira</strong> y <strong>Trello</strong>, lo que me permite coordinar eficazmente equipos y proyectos en entornos ágiles.
-                    </p>
+                    // <p>
+                    //   Cuento con más de 6 años de experiencia en el desarrollo de proyectos bajo <strong>Metodologías Ágiles</strong>, incluyendo <strong>Scrum</strong> y <strong>Kanban</strong>. Además, tengo experiencia práctica en el uso de herramientas de gestión como <strong>Jira</strong> y <strong>Trello</strong>, lo que me permite coordinar eficazmente equipos y proyectos en entornos ágiles.
+                    // </p>
+                    <div>
+                      <p className="mb-0">Scrum</p>
+                      <p>Kanban</p>
+                    </div>
                   )}
                   <hr className='separador-conocimientos' />
                 </div>

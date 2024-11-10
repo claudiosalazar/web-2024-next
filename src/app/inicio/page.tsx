@@ -18,12 +18,12 @@ function Inicio() {
               <div>
                 <div className='logo-inicio mx-auto'></div>
                 {/* <h1 className='d-flex flex-column flex-md-row align-content-center'> */}
-                <h1 className='d-flex flex-column flex-md-row mx-auto'>
-                  <span >DISEÑADOR</span> 
-                  <span className='d-none d-md-block mx-3'>/</span>
-                  <span >FRONTEND DEV</span>
+                <div className='nombre-inicio mb-4'></div>
+                <h1 className='d-flex flex-column mx-auto'>
+                  <span >UI DEVELOPER</span> 
+                  <span >UI DESIGNER</span>
+                  <span >FRONTEND DESIGNER</span>
                 </h1>
-                <div className='nombre-inicio'></div>
               </div>
             </div> 
             <VideoInicio />
