@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from 'next/image';
 
 // Fotos
-import foto1 from '../../assets/portafolio/foto/constanera.jpg';
 import foto2 from '../../assets/portafolio/foto/constanera.jpg';
 import foto3 from '../../assets/portafolio/foto/carretera.jpg';
 import foto4 from '../../assets/portafolio/foto/macbook.jpg';
@@ -76,16 +75,14 @@ function Fotografia () {
         </h1>
         <div className="detalle-seccion">
           <p className="parrafo-seccion">
-            {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna. */}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper erat eu ipsum bibendum cursus. Sed mauris arcu, tincidunt ut egestas sit amet, finibus a lacus. Morbi venenatis, tellus ac pharetra tempor, neque quam lacinia dolor, et luctus tellus dui ac urna.
           </p>
         </div>
       </motion.div>
 
       <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio col-11 mx-auto mt-5'>
         <ul className="row">
-          <li className="col-6 col-md-4 p-0">
-            <Image className="img-fluid" src={foto1} alt="Foto 1" />
-          </li>
+
           <li className="col-6 col-md-4 p-0">
             <Image className="img-fluid" src={foto2} alt="Foto 1" />
           </li>

@@ -109,23 +109,23 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                   <div className="col-12 col-md-6 col-xxl-4">
                     <Image src={miBanco1} alt="Mi Banco" title="Mi Banco" className="img-fluid" />
                   </div>
-                  <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
-                    <h2 className="mt-4 mt-md-0">Mi Banco</h2>
-                    <p>
+                  <div className="col-12 col-md-6 col-xxl-6 ps-md-0 ps-xxl-4 ms-md-0 ms-xxl-4 descripcion-proyecto">
+                    <h2 className="mt-4 mt-md-0 ms-0 ms-md-4 ms-xxl-0">Mi Banco</h2>
+                    <p className="ms-0 ms-md-4 ms-xxl-0">
                       Proyecto personal de sitio bancario ficticio. Creación de diseño UI y desarrollo frontend y backend (Node.js). En el se pueden realizar transferencias, pagos de productos y modificación de datos del usuario con se ingresa al sitio. Los datos para poder ingresar y visualizar el proyecto son:
                     </p>
-                    <p>
+                    <p className="ms-0 ms-md-4 ms-xxl-0">
                       <span>Usuario: <strong>12.840.432-5</strong></span>
                       <br/>
                       <span>Clave: <strong>Usuario-123</strong></span>
                     </p>
-                    <p>
+                    <p className="ms-0 ms-md-4 ms-xxl-0">
                       <span>Usuario: <strong>9.328.275-2</strong></span>
                       <br/>
                       <span>Clave: <strong>Usuario-123</strong></span>
                     </p>
-                    <h3>Tecnologías y software utilizados:</h3>
-                    <ul className="tecnologias">
+                    <h3 className="ms-0 ms-md-4 ms-xxl-0">Tecnologías y software utilizados:</h3>
+                    <ul className="tecnologias ms-0 ms-md-4 ms-xxl-0">
                       <li>
                         <Image src={icoAngular} alt="Angular" title="Angular" /> 
                       </li>
@@ -163,8 +163,8 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                         <Image src={icoIllustrator} alt="Illustrator" title="Illustrator" /> 
                       </li>
                     </ul>
-                    <hr/>
-                    <Link href="https://mi-banco.claudiosalazar.cl" target='new' className="link-portafolio-proyectos">
+                    <hr className="ms-0 ms-md-4 ms-xxl-0"/>
+                    <Link href="https://mi-banco.claudiosalazar.cl" target='new' className="link-portafolio-proyectos ms-0 ms-md-4 ms-xxl-0">
                       <span className='ico-mas-proyecto'></span>
                       <span className='texto-link-portafolio'>Ver proyecto</span>
                     </Link>
@@ -177,13 +177,13 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                   <div className="col-12 col-md-6 col-xxl-4">
                     <Image src={itau} alt="Itau" title="Itau Sitio Publico" className="img-fluid" />
                   </div>
-                  <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
-                    <h2 className="mt-4 mt-md-0">ITAU - Sitio publico</h2>
-                    <p>
+                  <div className="col-12 col-md-6 col-xxl-6 ps-md-0 ps-xxl-4 ms-md-0 ms-xxl-4 descripcion-proyecto">
+                    <h2 className="mt-4 mt-md-0 ms-0 ms-md-4 ms-xxl-0">ITAU - Sitio publico</h2>
+                    <p className="ms-0 ms-md-4 ms-xxl-0">
                       Desarrollo de componentes y actualización de secciones para sitio publico de <strong>Itau Chile</strong>. Los desarrollos se hicieron trabajando con equipo UX para desarrollar el diseño y luego entregar desarrollo HTML a equipo de DEV para su implementacion en CMS de IBM.
                     </p>
-                    <h3>Tecnologías y software utilizados</h3>
-                    <ul className="tecnologias">
+                    <h3 className="ms-0 ms-md-4 ms-xxl-0">Tecnologías y software utilizados</h3>
+                    <ul className="tecnologias ms-0 ms-md-4 ms-xxl-0">
                       <li>
                         <Image src={icoHtml} alt="HTML 5" title="HTML 5" /> 
                       </li>
@@ -200,14 +200,14 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                         <Image src={icoIllustrator} alt="Illustrator" title="Illustrator" /> 
                       </li>
                     </ul>
-                    <h3>Metodologías</h3>
-                    <ul className="tecnologias">
+                    <h3 className="ms-0 ms-md-4 ms-xxl-0">Metodologías</h3>
+                    <ul className="tecnologias ms-0 ms-md-4 ms-xxl-0">
                       <li>
                         <Image src={icoScrum} alt="Scrum" title="Scrum" /> 
                       </li>
                     </ul>
-                    <hr/>
-                    <Link href="https://www.itau.cl" target='new' className="link-portafolio-proyectos">
+                    <hr className="ms-0 ms-md-4 ms-xxl-0"/>
+                    <Link href="https://www.itau.cl" target='new' className="link-portafolio-proyectos ms-0 ms-md-4 ms-xxl-0">
                       <span className='ico-mas-proyecto'></span>
                       <span className='texto-link-portafolio'>Ver proyecto</span>
                     </Link>
@@ -220,13 +220,13 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                   <div className="col-12 col-md-6 col-xxl-4">
                     <Image src={bci} alt="BCI" className="img-fluid" title="Plataforma comercial 360 | Connect - BCI" />
                   </div>
-                  <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
-                    <h2 className="mt-4 mt-md-0">BCI - 360 | Connect</h2>
-                    <p>
+                  <div className="col-12 col-md-6 col-xxl-6 ps-md-0 ps-xxl-4 ms-md-0 ms-xxl-4 descripcion-proyecto">
+                    <h2 className="mt-4 mt-md-0 ms-0 ms-md-4 ms-xxl-0">BCI - 360 | Connect</h2>
+                    <p className="ms-0 ms-md-4 ms-xxl-0">
                       Desarrollo de modulos y componentes <strong>360 | Connect</strong>, que es la plataforma comercial para uso de ejecutivos del banco <strong>BCI</strong>. Los desarrollos se hicieron trabajando con equipo UX para desarrollar el diseño y luego entregar modulo a equipo DEV Frontend utilizando Bitbucket.
                     </p>
-                    <h3>Tecnologías y software utilizados</h3>
-                    <ul className="tecnologias">
+                    <h3 className="ms-0 ms-md-4 ms-xxl-0">Tecnologías y software utilizados</h3>
+                    <ul className="tecnologias ms-0 ms-md-4 ms-xxl-0">
                       <li>
                         <Image src={icoAngular} alt="Angular" title="Angular" /> 
                       </li>
@@ -258,8 +258,8 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                         <Image src={icoIllustrator} alt="Illustrator" title="Illustrator" /> 
                       </li>
                     </ul>
-                    <h3>Metodologías</h3>
-                    <ul className="tecnologias">
+                    <h3 className="ms-0 ms-md-4 ms-xxl-0">Metodologías</h3>
+                    <ul className="tecnologias ms-0 ms-md-4 ms-xxl-0">
                       <li>
                         <Image src={icoScrum} alt="Scrum" title="Scrum" /> 
                       </li>
@@ -267,8 +267,8 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                         <Image src={icoKanban} alt="Kanban" title="Kanban" />
                       </li>
                     </ul>
-                    <hr/>
-                    <Link href="https://www.bci.cl/empresas/360-connect" target='new' className="link-portafolio-proyectos">
+                    <hr className="ms-0 ms-md-4 ms-xxl-0"/>
+                    <Link href="https://www.bci.cl/empresas/360-connect" target='new' className="link-portafolio-proyectos ms-0 ms-md-4 ms-xxl-0">
                       <span className='ico-mas-proyecto'></span>
                       <span className='texto-link-portafolio'>Ver proyecto</span>
                     </Link>
@@ -281,13 +281,13 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                   <div className="col-12 col-md-6 col-xxl-4">
                     <Image src={cym} alt="C&M Consultores" title="C&M Consultores" className="img-fluid" />
                   </div>
-                  <div className="col-12 col-md-6 col-xxl-6 ps-md-4 descripcion-proyecto ms-md-4">
-                    <h2 className="mt-4 mt-md-0">C&M Consultores</h2>
-                    <p>
+                  <div className="col-12 col-md-6 col-xxl-6 ps-md-0 ps-xxl-4 ms-md-0 ms-xxl-4 descripcion-proyecto">
+                    <h2 className="mt-4 mt-md-0 ms-0 ms-md-4 ms-xxl-0">C&M Consultores</h2>
+                    <p className="ms-0 ms-md-4 ms-xxl-0">
                       Proyecto Freelance sitio web corporarivo/informativo para pyme de contabilidad <strong>C&M Consultores</strong>.
                     </p>
-                    <h3>Tecnologías y software utilizados</h3>
-                    <ul className="tecnologias">
+                    <h3 className="ms-0 ms-md-4 ms-xxl-0">Tecnologías y software utilizados</h3>
+                    <ul className="tecnologias ms-0 ms-md-4 ms-xxl-0">
                       <li>
                         <Image src={icoAngular} alt="Angular" title="Angular" /> 
                       </li>
@@ -310,8 +310,8 @@ import icoBitbucket from '../../assets/iconos/ico-bitbucket.png';
                         <Image src={icoIllustrator} alt="Illustrator" title="Illustrator" /> 
                       </li>
                     </ul>
-                    <hr/>
-                    <Link href="https://cymconsultores.cl/" target='new' className="link-portafolio-proyectos">
+                    <hr className="ms-0 ms-md-4 ms-xxl-0"/>
+                    <Link href="https://cymconsultores.cl/" target='new' className="link-portafolio-proyectos ms-0 ms-md-4 ms-xxl-0">
                       <span className='ico-mas-proyecto'></span>
                       <span className='texto-link-portafolio'>Ver proyecto</span>
                     </Link>
