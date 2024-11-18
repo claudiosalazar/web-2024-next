@@ -185,12 +185,13 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  backdrop-filter: blur(5px);
 
   .modal-content {
     position: relative;
     background: white;
     padding: 20px;
-    border-radius: 0;
+    border-radius: 24px;
     max-width: fit-content;
     max-height: 60%;
     aspect-ratio: 1/1;
@@ -203,16 +204,27 @@
     .info {
       position: absolute;
       color: white;
-      bottom: 0;
+      bottom: 4px;
       left: 0;
       padding: 34px;
+      margin: 0 0 4px 4px;
+      border-radius: 24px;
       background-color: rgb(0, 0, 0, .8);
       display: block;
-      height: 30%;
-      width: 100%;
+      height: fit-content;
+      width: calc(100% - 8px);
       margin-bottom: 0;
+      h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: .2rem;
+      }
       p {
+        font-size: .9rem;
         color: white;
+        margin-bottom: 0;
+        font-weight: 200;
       }
     }
 
@@ -222,8 +234,8 @@
       height: 34px;
       border-radius: 50%;
       border: none;
-      right: 12px;
-      top: 12px;
+      right: 10px;
+      top: 10px;
       z-index: 500;
       display: flex;
       align-items: center;

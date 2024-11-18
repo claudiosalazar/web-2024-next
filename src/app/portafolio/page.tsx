@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import images from '../ui/Images';
 import ImageModal from '../ui/ImageModal';
@@ -12,7 +12,7 @@ function Portafolio() {
     { src: images.dev3, category: 'dev', titulo: 'Titulo', text: 'Desarrollo CYM' },
     { src: images.dev4, category: 'dev', titulo: 'Titulo', text: 'Desarrollo Itaú' },
     { src: images.ui1, category: 'ui', titulo: 'Titulo', text: 'Diseño UI CYM' },
-    { src: images.ui2, category: 'ui', titulo: 'Titulo', text: 'Diseño UI Mi Banco' },
+    { src: images.ui2, category: 'ui', titulo: 'Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
     { src: images.d1, category: 'd', titulo: 'Titulo', text: 'Diseño Adidas' },
     { src: images.d2, category: 'd', titulo: 'Titulo', text: 'Diseño Aflorar' },
     { src: images.d3, category: 'd', titulo: 'Titulo', text: 'Diseño Alacranes' },
@@ -105,6 +105,7 @@ function Portafolio() {
     sequence();
   }, [controlTitulo, controlMenu, controlImagenes]);
 
+
   return (
     <>
       <section className="portafolio row d-flex align-items-center">
@@ -158,6 +159,7 @@ function Portafolio() {
       </section>
 
       <ImageModal isOpen={isModalOpen} imageSrc={selectedImage || ''} imageTitulo={selectedTitulo || ''} imageDescripcion={selectedText || ''} onClose={handleCloseModal} />
+      
     </>
   );
 }

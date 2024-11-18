@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ImageModalProps {
   isOpen: boolean;
@@ -9,21 +10,37 @@ interface ImageModalProps {
 }
 
 const ImageModal: React.FC<ImageModalProps> = ({ isOpen, imageSrc, imageTitulo, imageDescripcion, onClose }) => {
-  if (!isOpen) return null;
-
   return (
-    <div className="modal-portafolio" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <img src={imageSrc} alt="Selected" className="img-fluid" />
-        <div className="info">
-          <h2>{imageTitulo}</h2>
-          <p>{imageDescripcion}</p>
-        </div>
-        <button className="cerrar-modal" onClick={onClose}>
-          <div className='icono-cerrar'></div>
-        </button>
-      </div>
-    </div>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className="modal-portafolio"
+          onClick={onClose}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ ease: 'easeIn', duration: 0.3 }}
+        >
+          <motion.div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ ease: 'easeIn', duration: 0.3 }}
+          >
+            <img src={imageSrc} alt={imageTitulo} className="img-fluid" />
+            <div className="info">
+              <h2>{imageTitulo}</h2>
+              <p>{imageDescripcion}</p>
+            </div>
+            <button className="cerrar-modal" onClick={onClose}>
+              <div className='icono-cerrar'></div>
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
