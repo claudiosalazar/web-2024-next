@@ -118,7 +118,7 @@ function Portafolio() {
         <div className='contenido-portafolio col-12 col-md-11 mx-auto pb-md-4'>
           <ul className='row'>
             {images.map((image, index) => (
-              <li key={index} className={`col-3 ${activeCategory && image.category !== activeCategory ? 'd-none' : ''}`}>
+              <li key={index} className={`col-6 col-md-4 col-xxl-3 ${activeCategory && image.category !== activeCategory ? 'd-none' : ''}`}>
                 <Image src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
               </li>
             ))}
