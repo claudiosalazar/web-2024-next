@@ -7,16 +7,21 @@ import ImageModal from '../ui/ImageModal';
 
 function Portafolio() {
   const imageList = [
-    { src: images.dev1, category: 'dev', titulo: 'Titulo', text: 'Proyecto personal de banco ficticio desarrollado en Angular con un Backend en NodeJS que consume datos desde base de datos MySql' },
+    { src: images.dev1, category: 'dev', titulo: 'Mi Banco', text: (
+      <>
+        Proyecto personal de banco ficticio desarrollado en Angular con un Backend en NodeJS que consume datos desde base de datos MySql. 
+        <a href="https://mi-banco.claudiosalazar.cl/" target="_blank" rel="noopener noreferrer">Ver más</a>
+      </>
+    )  },
     { src: images.dev2, category: 'dev', titulo: 'BCI | 360 Connect', text: 'Desarrollo BCI' },
-    { src: images.dev3, category: 'dev', titulo: 'Titulo', text: 'Desarrollo CYM' },
-    { src: images.dev4, category: 'dev', titulo: 'Titulo', text: 'Desarrollo Itaú' },
-    { src: images.ui1, category: 'ui', titulo: 'Titulo', text: 'Diseño UI CYM' },
-    { src: images.ui2, category: 'ui', titulo: 'Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
-    { src: images.d1, category: 'd', titulo: 'Titulo', text: 'Diseño Adidas' },
-    { src: images.d2, category: 'd', titulo: 'Titulo', text: 'Diseño Aflorar' },
-    { src: images.d3, category: 'd', titulo: 'Titulo', text: 'Diseño Alacranes' },
-    { src: images.d4, category: 'd', titulo: 'Titulo', text: 'Diseño Bigmark' },
+    { src: images.dev3, category: 'dev', titulo: 'C&M Consultores ', text: 'Desarrollo CYM' },
+    { src: images.dev4, category: 'dev', titulo: 'Itaú', text: 'Desarrollo Itaú' },
+    { src: images.ui1, category: 'ui', titulo: 'Diseño UI C&M Consultores', text: 'Diseño UI CYM' },
+    { src: images.ui2, category: 'ui', titulo: 'Diseño UI Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
+    { src: images.d1, category: 'd', titulo: 'Adidas', text: 'Diseño Adidas' },
+    { src: images.d2, category: 'd', titulo: 'Aflorar', text: 'Diseño Aflorar' },
+    { src: images.d3, category: 'd', titulo: 'Alacranes', text: 'Diseño Alacranes' },
+    { src: images.d4, category: 'd', titulo: 'Bigmark', text: 'Diseño Bigmark' },
     { src: images.d5, category: 'd', titulo: 'Titulo', text: 'Diseño CYM' },
     { src: images.d6, category: 'd', titulo: 'Titulo', text: 'Diseño Katarsis' },
     { src: images.d7, category: 'd', titulo: 'Titulo', text: 'Diseño Megasalud' },
@@ -29,13 +34,13 @@ function Portafolio() {
     { src: images.i7, category: 'i', titulo: 'Titulo', text: 'Ilustración Wonder Woman' },
     { src: images.i8, category: 'i', titulo: 'Titulo', text: 'Ilustración Darth Maul' },
     { src: images.i9, category: 'i', titulo: 'Titulo', text: 'Ilustración Skull Batman' },
-    { src: images.f1, category: 'f', titulo: 'Titulo', text: 'Fotografía Carretera' },
-    { src: images.f2, category: 'f', titulo: 'Titulo', text: 'Fotografía Constanera' },
-    { src: images.f3, category: 'f', titulo: 'Titulo', text: 'Fotografía Foco' },
-    { src: images.f4, category: 'f', titulo: 'Titulo', text: 'Fotografía Macbook' },
-    { src: images.f5, category: 'f', titulo: 'Titulo', text: 'Fotografía Moto' },
-    { src: images.f6, category: 'f', titulo: 'Titulo', text: 'Fotografía Pelota' },
-    { src: images.f7, category: 'f', titulo: 'Titulo', text: 'Fotografía Reflejo' },
+    { src: images.f1, category: 'f', titulo: '', text: '' },
+    { src: images.f2, category: 'f', titulo: '', text: '' },
+    { src: images.f3, category: 'f', titulo: '', text: '' },
+    { src: images.f4, category: 'f', titulo: '', text: '' },
+    { src: images.f5, category: 'f', titulo: '', text: '' },
+    { src: images.f6, category: 'f', titulo: '', text: '' },
+    { src: images.f7, category: 'f', titulo: '', text: '' },
   ];
 
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -43,7 +48,7 @@ function Portafolio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedTitulo, setSelectedTitulo] = useState<string | null>(null);
-  const [selectedText, setSelectedText] = useState<string | null>(null);
+  const [selectedText, setSelectedText] = useState<React.ReactNode>(null);
   const controlTitulo = useAnimation();
   const controlMenu = useAnimation();
   const controlImagenes = useAnimation();
@@ -62,7 +67,7 @@ function Portafolio() {
     }));
   };
 
-  const handleImageClick = (src: string, titulo: string, text: string) => {
+  const handleImageClick = (src: string, titulo: string, text: React.ReactNode) => {
     setSelectedImage(src);
     setSelectedTitulo(titulo);
     setSelectedText(text);

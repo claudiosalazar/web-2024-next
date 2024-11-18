@@ -5,7 +5,7 @@ interface ImageModalProps {
   isOpen: boolean;
   imageSrc: string;
   imageTitulo: string;
-  imageDescripcion: string;
+  imageDescripcion: React.ReactNode;
   onClose: () => void;
 }
 
@@ -30,10 +30,12 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, imageSrc, imageTitulo, 
             transition={{ ease: 'easeIn', duration: 0.3 }}
           >
             <img src={imageSrc} alt={imageTitulo} className="img-fluid" />
-            <div className="info">
-              <h2>{imageTitulo}</h2>
-              <p>{imageDescripcion}</p>
-            </div>
+            {(imageTitulo || imageDescripcion) && (
+              <div className="info">
+                {imageTitulo && <h2>{imageTitulo}</h2>}
+                {imageDescripcion && <p>{imageDescripcion}</p>}
+              </div>
+            )}
             <button className="cerrar-modal" onClick={onClose}>
               <div className='icono-cerrar'></div>
             </button>
