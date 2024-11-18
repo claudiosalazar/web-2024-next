@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import dev1 from '../assets/portafolio/dev-mi-banco-1.jpg';
 import dev2 from '../assets/portafolio/dev-bci.jpg';
 import dev3 from '../assets/portafolio/dev-cym.jpg';
@@ -34,6 +35,9 @@ import f7 from '../assets/portafolio/f-reflejo.jpg';
 
 function Portafolio() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const controlTitulo = useAnimation();
+  const controlMenu = useAnimation();
+  const controlImagenes = useAnimation();
 
   const images = [
     { src: dev1, category: 'dev' },
@@ -71,14 +75,43 @@ function Portafolio() {
     setActiveCategory(category);
   };
 
+  useEffect(() => {
+    const sequence = async () => {
+      await controlTitulo.start({ 
+        opacity: 1, 
+        transition: {
+          easeIn: 0.5,
+          duration: 0.5 
+        } 
+      });
+      await controlMenu.start({ 
+        opacity: 1, 
+        transition: {
+          easeIn: 0.5,  
+          duration: 0.5 
+        } 
+      });
+      await controlImagenes.start(i => ({
+        opacity: 1,
+        transition: {
+          easeIn: 0.5, 
+          delay: i * 0.05, 
+          duration: 0.5
+        }
+      }));
+    };
+
+    sequence();
+  }, [controlTitulo, controlMenu, controlImagenes]);
+
   return (
     <>
       <section className="portafolio row d-flex align-items-center">
 
-        <div className='titulo col-11 ol-xl-9 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
+        <motion.div initial={{ opacity: 0 }} animate={controlTitulo} className='titulo col-11 ol-xl-9 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
           <h1 className='text-center mb-4'>Portafolio</h1>
           <hr />
-          <ul className='d-flex menu-portafolio'>
+          <motion.ul initial={{ opacity: 0 }} animate={controlMenu} className='d-flex menu-portafolio'>
             <li className={`${activeCategory === null ? 'oculto' : 'visible'}`}>
               <a href="#todo" className={`link-portafolio ${activeCategory === null ? 'active' : ''}`} onClick={() => handleCategoryClick(null)}>Ver todo</a>
             </li>
@@ -112,17 +145,23 @@ function Portafolio() {
             <li>
               <a href="#f" className={`link-portafolio ${activeCategory === 'f' ? 'active' : ''}`} onClick={() => handleCategoryClick('f')}>Fotografía</a>
             </li>
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
 
         <div className='contenido-portafolio col-12 col-md-11 mx-auto pb-md-4'>
           <ul className='row'>
             {images.map((image, index) => (
-              <li key={index} className={`col-6 col-md-4 col-xxl-3 ${activeCategory && image.category !== activeCategory ? 'd-none' : ''}`}>
+              <motion.li
+                key={index}
+                className={`col-6 col-md-4 col-xxl-3 ${activeCategory && image.category !== activeCategory ? 'd-none' : ''}`}
+                initial={{ opacity: 0 }}
+                animate={controlImagenes}
+                custom={index}
+              >
                 <div className='mas-info'></div>
                 <div className='mascara'></div>
                 <Image src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
