@@ -156,8 +156,8 @@ function Portafolio() {
                   custom={index}
                   transition={{ delay: index * 0.05, duration: 0.5 }}
                 >
-                  <div className='mas-info'></div>
-                  <div className='mascara'></div>
+                  {/* <div className='mas-info'></div>
+                  <div className='mascara'></div> */}
                   <Image src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
                 </motion.li>
               ))}
