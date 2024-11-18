@@ -1,39 +1,8 @@
 'use client';
 
-import Image from 'next/image';
-import icoHtml from '../assets/iconos/ico-html.png';
-import icoCss from '../assets/iconos/ico-css.png';
-import icoSass from '../assets/iconos/ico-sass.png';
-import icoBootstrap from '../assets/iconos/ico-bootstrap.png';
-import icoAdobe from '../assets/iconos/ico-adobe.png';
-import icoAngular from '../assets/iconos/ico-angular.png';  
-import icoAtlassian from '../assets/iconos/ico-atlassian.png';
-
-import icoPhp from '../assets/iconos/ico-php.png';  
-import icoWp from '../assets/iconos/ico-wordpress.png';
-import icoMysql from '../assets/iconos/ico-mysql.png';
-import icoApi from '../assets/iconos/ico-api.png';
-
-import icoFigma from '../assets/iconos/ico-figma.png';
-import icoGit from '../assets/iconos/ico-git.png';
-import icoGitHub from '../assets/iconos/ico-github.png';
-import icoGitLab from '../assets/iconos/ico-gitlab.png';
-
-import icoIllustrator from '../assets/iconos/ico-illustrator.png';
-import icoJs from '../assets/iconos/ico-js.png';
-import icoKanban from '../assets/iconos/ico-kanban.png';
-import icoNpm from '../assets/iconos/ico-npm.png';
-import icoPhotoshop from '../assets/iconos/ico-photoshop.png';
-import icoReact from '../assets/iconos/ico-react.png';
-import icoJira from '../assets/iconos/ico-jira.png';
-
-import icoScrum from '../assets/iconos/ico-scrum.png';
-import icoSketch from '../assets/iconos/ico-sketch.png';
-import icoTs from '../assets/iconos/ico-ts.png';
-import icoXd from '../assets/iconos/ico-xd.png';
-import icoNode from '../assets/iconos/ico-nodejs.png';
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import images from '../ui/Images';
 
 function Conocimientos() {
   const [isOpen1, setIsOpen1] = useState(false);
@@ -137,53 +106,53 @@ function Conocimientos() {
                   <div className={`iconos d-none d-md-flex ${eval(`isOpen${index}`) ? 'active' : ''}`}>
                     {index === 1 && (
                       <>
-                        <Image src={icoHtml} className="ico-conocimientos" alt="HTML 5" title="HTML 5" />
-                        <Image src={icoCss} className="ico-conocimientos" alt="CSS 3" title="CSS 3" />
-                        <Image src={icoSass} className="ico-conocimientos" alt="Sass" title="Sass, scss" />
-                        <Image src={icoBootstrap} className="ico-conocimientos" alt="Bootstrap" title="Bootstrap 4 o superior" />
+                        <img src={images.icoHtml} className="ico-conocimientos" alt="HTML 5" title="HTML 5" />
+                        <img src={images.icoCss} className="ico-conocimientos" alt="CSS 3" title="CSS 3" />
+                        <img src={images.icoSass} className="ico-conocimientos" alt="Sass" title="Sass, scss" />
+                        <img src={images.icoBootstrap} className="ico-conocimientos" alt="Bootstrap" title="Bootstrap 4 o superior" />
                       </>
                     )}
                     {index === 2 && (
                       <>
-                        <Image src={icoJs} className="ico-conocimientos" alt="javascript" title="JavaScript" />
-                        <Image src={icoTs} className="ico-conocimientos" alt="typescript" title="TypeScript" />
-                        <Image src={icoNode} className="ico-conocimientos" alt="nodejs" title="Node.js" />
-                        <Image src={icoPhp} className="ico-conocimientos" alt="php" title="PHP" />
-                        <Image src={icoApi} className="ico-api" alt="api" title="API" />
-                        <Image src={icoMysql} className="ico-conocimientos" alt="mysql" title="MySQL" />
+                        <img src={images.icoJs} className="ico-conocimientos" alt="javascript" title="JavaScript" />
+                        <img src={images.icoTs} className="ico-conocimientos" alt="typescript" title="TypeScript" />
+                        <img src={images.icoNode} className="ico-conocimientos" alt="nodejs" title="Node.js" />
+                        <img src={images.icoPhp} className="ico-conocimientos" alt="php" title="PHP" />
+                        <img src={images.icoApi} className="ico-api" alt="api" title="API" />
+                        <img src={images.icoMysql} className="ico-conocimientos" alt="mysql" title="MySQL" />
                       </>
                     )}
                     {index === 3 && (
                       <>
-                        <Image src={icoAngular} className="ico-conocimientos" alt="angular" title="Angular 15 o superior" />
-                        <Image src={icoReact} className="ico-conocimientos" alt="react" title="React Native" />
-                        <Image src={icoWp} className="ico-conocimientos" alt="wordpress" title="WordPress" />
-                        <Image src={icoNpm} className="ico-conocimientos" alt="npm" title="Dependencias NPM" />
+                        <img src={images.icoAngular} className="ico-conocimientos" alt="angular" title="Angular 15 o superior" />
+                        <img src={images.icoReact} className="ico-conocimientos" alt="react" title="React Native" />
+                        <img src={images.icoWp} className="ico-conocimientos" alt="wordpress" title="WordPress" />
+                        <img src={images.icoNpm} className="ico-conocimientos" alt="npm" title="Dependencias NPM" />
                       </>
                     )}
                     {index === 4 && (
                       <>
-                        <Image src={icoGit} className="ico-conocimientos" alt="git" title="GIT" />
-                        <Image src={icoGitHub} className="ico-conocimientos" alt="github" title="Repositorio GitHub" />
-                        <Image src={icoAtlassian} className="ico-conocimientos" alt="atlassian" title="Repositorio Atlassian" />
-                        <Image src={icoGitLab} className="ico-conocimientos" alt="gitlab" title="Repositorio GitLab" />
+                        <img src={images.icoGit} className="ico-conocimientos" alt="git" title="GIT" />
+                        <img src={images.icoGitHub} className="ico-conocimientos" alt="github" title="Repositorio GitHub" />
+                        <img src={images.icoAtlassian} className="ico-conocimientos" alt="atlassian" title="Repositorio Atlassian" />
+                        <img src={images.icoGitLab} className="ico-conocimientos" alt="gitlab" title="Repositorio GitLab" />
                       </>
                     )}
                     {index === 5 && (
                       <>
-                        <Image src={icoFigma} className="ico-conocimientos" alt="figma" title="Figma" />
-                        <Image src={icoSketch} className="ico-conocimientos" alt="sketch" title="Sketch" />
-                        <Image src={icoXd} className="ico-conocimientos" alt="xd" title="Adobe XD" />
-                        <Image src={icoAdobe} className="ico-conocimientos" alt="adobe" title="Creative Cloud Adobe" />
-                        <Image src={icoIllustrator} className="ico-conocimientos" alt="illustrator" title="Adobe Illustrator" />
-                        <Image src={icoPhotoshop} className="ico-conocimientos" alt="photoshop" title="Adobe Photoshop" />
+                        <img src={images.icoFigma} className="ico-conocimientos" alt="figma" title="Figma" />
+                        <img src={images.icoSketch} className="ico-conocimientos" alt="sketch" title="Sketch" />
+                        <img src={images.icoXd} className="ico-conocimientos" alt="xd" title="Adobe XD" />
+                        <img src={images.icoAdobe} className="ico-conocimientos" alt="adobe" title="Creative Cloud Adobe" />
+                        <img src={images.icoIllustrator} className="ico-conocimientos" alt="illustrator" title="Adobe Illustrator" />
+                        <img src={images.icoPhotoshop} className="ico-conocimientos" alt="photoshop" title="Adobe Photoshop" />
                       </>
                     )}
                     {index === 6 && (
                       <>
-                        <Image src={icoScrum} className="ico-conocimientos" alt="scrum" title="Scrum" />
-                        <Image src={icoKanban} className="ico-conocimientos" alt="kanban" title="Kanban" />
-                        <Image src={icoJira} className="ico-conocimientos" alt="jira" title="Jira" />
+                        <img src={images.icoScrum} className="ico-conocimientos" alt="scrum" title="Scrum" />
+                        <img src={images.icoKanban} className="ico-conocimientos" alt="kanban" title="Kanban" />
+                        <img src={images.icoJira} className="ico-conocimientos" alt="jira" title="Jira" />
                       </>
                     )}
                   </div>

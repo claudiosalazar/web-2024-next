@@ -2,14 +2,9 @@
 
 import { AnimatePresence, easeIn, motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import Image from 'next/image';
+import images from '../ui/Images';
 
-import logoItau from '../assets/logos/logo-itau.png';
-import logoNtt from '../assets/logos/logo-ntt-data.png';
-import logoBbk from '../assets/logos/logo-bbk.png';
-import logoMayo from '../assets/logos/logo-mayo.png';
-import logoKi from '../assets/logos/logo-ki.png';
-import logoNuestragencia from '../assets/logos/logo-nuestragencia.png';
+
 
 function Trayectoria() {
   const controlTitulo = useAnimation();
@@ -263,7 +258,7 @@ function Trayectoria() {
               </button>
               <div className="d-flex">
                 <div className="me-3 ">
-                  <Image src={logoItau} alt="itau logo" title="Itau" />
+                  <img src={images.logoItau} alt="itau logo" title="Itau" />
                 </div>
                 <h4>ITAU</h4>
               </div>
@@ -286,7 +281,7 @@ function Trayectoria() {
               </button>
               <div className="d-flex">
                 <div className="me-3 ">
-                  <Image src={logoNtt} alt="everis ntt data logo" title="everis / NTT DATA" />
+                  <img src={images.logoNtt} alt="everis ntt data logo" title="everis / NTT DATA" />
                 </div>
                 <h4>NTT DATA</h4>
               </div>
@@ -309,7 +304,7 @@ function Trayectoria() {
               </button>
               <div className="d-flex">
                 <div className="me-3 ">
-                  <Image src={logoBbk} alt="bbk group logo" title="BBK Group" />
+                  <img src={images.logoBbk} alt="bbk group logo" title="BBK Group" />
                 </div>
                 <h4>BBK Group</h4>
               </div>
@@ -332,7 +327,7 @@ function Trayectoria() {
               </button>
               <div className="d-flex">
                 <div className="me-3 ">
-                  <Image src={logoMayo} alt="mayo group logo" title="MAYO Group" />
+                  <img src={images.logoMayo} alt="mayo group logo" title="MAYO Group" />
                 </div>
                 <h4>MAYO Group Chile</h4>
               </div>
@@ -355,7 +350,7 @@ function Trayectoria() {
               </button>
               <div className="d-flex">
                 <div className="me-3 ">
-                  <Image src={logoKi} alt="ki technologies logo" title="Ki Technologies" />
+                  <img src={images.logoKi} alt="ki technologies logo" title="Ki Technologies" />
                 </div>
                 <h4>Ki Technologies</h4>
               </div>
@@ -378,7 +373,7 @@ function Trayectoria() {
               </button>
               <div className="d-flex">
                 <div className="me-3 ">
-                  <Image src={logoNuestragencia} alt="nuestragencia logo" title="nuestrAgencia" />
+                  <img src={images.logoNuestragencia} alt="nuestragencia logo" title="nuestrAgencia" />
                 </div>
                 <h4>nuestrAgencia</h4>
               </div>

@@ -1,14 +1,9 @@
 'client-only'
 
 import React from 'react';
-import Image from 'next/image';
-import icoConocimientos from '../assets/resumen-icon-conocimientos.png';
 import VideoInicio from '../ui/video-inicio';
-import dev1 from '../assets/portafolio/dev-mi-banco-1.jpg';
-import dev2 from '../assets/portafolio/dev-bci.jpg';
-import dev3 from '../assets/portafolio/dev-cym.jpg';
+import images from '../ui/Images';
 import Link from "next/link";
-
 
 function Inicio() {
   return (
@@ -19,12 +14,11 @@ function Inicio() {
             <div className='contenido-portada d-flex align-items-center justify-content-center'>
               <div>
                 <div className='logo-inicio mx-auto'></div>
-                {/* <h1 className='d-flex flex-column flex-md-row align-content-center'> */}
                 <div className='nombre-inicio mb-4'></div>
                 <h1 className='d-flex flex-column mx-auto'>
-                  <span >UI DEVELOPER</span> 
-                  <span >UI DESIGNER</span>
-                  <span >FRONTEND DESIGNER</span>
+                  <span>UI DEVELOPER</span> 
+                  <span>UI DESIGNER</span>
+                  <span>FRONTEND DESIGNER</span>
                 </h1>
               </div>
             </div> 
@@ -44,7 +38,7 @@ function Inicio() {
                     <span className='span-anho'>2004</span>
                   </h4>
                 </div>
-                <div className='col-12  col-md-8 col-lg-10 texto-resumen-trayectoria'>
+                <div className='col-12 col-md-8 col-lg-10 texto-resumen-trayectoria'>
                   <p className='ms-0 ms-md-4 mb-4 px-4 px-lg-0'>
                     <strong>UI DEVELOPER</strong> especializado en en el <strong>desarrollo de interfaces web y componentes</strong>, usando código semántico y manteniendo siempre un enfoque en la mejora continua y el conocimiento de nuevas tecnologías. Más de 10 años de experiencia en uso de <strong>HTML</strong> y <strong>CSS</strong> para framework como <strong>Angular</strong> o <strong>React</strong>, trabajando en proyectos con <strong>metodologías ágiles</strong>. 
                   </p>
@@ -68,7 +62,7 @@ function Inicio() {
             <div className='col-12 col-md-10 col-lg-8 col-xxl-6 mx-auto'>
               <div className='row'>
                 <div className='col-8 col-md-4 mx-auto mt-4 mt-md-4 pe-md-4 separador-resumen-conocimiento'>
-                  <Image src={icoConocimientos} className="ico-conocimientos-resumen img-fluid" alt="conocimientos" title="Conocimientos" />
+                  <img src={images.icoConocimientos} className="ico-conocimientos-resumen img-fluid" alt="conocimientos" title="Conocimientos" />
                 </div>
                 <div className='col-10 col-md-8 mx-auto my-5 mt-md-4 mb-md-0 ps-md-4'>
                   <p>
@@ -91,13 +85,13 @@ function Inicio() {
           <hr className='mx-auto' />
           <ul className='d-flex justify-content-center flex-column flex-md-row mx-auto my-3 my-md-5'>
             <li>
-              <Image src={dev1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+              <img src={images.dev1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
             </li>
             <li>
-              <Image src={dev2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+              <img src={images.dev2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
             </li>
             <li>
-              <Image src={dev3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+              <img src={images.dev3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
             </li>
           </ul>
           <hr className='mx-auto' />

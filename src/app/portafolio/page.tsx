@@ -1,73 +1,44 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
-import dev1 from '../assets/portafolio/dev-mi-banco-1.jpg';
-import dev2 from '../assets/portafolio/dev-bci.jpg';
-import dev3 from '../assets/portafolio/dev-cym.jpg';
-import dev4 from '../assets/portafolio/dev-itau.jpg';
-import ui1 from '../assets/portafolio/ui-cym.jpg';
-import ui2 from '../assets/portafolio/ui-mi-banco.jpg';
-import d1 from '../assets/portafolio/d-adidas.jpg';
-import d2 from '../assets/portafolio/d-aflorar.jpg';
-import d3 from '../assets/portafolio/d-alacranes.jpg';
-import d4 from '../assets/portafolio/d-bigmark.jpg';
-import d5 from '../assets/portafolio/d-cym.jpg';
-import d6 from '../assets/portafolio/d-katarsis.jpg';
-import d7 from '../assets/portafolio/d-megasalud.jpg';
-import i1 from '../assets/portafolio/i-aguila-audax.jpg';
-import i2 from '../assets/portafolio/i-love-rock-beer.jpg';
-import i3 from '../assets/portafolio/i-manchester-logo.jpg';
-import i4 from '../assets/portafolio/i-scar.jpg';
-import i5 from '../assets/portafolio/i-skeletor.jpg';
-import i6 from '../assets/portafolio/i-witch-king.jpg';
-import i7 from '../assets/portafolio/i-wonder-woman.jpg';
-import i8 from '../assets/portafolio/i-darth-maul.jpg';
-import i9 from '../assets/portafolio/i-skull-batman.jpg';
-import f1 from '../assets/portafolio/f-carretera.jpg';
-import f2 from '../assets/portafolio/f-constanera.jpg';
-import f3 from '../assets/portafolio/f-foco.jpg';
-import f4 from '../assets/portafolio/f-macbook.jpg';
-import f5 from '../assets/portafolio/f-moto.jpg';
-import f6 from '../assets/portafolio/f-pelota.jpg';
-import f7 from '../assets/portafolio/f-reflejo.jpg';
+import images from '../ui/Images';
 
 function Portafolio() {
-  const images = [
-    { src: dev1, category: 'dev' },
-    { src: dev2, category: 'dev' },
-    { src: dev3, category: 'dev' },
-    { src: dev4, category: 'dev' },
-    { src: ui1, category: 'ui' },
-    { src: ui2, category: 'ui' },
-    { src: d1, category: 'd' },
-    { src: d2, category: 'd' },
-    { src: d3, category: 'd' },
-    { src: d4, category: 'd' },
-    { src: d5, category: 'd' },
-    { src: d6, category: 'd' },
-    { src: d7, category: 'd' },
-    { src: i1, category: 'i' },
-    { src: i2, category: 'i' },
-    { src: i3, category: 'i' },
-    { src: i4, category: 'i' },
-    { src: i5, category: 'i' },
-    { src: i6, category: 'i' },
-    { src: i7, category: 'i' },
-    { src: i8, category: 'i' },
-    { src: i9, category: 'i' },
-    { src: f1, category: 'f' },
-    { src: f2, category: 'f' },
-    { src: f3, category: 'f' },
-    { src: f4, category: 'f' },
-    { src: f5, category: 'f' },
-    { src: f6, category: 'f' },
-    { src: f7, category: 'f' },
+  const imageList = [
+    { src: images.dev1, category: 'dev' },
+    { src: images.dev2, category: 'dev' },
+    { src: images.dev3, category: 'dev' },
+    { src: images.dev4, category: 'dev' },
+    { src: images.ui1, category: 'ui' },
+    { src: images.ui2, category: 'ui' },
+    { src: images.d1, category: 'd' },
+    { src: images.d2, category: 'd' },
+    { src: images.d3, category: 'd' },
+    { src: images.d4, category: 'd' },
+    { src: images.d5, category: 'd' },
+    { src: images.d6, category: 'd' },
+    { src: images.d7, category: 'd' },
+    { src: images.i1, category: 'i' },
+    { src: images.i2, category: 'i' },
+    { src: images.i3, category: 'i' },
+    { src: images.i4, category: 'i' },
+    { src: images.i5, category: 'i' },
+    { src: images.i6, category: 'i' },
+    { src: images.i7, category: 'i' },
+    { src: images.i8, category: 'i' },
+    { src: images.i9, category: 'i' },
+    { src: images.f1, category: 'f' },
+    { src: images.f2, category: 'f' },
+    { src: images.f3, category: 'f' },
+    { src: images.f4, category: 'f' },
+    { src: images.f5, category: 'f' },
+    { src: images.f6, category: 'f' },
+    { src: images.f7, category: 'f' },
   ];
 
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [filteredImages, setFilteredImages] = useState(images);
+  const [filteredImages, setFilteredImages] = useState(imageList);
   const controlTitulo = useAnimation();
   const controlMenu = useAnimation();
   const controlImagenes = useAnimation();
@@ -75,7 +46,7 @@ function Portafolio() {
   const handleCategoryClick = async (category: string | null) => {
     await controlImagenes.start({ opacity: 0, transition: { duration: 0.5 } });
     setActiveCategory(category);
-    setFilteredImages(category ? images.filter(image => image.category === category) : images);
+    setFilteredImages(category ? imageList.filter(image => image.category === category) : imageList);
     controlImagenes.start(i => ({
       opacity: 1,
       transition: {
@@ -156,9 +127,7 @@ function Portafolio() {
                   custom={index}
                   transition={{ delay: index * 0.05, duration: 0.5 }}
                 >
-                  {/* <div className='mas-info'></div>
-                  <div className='mascara'></div> */}
-                  <Image src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
+                  <img src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
                 </motion.li>
               ))}
             </AnimatePresence>
