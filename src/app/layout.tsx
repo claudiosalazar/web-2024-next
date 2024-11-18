@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from 'next/script';
-import { Montserrat } from "next/font/google";
 import "./globals.scss";
 import './globalicons.scss';
 
@@ -8,14 +7,9 @@ import './globalicons.scss';
 import Header from "./components/Header";
 import Contactame from "./contactame/page";
 
-const montserrat = Montserrat({ 
-  subsets: ["latin"],
-  variable: '--font-montserrat',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
-});
 
 export const metadata: Metadata = {
-  title: "Claudio Salazar | Diseñador | Frontend Developer",
+  title: "Claudio Salazar | UI Developer | UI Designer | Frontend Designer",
   description: "Portfolio de Claudio Salazar",
 };
 
@@ -26,7 +20,7 @@ function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={montserrat.className}>
+      <body>
         <div className="contenido">
           <Header />
           <div className="container-fluid">
