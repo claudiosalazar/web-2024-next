@@ -178,14 +178,14 @@
   ul {
     width: 85% !important;
     @media (min-width: $md) {
-      width: 50% !important;
+      width: 70% !important;
     }
     li {
       list-style: none;
       margin: 4% auto;
       @media (min-width: $md) {
         width: 29.333333%;
-        margin: auto 2%;
+        margin: auto 1%;
       }
       img {
         width: 100%;

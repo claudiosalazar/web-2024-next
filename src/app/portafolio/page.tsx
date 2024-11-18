@@ -34,11 +34,6 @@ import f6 from '../assets/portafolio/f-pelota.jpg';
 import f7 from '../assets/portafolio/f-reflejo.jpg';
 
 function Portafolio() {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const controlTitulo = useAnimation();
-  const controlMenu = useAnimation();
-  const controlImagenes = useAnimation();
-
   const images = [
     { src: dev1, category: 'dev' },
     { src: dev2, category: 'dev' },
@@ -71,8 +66,24 @@ function Portafolio() {
     { src: f7, category: 'f' },
   ];
 
-  const handleCategoryClick = (category: string | null) => {
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [filteredImages, setFilteredImages] = useState(images);
+  const controlTitulo = useAnimation();
+  const controlMenu = useAnimation();
+  const controlImagenes = useAnimation();
+
+  const handleCategoryClick = async (category: string | null) => {
+    await controlImagenes.start({ opacity: 0, transition: { duration: 0.5 } });
     setActiveCategory(category);
+    setFilteredImages(category ? images.filter(image => image.category === category) : images);
+    controlImagenes.start(i => ({
+      opacity: 1,
+      transition: {
+        easeIn: 0.5,
+        delay: i * 0.05,
+        duration: 0.5
+      }
+    }));
   };
 
   useEffect(() => {
@@ -108,61 +119,49 @@ function Portafolio() {
     <>
       <section className="portafolio row d-flex align-items-center">
 
-        <motion.div initial={{ opacity: 0 }} animate={controlTitulo} className='titulo col-11 ol-xl-9 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
+        <motion.div initial={{ opacity: 0 }} animate={controlTitulo} className='titulo col-12 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
           <h1 className='text-center mb-4'>Portafolio</h1>
-          <hr />
-          <motion.ul initial={{ opacity: 0 }} animate={controlMenu} className='d-flex menu-portafolio'>
-            <li className={`${activeCategory === null ? 'oculto' : 'visible'}`}>
-              <a href="#todo" className={`link-portafolio ${activeCategory === null ? 'active' : ''}`} onClick={() => handleCategoryClick(null)}>Ver todo</a>
-            </li>
-            <li className={`${activeCategory === null ? 'oculto' : 'visible'}`}>
-              |
-            </li>
-            <li>
+          <motion.ul initial={{ opacity: 0 }} animate={controlMenu} className='row menu-portafolio'>
+            <li className='col-6 col-md'>
               <a href="#dev" className={`link-portafolio ${activeCategory === 'dev' ? 'active' : ''}`} onClick={() => handleCategoryClick('dev')}>Desarrollo</a>
             </li>
-            <li>
-              |
-            </li>
-            <li>
+            <li className='col-6 col-md'>
               <a href="#ui" className={`link-portafolio ${activeCategory === 'ui' ? 'active' : ''}`} onClick={() => handleCategoryClick('ui')}>Diseño UI</a>
             </li>
-            <li>
-              |
-            </li>
-            <li>
+            <li className='col-6 col-md'>
               <a href="#d" className={`link-portafolio ${activeCategory === 'd' ? 'active' : ''}`} onClick={() => handleCategoryClick('d')}>Diseño Gráfico</a>
             </li>
-            <li>
-              |
-            </li>
-            <li>
+            <li className='col-6 col-md'>
               <a href="#i" className={`link-portafolio ${activeCategory === 'i' ? 'active' : ''}`} onClick={() => handleCategoryClick('i')}>Ilustraciones</a>
             </li>
-            <li>
-              |
-            </li>
-            <li>
+            <li className='col-6 col-md'>
               <a href="#f" className={`link-portafolio ${activeCategory === 'f' ? 'active' : ''}`} onClick={() => handleCategoryClick('f')}>Fotografía</a>
+            </li>
+            <li className={`col-6 col-md ${activeCategory === null ? 'oculto' : 'visible'}`}>
+              <a href="#todo" className={`link-portafolio ${activeCategory === null ? 'active' : ''}`} onClick={() => handleCategoryClick(null)}>Ver todo</a>
             </li>
           </motion.ul>
         </motion.div>
 
         <div className='contenido-portafolio col-12 col-md-11 mx-auto pb-md-4'>
           <ul className='row'>
-            {images.map((image, index) => (
-              <motion.li
-                key={index}
-                className={`col-6 col-md-4 col-xxl-3 ${activeCategory && image.category !== activeCategory ? 'd-none' : ''}`}
-                initial={{ opacity: 0 }}
-                animate={controlImagenes}
-                custom={index}
-              >
-                <div className='mas-info'></div>
-                <div className='mascara'></div>
-                <Image src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
-              </motion.li>
-            ))}
+            <AnimatePresence>
+              {filteredImages.map((image, index) => (
+                <motion.li
+                  key={index}
+                  className={`col-6 col-md-4 col-xxl-3`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  custom={index}
+                  transition={{ delay: index * 0.05, duration: 0.5 }}
+                >
+                  <div className='mas-info'></div>
+                  <div className='mascara'></div>
+                  <Image src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
+                </motion.li>
+              ))}
+            </AnimatePresence>
           </ul>
         </div>
       </section>

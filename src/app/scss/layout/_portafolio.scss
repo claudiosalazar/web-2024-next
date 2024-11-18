@@ -21,10 +21,34 @@
       padding: 0;
     }
     &.menu-portafolio {
-      margin-bottom: 36px;
+      width: 100%;
+      margin: 12px 0 36px 0;
+      @media (min-width: $md) {
+        margin: 36px 0;
+      }
+      @media (min-width: $lg) {
+        width: 80%;
+      }
+      @media (min-width: $xl) {
+        width: 60%;
+      }
       li {
         color: $dorado-oscuro;
-        font-size: .9rem;
+        font-size: .8rem;
+        margin-bottom: 12px;
+        text-align: left;
+        @media (min-width: $md) {
+          padding: 0 12px;
+          text-align: center;
+          margin-bottom: 0;
+          border-left: 1px solid $dorado;
+        }
+        @media (min-width: $lg) {
+          font-size: .9rem;
+        }
+        &:first-child {
+          border-left: 0;
+        }
         &.oculto {
           display: none;
         }
@@ -32,7 +56,6 @@
           display: block;
         }
         a {
-          margin: 0 18px !important;
           text-transform: uppercase;
           color: $dorado-oscuro;
           &:hover {

@@ -4,7 +4,9 @@ import React from 'react';
 import Image from 'next/image';
 import icoConocimientos from '../assets/resumen-icon-conocimientos.png';
 import VideoInicio from '../ui/video-inicio';
-import miBanco1 from '../assets/portafolio/dev-mi-banco-1.jpg';
+import dev1 from '../assets/portafolio/dev-mi-banco-1.jpg';
+import dev2 from '../assets/portafolio/dev-bci.jpg';
+import dev3 from '../assets/portafolio/dev-cym.jpg';
 import Link from "next/link";
 
 
@@ -44,7 +46,7 @@ function Inicio() {
                 </div>
                 <div className='col-12  col-md-8 col-lg-10 texto-resumen-trayectoria'>
                   <p className='ms-0 ms-md-4 mb-4 px-4 px-lg-0'>
-                    Con más de 20 años de experiencia, he participado en muchos proyectos web para rubros como banca, corporativos y marketing. Durante los últimos años he trabajado en proyectos con metodologías ágiles utilizando las últimas tecnologías para proyectos de la banca nacional como Banco Estado, BCI e Itaú.
+                    <strong>UI DEVELOPER</strong> especializado en en el <strong>desarrollo de interfaces web y componentes</strong>, usando código semántico y manteniendo siempre un enfoque en la mejora continua y el conocimiento de nuevas tecnologías. Más de 10 años de experiencia en uso de <strong>HTML</strong> y <strong>CSS</strong> para framework como <strong>Angular</strong> o <strong>React</strong>, trabajando en proyectos con <strong>metodologías ágiles</strong>. 
                   </p>
                   <p className='mb-0 ps-4 mx-auto mx-md-0 mt-2 mt-md-0'>
                     <Link href="/trayectoria" className="link-inicio-resumenes">
@@ -89,13 +91,13 @@ function Inicio() {
           <hr className='mx-auto' />
           <ul className='d-flex justify-content-center flex-column flex-md-row mx-auto my-3 my-md-5'>
             <li>
-              <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+              <Image src={dev1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
             </li>
             <li>
-              <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+              <Image src={dev2} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
             </li>
             <li>
-              <Image src={miBanco1} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
+              <Image src={dev3} className="ico-conocimientos img-fluid" alt="HTML 5" title="HTML 5" />
             </li>
           </ul>
           <hr className='mx-auto' />
