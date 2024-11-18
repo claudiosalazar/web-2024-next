@@ -90,49 +90,132 @@
   }
 }
 
+// .modal-portafolio {
+//   position: fixed;
+//   z-index: 3000;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   backdrop-filter: blur(4px);
+//   overflow: hidden;
+//   background-color: rgb(207, 131, 0, .6);
+//   display: none !important;
+//   justify-content: center;
+//   align-items: center;
+//   opacity: 0;
+//   transition: opacity .3s ease-in-out;
+
+//   &.imagen-visible {
+//     display: flex !important;
+//     justify-content: center;
+//     align-items: center;
+//     opacity: 1;
+//   }
+
+//   &.ocultar {
+//     opacity: 0;
+//     transition: opacity .3s ease-in-out;
+//   }
+
+//   .item-modal {
+//     max-width: 1500px;
+//     max-height: 1500px;
+//     position: relative;
+//     margin-left: 12px;
+//     margin-right: 12px;
+//     @media (min-width: $md) {
+//       margin-left: 0;
+//       margin-right: 0;
+//     }
+//     img {
+//       width: auto;
+//       height: auto;
+//       border-radius: 20px;
+//     }
+//     .cerrar-modal {
+//       position: absolute;
+//       width: 34px;
+//       height: 34px;
+//       border-radius: 50%;
+//       border: none;
+//       right: 12px;
+//       top: 12px;
+//       z-index: 500;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       background-color: $gris-30;
+//       .icono-cerrar {
+//         width: 32px;
+//         height: 32px;
+//         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.785423 14L0 13.2146L6.21458 7L0 0.785423L0.785423 0L7 6.21458L13.2146 0L14 0.785423L7.78542 7L14 13.2146L13.2146 14L7 7.78542L0.785423 14Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+//         background-size: 14px 14px;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         border-radius: 50%;
+//         cursor: pointer;
+//         @include rotated-out;
+  
+//         &:hover {
+//           @include rotated-in;
+//         }
+//       }
+  
+//       @media (max-width: $md) {
+//         width: 28px;
+//         height: 28px;
+//         right: 6px;
+//         top: 6px;
+//       }
+//     }
+//   }
+// }
+
+
+// Modal portafolio
 .modal-portafolio {
   position: fixed;
-  z-index: 3000;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  backdrop-filter: blur(4px);
-  overflow: hidden;
-  background-color: rgb(207, 131, 0, .6);
-  display: none !important;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
+  z-index: 1000;
 
-  &.imagen-visible {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-  }
-
-  &.ocultar {
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-  }
-
-  .item-modal {
-    max-width: 1500px;
-    max-height: 1500px;
+  .modal-content {
     position: relative;
-    margin-left: 12px;
-    margin-right: 12px;
-    @media (min-width: $md) {
-      margin-left: 0;
-      margin-right: 0;
-    }
+    background: white;
+    padding: 20px;
+    border-radius: 0;
+    max-width: fit-content;
+    max-height: 60%;
+    aspect-ratio: 1/1;
+    
     img {
-      width: auto;
-      height: auto;
-      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
+    .info {
+      position: absolute;
+      color: white;
+      bottom: 0;
+      left: 0;
+      padding: 34px;
+      background-color: rgb(0, 0, 0, .8);
+      display: block;
+      height: 30%;
+      width: 100%;
+      margin-bottom: 0;
+      p {
+        color: white;
+      }
+    }
+
     .cerrar-modal {
       position: absolute;
       width: 34px;
@@ -173,35 +256,3 @@
 }
 
 
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  position: relative;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}

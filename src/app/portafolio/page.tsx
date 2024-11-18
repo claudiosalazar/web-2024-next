@@ -7,41 +7,42 @@ import ImageModal from '../ui/ImageModal';
 
 function Portafolio() {
   const imageList = [
-    { src: images.dev1, category: 'dev', text: 'Desarrollo Mi Banco' },
-    { src: images.dev2, category: 'dev', text: 'Desarrollo BCI' },
-    { src: images.dev3, category: 'dev', text: 'Desarrollo CYM' },
-    { src: images.dev4, category: 'dev', text: 'Desarrollo Itaú' },
-    { src: images.ui1, category: 'ui', text: 'Diseño UI CYM' },
-    { src: images.ui2, category: 'ui', text: 'Diseño UI Mi Banco' },
-    { src: images.d1, category: 'd', text: 'Diseño Adidas' },
-    { src: images.d2, category: 'd', text: 'Diseño Aflorar' },
-    { src: images.d3, category: 'd', text: 'Diseño Alacranes' },
-    { src: images.d4, category: 'd', text: 'Diseño Bigmark' },
-    { src: images.d5, category: 'd', text: 'Diseño CYM' },
-    { src: images.d6, category: 'd', text: 'Diseño Katarsis' },
-    { src: images.d7, category: 'd', text: 'Diseño Megasalud' },
-    { src: images.i1, category: 'i', text: 'Ilustración Águila Audax' },
-    { src: images.i2, category: 'i', text: 'Ilustración Love Rock Beer' },
-    { src: images.i3, category: 'i', text: 'Ilustración Manchester Logo' },
-    { src: images.i4, category: 'i', text: 'Ilustración Scar' },
-    { src: images.i5, category: 'i', text: 'Ilustración Skeletor' },
-    { src: images.i6, category: 'i', text: 'Ilustración Witch King' },
-    { src: images.i7, category: 'i', text: 'Ilustración Wonder Woman' },
-    { src: images.i8, category: 'i', text: 'Ilustración Darth Maul' },
-    { src: images.i9, category: 'i', text: 'Ilustración Skull Batman' },
-    { src: images.f1, category: 'f', text: 'Fotografía Carretera' },
-    { src: images.f2, category: 'f', text: 'Fotografía Constanera' },
-    { src: images.f3, category: 'f', text: 'Fotografía Foco' },
-    { src: images.f4, category: 'f', text: 'Fotografía Macbook' },
-    { src: images.f5, category: 'f', text: 'Fotografía Moto' },
-    { src: images.f6, category: 'f', text: 'Fotografía Pelota' },
-    { src: images.f7, category: 'f', text: 'Fotografía Reflejo' },
+    { src: images.dev1, category: 'dev', titulo: 'Titulo', text: 'Proyecto personal de banco ficticio desarrollado en Angular con un Backend en NodeJS que consume datos desde base de datos MySql' },
+    { src: images.dev2, category: 'dev', titulo: 'BCI | 360 Connect', text: 'Desarrollo BCI' },
+    { src: images.dev3, category: 'dev', titulo: 'Titulo', text: 'Desarrollo CYM' },
+    { src: images.dev4, category: 'dev', titulo: 'Titulo', text: 'Desarrollo Itaú' },
+    { src: images.ui1, category: 'ui', titulo: 'Titulo', text: 'Diseño UI CYM' },
+    { src: images.ui2, category: 'ui', titulo: 'Titulo', text: 'Diseño UI Mi Banco' },
+    { src: images.d1, category: 'd', titulo: 'Titulo', text: 'Diseño Adidas' },
+    { src: images.d2, category: 'd', titulo: 'Titulo', text: 'Diseño Aflorar' },
+    { src: images.d3, category: 'd', titulo: 'Titulo', text: 'Diseño Alacranes' },
+    { src: images.d4, category: 'd', titulo: 'Titulo', text: 'Diseño Bigmark' },
+    { src: images.d5, category: 'd', titulo: 'Titulo', text: 'Diseño CYM' },
+    { src: images.d6, category: 'd', titulo: 'Titulo', text: 'Diseño Katarsis' },
+    { src: images.d7, category: 'd', titulo: 'Titulo', text: 'Diseño Megasalud' },
+    { src: images.i1, category: 'i', titulo: 'Titulo', text: 'Ilustración Águila Audax' },
+    { src: images.i2, category: 'i', titulo: 'Titulo', text: 'Ilustración Love Rock Beer' },
+    { src: images.i3, category: 'i', titulo: 'Titulo', text: 'Ilustración Manchester Logo' },
+    { src: images.i4, category: 'i', titulo: 'Titulo', text: 'Ilustración Scar' },
+    { src: images.i5, category: 'i', titulo: 'Titulo', text: 'Ilustración Skeletor' },
+    { src: images.i6, category: 'i', titulo: 'Titulo', text: 'Ilustración Witch King' },
+    { src: images.i7, category: 'i', titulo: 'Titulo', text: 'Ilustración Wonder Woman' },
+    { src: images.i8, category: 'i', titulo: 'Titulo', text: 'Ilustración Darth Maul' },
+    { src: images.i9, category: 'i', titulo: 'Titulo', text: 'Ilustración Skull Batman' },
+    { src: images.f1, category: 'f', titulo: 'Titulo', text: 'Fotografía Carretera' },
+    { src: images.f2, category: 'f', titulo: 'Titulo', text: 'Fotografía Constanera' },
+    { src: images.f3, category: 'f', titulo: 'Titulo', text: 'Fotografía Foco' },
+    { src: images.f4, category: 'f', titulo: 'Titulo', text: 'Fotografía Macbook' },
+    { src: images.f5, category: 'f', titulo: 'Titulo', text: 'Fotografía Moto' },
+    { src: images.f6, category: 'f', titulo: 'Titulo', text: 'Fotografía Pelota' },
+    { src: images.f7, category: 'f', titulo: 'Titulo', text: 'Fotografía Reflejo' },
   ];
 
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [filteredImages, setFilteredImages] = useState(imageList);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedTitulo, setSelectedTitulo] = useState<string | null>(null);
   const [selectedText, setSelectedText] = useState<string | null>(null);
   const controlTitulo = useAnimation();
   const controlMenu = useAnimation();
@@ -61,8 +62,9 @@ function Portafolio() {
     }));
   };
 
-  const handleImageClick = (src: string, text: string) => {
+  const handleImageClick = (src: string, titulo: string, text: string) => {
     setSelectedImage(src);
+    setSelectedTitulo(titulo);
     setSelectedText(text);
     setIsModalOpen(true);
   };
@@ -70,6 +72,7 @@ function Portafolio() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedImage(null);
+    setSelectedTitulo(null);
     setSelectedText(null);
   };
 
@@ -142,7 +145,7 @@ function Portafolio() {
                   exit={{ opacity: 0 }}
                   custom={index}
                   transition={{ delay: index * 0.05, duration: 0.5 }}
-                  onClick={() => handleImageClick(image.src, image.text)}
+                  onClick={() => handleImageClick(image.src, image.titulo, image.text)}
                 >
                   <div className='mascara'></div>
                   <div className='mas-info'></div>
@@ -154,7 +157,7 @@ function Portafolio() {
         </div>
       </section>
 
-      <ImageModal isOpen={isModalOpen} imageSrc={selectedImage || ''} imageText={selectedText || ''} onClose={handleCloseModal} />
+      <ImageModal isOpen={isModalOpen} imageSrc={selectedImage || ''} imageTitulo={selectedTitulo || ''} imageDescripcion={selectedText || ''} onClose={handleCloseModal} />
     </>
   );
 }
