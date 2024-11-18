@@ -1,162 +1,71 @@
-'use client';
-
-import React, { useState, useCallback, useEffect } from 'react';
-import { AnimatePresence, easeIn, motion, useAnimation } from 'framer-motion';
-import Link from "next/link";
+import React from 'react';
 import Image from 'next/image';
-
-// Desarrollo
-import miBanco1 from '../assets/portafolio/desarrollo/mi-banco-1.jpg';
-import miBanco2 from '../assets/portafolio/desarrollo/mi-banco-2.jpg';
-import miBanco3 from '../assets/portafolio/desarrollo/mi-banco-3.jpg';
-import miBanco4 from '../assets/portafolio/desarrollo/mi-banco-4.jpg';
+import dev1 from '../assets/portafolio/dev-mi-banco-1.jpg';
+import dev2 from '../assets/portafolio/dev-bci.jpg';
+import dev3 from '../assets/portafolio/dev-cym.jpg';
+import dev4 from '../assets/portafolio/dev-itau.jpg';
+import ui1 from '../assets/portafolio/ui-cym.jpg';
+import ui2 from '../assets/portafolio/ui-mi-banco.jpg';
+import d1 from '../assets/portafolio/d-adidas.jpg';
+import d2 from '../assets/portafolio/d-aflorar.jpg';
+import d3 from '../assets/portafolio/d-alacranes.jpg';
+import d4 from '../assets/portafolio/d-bigmark.jpg';
+import d5 from '../assets/portafolio/d-cym.jpg';
+import d6 from '../assets/portafolio/d-katarsis.jpg';
+import d7 from '../assets/portafolio/d-megasalud.jpg';
+import i1 from '../assets/portafolio/i-aguila-audax.jpg';
+import i2 from '../assets/portafolio/i-love-rock-beer.jpg';
+import i3 from '../assets/portafolio/i-manchester-logo.jpg';
+import i4 from '../assets/portafolio/i-scar.jpg';
+import i5 from '../assets/portafolio/i-skeletor.jpg';
+import i6 from '../assets/portafolio/i-witch-king.jpg';
+import i7 from '../assets/portafolio/i-wonder-woman.jpg';
+import i8 from '../assets/portafolio/i-darth-maul.jpg';
+import i9 from '../assets/portafolio/i-skull-batman.jpg';
+import f1 from '../assets/portafolio/f-carretera.jpg';
+import f2 from '../assets/portafolio/f-constanera.jpg';
+import f3 from '../assets/portafolio/f-foco.jpg';
+import f4 from '../assets/portafolio/f-macbook.jpg';
+import f5 from '../assets/portafolio/f-moto.jpg';
+import f6 from '../assets/portafolio/f-pelota.jpg';
+import f7 from '../assets/portafolio/f-reflejo.jpg';
 
 function Portafolio() {
+  const images = [
+    dev1, dev2, dev3, dev4,
+    ui1, ui2,
+    d1, d2, d3, d4, d5, d6, d7,
+    i1, i2, i3, i4, i5, i6, i7, i8, i9,
+    f1, f2, f3, f4, f5, f6, f7
+  ];
 
-  const controlTitulo = useAnimation();
-  const controlContenido = useAnimation();
-
-  const titulo = {
-    hidden: {
-      y: -10,
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        easeIn,
-        duration: 0.05
-      }
-    },
-  };
-
-  const contenidoPortafolio = {
-    hidden: {
-      y: -10,
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        easeIn,
-        duration: 0.1
-      }
-    },
-  };
-
-  useEffect(() => {
-    const sequence = async () => {
-      await controlTitulo.start({ opacity: 1, y: 0 });
-      await controlContenido.start(i => ({
-        opacity: 1,
-        y: 0,
-        transition: { 
-          ease: 'easeInOut',
-        }
-      }));
-    };
-
-    sequence();
-  }, [controlTitulo, controlContenido]);
-
-  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    const video = e.currentTarget.querySelector('.fnd-video-link') as HTMLVideoElement;
-    video.currentTime = 0;
-    if (video) {
-      video.style.transition = 'opacity 0.3s ease-in';
-      video.style.opacity = '1';
-      video.play();
-    }
-  };
-  
-  const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    const video = e.currentTarget.querySelector('.fnd-video-link') as HTMLVideoElement;
-    if (video) {
-      video.style.transition = 'opacity 0.3s ease-out';
-      video.style.opacity = '0';
-  
-      // Espera a que la transición termine antes de reiniciar el video
-      const handleTransitionEnd = () => {
-        if (video.style.opacity === '0') {
-          video.currentTime = 0; // Reinicia el video al principio
-        }
-        video.removeEventListener('transitionend', handleTransitionEnd);
-      };
-  
-      video.addEventListener('transitionend', handleTransitionEnd);
-    }
-  };
-  
   return (
     <>
       <section className="portafolio row d-flex align-items-center">
 
-        <motion.div variants={titulo} initial='hidden' animate={controlTitulo} className='titulo col-11 ol-xl-9 mx-auto text-center pt-4 d-flex flex-column flex-md-row align-items-md-center'>
+        <div className='titulo col-11 ol-xl-9 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
           <h1 className='text-center mb-4'>Portafolio</h1>
-        </motion.div>
+          <hr />
+          <ul>
+            <li>
+              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
+              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
+              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
+              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
+            </li>
+          </ul>
+        </div>
 
-        <motion.div variants={contenidoPortafolio} initial='hidden' animate={controlContenido} className='contenidoPortafolio contenido-portafolio col-12 col-md-11 mx-auto mt-5 pb-md-4'>
-          <div className='row'>
-            <div className='col-11 col-lg-6 tipo-proyecto dev mx-auto p-0' >
-              <Link className='link-portada-portafolio' href='/portafolio/desarrollo' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <div className='info-link'>
-                  <span>Desarrollo</span>
-                  <span className='ico-tipo-proyecto ico-dev'></span>
-                </div>
-                <video className='fnd-video-link' src='/video/link-dev.mp4' muted loop></video>
-              </Link>
-            </div>
-
-            <div className='col-11 col-lg-6 mx-auto'>
-              <div className='row'>
-                <div className='ui col-12 col-md-6 tipo-proyecto p-0' >
-                  <Link className='link-portada-portafolio' href='/portafolio/diseno-ui' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <div className='info-link ui'>
-                      <span>Diseño UX/UI</span>
-                      <span className='ico-tipo-proyecto ico-ui'></span>
-                    </div>
-                    <video className='fnd-video-link' src='/video/link-ui.mp4' muted loop></video>
-                  </Link>
-                </div>
-
-                <div className='diseno col-12 col-md-6 tipo-proyecto p-0' >
-                  <Link className='link-portada-portafolio' href='/portafolio/diseno-grafico' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <div className='info-link'>
-                      <span>Diseño Gráfico</span>
-                      <span className='ico-tipo-proyecto ico-diseno'></span>
-                    </div>
-                    <video className='fnd-video-link' src='/video/link-diseno.mp4' muted loop></video>
-                  </Link>
-                </div>
-
-                <div className='ilustracion col-12 col-md-6 tipo-proyecto p-0' >
-                  <Link className='link-portada-portafolio' href='/portafolio/ilustraciones' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <div className='info-link'>
-                      <span>Ilustraciones</span>
-                      <span className='ico-tipo-proyecto ico-ilustracion'></span>
-                    </div>
-                    <video className='fnd-video-link' src='/video/link-ilustracion.mp4' muted loop></video>
-                  </Link>
-                </div>
-
-                <div className='foto col-12 col-md-6 tipo-proyecto p-0' >
-                  <Link className='link-portada-portafolio' href='/portafolio/fotografia' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <div className='info-link'>
-                      <span>Fotografía</span>
-                      <span className='ico-tipo-proyecto ico-foto'></span>
-                    </div>
-                    <video className='fnd-video-link' src='/video/link-foto.mp4' muted loop></video>
-                  </Link>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        <div className='contenidoPortafolio contenido-portafolio col-12 col-md-11 mx-auto mt-5 pb-md-4'>
+          <ul className='row'>
+            {images.map((image, index) => (
+              <li key={index} className='col-4'>
+                <Image src={image} alt={`Portafolio ${index + 1}`} className="img-fluid" />
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
-
     </>
   );
 }

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import icoConocimientos from '../assets/resumen-icon-conocimientos.png';
 import VideoInicio from '../ui/video-inicio';
-import miBanco1 from '../assets/portafolio/desarrollo/mi-banco-1.jpg';
+import miBanco1 from '../assets/portafolio/dev-mi-banco-1.jpg';
 import Link from "next/link";
 
 
