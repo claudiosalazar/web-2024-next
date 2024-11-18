@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import dev1 from '../assets/portafolio/dev-mi-banco-1.jpg';
 import dev2 from '../assets/portafolio/dev-bci.jpg';
@@ -31,13 +33,43 @@ import f6 from '../assets/portafolio/f-pelota.jpg';
 import f7 from '../assets/portafolio/f-reflejo.jpg';
 
 function Portafolio() {
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
   const images = [
-    dev1, dev2, dev3, dev4,
-    ui1, ui2,
-    d1, d2, d3, d4, d5, d6, d7,
-    i1, i2, i3, i4, i5, i6, i7, i8, i9,
-    f1, f2, f3, f4, f5, f6, f7
+    { src: dev1, category: 'dev' },
+    { src: dev2, category: 'dev' },
+    { src: dev3, category: 'dev' },
+    { src: dev4, category: 'dev' },
+    { src: ui1, category: 'ui' },
+    { src: ui2, category: 'ui' },
+    { src: d1, category: 'd' },
+    { src: d2, category: 'd' },
+    { src: d3, category: 'd' },
+    { src: d4, category: 'd' },
+    { src: d5, category: 'd' },
+    { src: d6, category: 'd' },
+    { src: d7, category: 'd' },
+    { src: i1, category: 'i' },
+    { src: i2, category: 'i' },
+    { src: i3, category: 'i' },
+    { src: i4, category: 'i' },
+    { src: i5, category: 'i' },
+    { src: i6, category: 'i' },
+    { src: i7, category: 'i' },
+    { src: i8, category: 'i' },
+    { src: i9, category: 'i' },
+    { src: f1, category: 'f' },
+    { src: f2, category: 'f' },
+    { src: f3, category: 'f' },
+    { src: f4, category: 'f' },
+    { src: f5, category: 'f' },
+    { src: f6, category: 'f' },
+    { src: f7, category: 'f' },
   ];
+
+  const handleCategoryClick = (category: string | null) => {
+    setActiveCategory(category);
+  };
 
   return (
     <>
@@ -46,21 +78,48 @@ function Portafolio() {
         <div className='titulo col-11 ol-xl-9 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
           <h1 className='text-center mb-4'>Portafolio</h1>
           <hr />
-          <ul>
+          <ul className='d-flex menu-portafolio'>
+            <li className={`${activeCategory === null ? 'oculto' : 'visible'}`}>
+              <a href="#todo" className={`link-portafolio ${activeCategory === null ? 'active' : ''}`} onClick={() => handleCategoryClick(null)}>Ver todo</a>
+            </li>
+            <li className={`${activeCategory === null ? 'oculto' : 'visible'}`}>
+              |
+            </li>
             <li>
-              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
-              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
-              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
-              <a href="#miBanco1" className="link-portafolio">Desarrollo</a>
+              <a href="#dev" className={`link-portafolio ${activeCategory === 'dev' ? 'active' : ''}`} onClick={() => handleCategoryClick('dev')}>Desarrollo</a>
+            </li>
+            <li>
+              |
+            </li>
+            <li>
+              <a href="#ui" className={`link-portafolio ${activeCategory === 'ui' ? 'active' : ''}`} onClick={() => handleCategoryClick('ui')}>Diseño UI</a>
+            </li>
+            <li>
+              |
+            </li>
+            <li>
+              <a href="#d" className={`link-portafolio ${activeCategory === 'd' ? 'active' : ''}`} onClick={() => handleCategoryClick('d')}>Diseño Gráfico</a>
+            </li>
+            <li>
+              |
+            </li>
+            <li>
+              <a href="#i" className={`link-portafolio ${activeCategory === 'i' ? 'active' : ''}`} onClick={() => handleCategoryClick('i')}>Ilustraciones</a>
+            </li>
+            <li>
+              |
+            </li>
+            <li>
+              <a href="#f" className={`link-portafolio ${activeCategory === 'f' ? 'active' : ''}`} onClick={() => handleCategoryClick('f')}>Fotografía</a>
             </li>
           </ul>
         </div>
 
-        <div className='contenidoPortafolio contenido-portafolio col-12 col-md-11 mx-auto mt-5 pb-md-4'>
+        <div className='contenido-portafolio col-12 col-md-11 mx-auto pb-md-4'>
           <ul className='row'>
             {images.map((image, index) => (
-              <li key={index} className='col-4'>
-                <Image src={image} alt={`Portafolio ${index + 1}`} className="img-fluid" />
+              <li key={index} className={`col-3 ${activeCategory && image.category !== activeCategory ? 'd-none' : ''}`}>
+                <Image src={image.src} alt={`Portafolio ${index + 1}`} className="img-fluid" />
               </li>
             ))}
           </ul>
