@@ -9,31 +9,50 @@ function Portafolio() {
   const imageList = [
     { src: images.dev1, category: 'dev', titulo: 'Mi Banco', text: (
       <>
-        Proyecto personal de banco ficticio desarrollado en Angular con un Backend en NodeJS que consume datos desde base de datos MySql. 
-        <a href="https://mi-banco.claudiosalazar.cl/" target="_blank" rel="noopener noreferrer">Ver más</a>
+        <hr />
+        <p>Proyecto personal de banco ficticio desarrollado en Angular, SCSS y Bootstrap 5, con un Backend en NodeJS que consume datos desde base de datos MySql.</p>
+        <a href="https://mi-banco.claudiosalazar.cl/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
       </>
-    )  },
-    { src: images.dev2, category: 'dev', titulo: 'BCI | 360 Connect', text: 'Desarrollo BCI' },
-    { src: images.dev3, category: 'dev', titulo: 'C&M Consultores ', text: 'Desarrollo CYM' },
-    { src: images.dev4, category: 'dev', titulo: 'Itaú', text: 'Desarrollo Itaú' },
-    { src: images.ui1, category: 'ui', titulo: 'Diseño UI C&M Consultores', text: 'Diseño UI CYM' },
-    { src: images.ui2, category: 'ui', titulo: 'Diseño UI Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
-    { src: images.d1, category: 'd', titulo: 'Adidas', text: 'Diseño Adidas' },
-    { src: images.d2, category: 'd', titulo: 'Aflorar', text: 'Diseño Aflorar' },
-    { src: images.d3, category: 'd', titulo: 'Alacranes', text: 'Diseño Alacranes' },
-    { src: images.d4, category: 'd', titulo: 'Bigmark', text: 'Diseño Bigmark' },
-    { src: images.d5, category: 'd', titulo: 'Titulo', text: 'Diseño CYM' },
-    { src: images.d6, category: 'd', titulo: 'Titulo', text: 'Diseño Katarsis' },
-    { src: images.d7, category: 'd', titulo: 'Titulo', text: 'Diseño Megasalud' },
-    { src: images.i1, category: 'i', titulo: 'Titulo', text: 'Ilustración Águila Audax' },
-    { src: images.i2, category: 'i', titulo: 'Titulo', text: 'Ilustración Love Rock Beer' },
-    { src: images.i3, category: 'i', titulo: 'Titulo', text: 'Ilustración Manchester Logo' },
-    { src: images.i4, category: 'i', titulo: 'Titulo', text: 'Ilustración Scar' },
-    { src: images.i5, category: 'i', titulo: 'Titulo', text: 'Ilustración Skeletor' },
-    { src: images.i6, category: 'i', titulo: 'Titulo', text: 'Ilustración Witch King' },
-    { src: images.i7, category: 'i', titulo: 'Titulo', text: 'Ilustración Wonder Woman' },
-    { src: images.i8, category: 'i', titulo: 'Titulo', text: 'Ilustración Darth Maul' },
-    { src: images.i9, category: 'i', titulo: 'Titulo', text: 'Ilustración Skull Batman' },
+    )},
+    { src: images.dev2, category: 'dev', titulo: 'BCI | 360 Connect', text: (
+      <>
+        <hr />
+        <p>Desarrollo de interface UI para variados modulos de APP Web responsive realizada con Angular, SCSS y Material Design.</p>
+        <a href="https://www.bci.cl/empresas/360-connect" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
+      </>
+    )},
+    { src: images.dev3, category: 'dev', titulo: 'C&M Consultores', text: (
+      <>
+        <hr />
+        <p>Desarrollo sitio web responsive en Angular para pyme dedicada a la contabilidad.</p>
+        <a href="https://cymconsultores.cl/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
+      </>
+    )},
+    { src: images.dev4, category: 'dev', titulo: 'Itaú', text: (
+      <>
+        <hr />
+        <p>Desarrollo de variados modulos para sitio de clientes Itaú.</p>
+        <a href="https://www.itau.cl/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
+      </>
+    )},
+    // { src: images.ui1, category: 'ui', titulo: 'Diseño UI C&M Consultores', text: 'Diseño UI CYM' },
+    // { src: images.ui2, category: 'ui', titulo: 'Diseño UI Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
+    { src: images.d1, category: 'd', titulo: 'Adidas', text: 'Propuesta personal de aviso para Adidas usando arquitectura de estación de metro Pedro de Valdivia en Santiago.' },
+    { src: images.d2, category: 'd', titulo: 'Aflorar', text: 'Logo para pyme dedicada a la elaboración de flores de Bach' },
+    { src: images.d3, category: 'd', titulo: 'Alacranes', text: 'Logo para club privado.' },
+    { src: images.d4, category: 'd', titulo: 'Bigmark', text: 'Logo para pyme dedicada a la venta de variados productos importados.' },
+    { src: images.d5, category: 'd', titulo: 'C&M Consultores', text: 'Imagen corporativa para pyme de contabilidad.' },
+    { src: images.d6, category: 'd', titulo: 'Katarsis', text: 'Logo para productora audiovisual.' },
+    { src: images.d7, category: 'd', titulo: 'Megasalud', text: 'Rediseño para flayer informativo.' },
+    { src: images.i1, category: 'i', titulo: '', text: '' },
+    { src: images.i2, category: 'i', titulo: '', text: '' },
+    { src: images.i3, category: 'i', titulo: '', text: '' },
+    { src: images.i4, category: 'i', titulo: '', text: '' },
+    { src: images.i5, category: 'i', titulo: '', text: '' },
+    { src: images.i6, category: 'i', titulo: '', text: '' },
+    { src: images.i7, category: 'i', titulo: '', text: '' },
+    { src: images.i8, category: 'i', titulo: '', text: '' },
+    { src: images.i9, category: 'i', titulo: '', text: '' },
     { src: images.f1, category: 'f', titulo: '', text: '' },
     { src: images.f2, category: 'f', titulo: '', text: '' },
     { src: images.f3, category: 'f', titulo: '', text: '' },
