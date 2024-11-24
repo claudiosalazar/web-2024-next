@@ -38,13 +38,48 @@ function Portafolio() {
     )},
     // { src: images.ui1, category: 'ui', titulo: 'Diseño UI C&M Consultores', text: 'Diseño UI CYM' },
     // { src: images.ui2, category: 'ui', titulo: 'Diseño UI Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
-    { src: images.d1, category: 'd', titulo: 'Adidas', text: 'Propuesta personal de aviso para Adidas usando arquitectura de estación de metro Pedro de Valdivia en Santiago.' },
-    { src: images.d2, category: 'd', titulo: 'Aflorar', text: 'Logo para pyme dedicada a la elaboración de flores de Bach' },
-    { src: images.d3, category: 'd', titulo: 'Alacranes', text: 'Logo para club privado.' },
-    { src: images.d4, category: 'd', titulo: 'Bigmark', text: 'Logo para pyme dedicada a la venta de variados productos importados.' },
-    { src: images.d5, category: 'd', titulo: 'C&M Consultores', text: 'Imagen corporativa para pyme de contabilidad.' },
-    { src: images.d6, category: 'd', titulo: 'Katarsis', text: 'Logo para productora audiovisual.' },
-    { src: images.d7, category: 'd', titulo: 'Megasalud', text: 'Rediseño para flayer informativo.' },
+    { src: images.d1, category: 'd', titulo: 'Adidas', text: (
+      <>
+        <hr />
+        <p>Propuesta personal de aviso para Adidas usando arquitectura de estación de metro Pedro de Valdivia en Santiago.</p>
+      </>
+    )},
+    { src: images.d2, category: 'd', titulo: 'Aflorar', text: (
+      <>
+        <hr />
+        <p>Logo para pyme dedicada a la elaboración de flores de Bach.</p>
+      </>
+    )},
+    { src: images.d3, category: 'd', titulo: 'Alacranes', text: (
+      <>
+        <hr />
+        <p>Logo para club privado.</p>
+      </>
+    )},
+    { src: images.d4, category: 'd', titulo: 'Bigmark', text: (
+      <>
+        <hr />
+        <p>Logo para pyme dedicada a la venta de variados productos importados.</p>
+      </>
+    )},
+    { src: images.d5, category: 'd', titulo: 'C&M Consultores', text: (
+      <>
+        <hr />
+        <p>Imagen corporativa para pyme de contabilidad.</p>
+      </>
+    )},
+    { src: images.d6, category: 'd', titulo: 'Katarsis', text: (
+      <>
+        <hr />
+        <p>Logo para productora audiovisual.</p>
+      </>
+    )},
+    { src: images.d7, category: 'd', titulo: 'Megasalud', text: (
+      <>
+        <hr />
+        <p>Rediseño para flayer informativo.</p>
+      </>
+    )},
     { src: images.i1, category: 'i', titulo: '', text: '' },
     { src: images.i2, category: 'i', titulo: '', text: '' },
     { src: images.i3, category: 'i', titulo: '', text: '' },
