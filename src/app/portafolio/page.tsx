@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import images from '../ui/Images';
 import ImageModal from '../ui/ImageModal';
 
+
 function Portafolio() {
   const imageList = [
     { src: images.dev1, category: 'dev', titulo: 'Mi Banco', text: (

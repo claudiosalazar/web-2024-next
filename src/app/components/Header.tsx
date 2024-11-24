@@ -72,19 +72,20 @@ function Header() {
                   Bienvenida
                 </Link>
               </li>
-              <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
+              <li className='separador-menu'></li>
               <li className='boton'>
                 <Link href="/trayectoria" className={`nav-link ${pathname.startsWith('/trayectoria') ? "active" : ""} ${menuColor}`}>
                   Trayectoria
                 </Link>
               </li>
-              <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
+              <li className='separador-menu'></li>
               <li className="nav-item logo">
                 <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
                   <div className='logo-header'></div>
                 </Link>
               </li>
-              <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
+              {/* <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li> */}
+              <li className='separador-menu'></li>
               <li className='boton'>
                 <Link href="/conocimientos" className={`nav-link ${pathname.startsWith('/conocimientos') ? "active" : ""} ${menuColor}`}>
                   Conocimientos
