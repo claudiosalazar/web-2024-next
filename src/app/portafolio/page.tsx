@@ -25,7 +25,7 @@ function Portafolio() {
     { src: images.dev3, category: 'dev', titulo: 'C&M Consultores', text: (
       <>
         <hr />
-        <p>Desarrollo sitio web responsive en Angular para pyme dedicada a la contabilidad.</p>
+        <p>Desarrollo sitio web y diseño UI responsive en Angular para pyme dedicada a la contabilidad.</p>
         <a href="https://cymconsultores.cl/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
       </>
     )},
@@ -176,9 +176,9 @@ function Portafolio() {
             <li className='col-6 col-md'>
               <a href="#dev" className={`link-portafolio ${activeCategory === 'dev' ? 'active' : ''}`} onClick={() => handleCategoryClick('dev')}>Desarrollo</a>
             </li>
-            <li className='col-6 col-md'>
+            {/* <li className='col-6 col-md'>
               <a href="#ui" className={`link-portafolio ${activeCategory === 'ui' ? 'active' : ''}`} onClick={() => handleCategoryClick('ui')}>Diseño UI</a>
-            </li>
+            </li> */}
             <li className='col-6 col-md'>
               <a href="#d" className={`link-portafolio ${activeCategory === 'd' ? 'active' : ''}`} onClick={() => handleCategoryClick('d')}>Diseño Gráfico</a>
             </li>
