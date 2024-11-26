@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface ImageModalProps {
   isOpen: boolean;
   imageSrc: string;
-  imageTitulo: string;
+  imageTitulo: React.ReactNode;
   imageDescripcion: React.ReactNode;
   onClose: () => void;
 }
@@ -29,11 +29,11 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, imageSrc, imageTitulo, 
             exit={{ opacity: 0, y: 20 }}
             transition={{ ease: 'easeIn', duration: 0.3 }}
           >
-            <img src={imageSrc} alt={imageTitulo} className="img-fluid" />
+            <img src={imageSrc} alt={typeof imageTitulo === 'string' ? imageTitulo : ''} className="img-fluid" />
             {(imageTitulo || imageDescripcion) && (
               <div className="info">
-                {imageTitulo && <h2>{imageTitulo}</h2>}
-                {imageDescripcion && <p>{imageDescripcion}</p>}
+                {imageTitulo && <span className='titulo-modal'>{imageTitulo}</span>}
+                {imageDescripcion && <span>{imageDescripcion}</span>}
               </div>
             )}
             <button className="cerrar-modal" onClick={onClose}>
