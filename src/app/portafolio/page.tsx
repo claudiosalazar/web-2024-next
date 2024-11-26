@@ -184,7 +184,7 @@ function Portafolio() {
         <>
           <p>
             <span className='tipo'>Ilustración</span>
-            <span className='nombre'>Audax Italiano</span>
+            <span className='nombre'>Tigre</span>
           </p>
         </>
       ),
@@ -195,7 +195,7 @@ function Portafolio() {
         <>
           <p>
             <span className='tipo'>Ilustración</span>
-            <span className='nombre'>Love, Rock & Beer</span>
+            <span className='nombre'>Aguila</span>
           </p>
         </>
       ),
@@ -206,7 +206,7 @@ function Portafolio() {
         <>
           <p>
             <span className='tipo'>Ilustración</span>
-            <span className='nombre'>Machester United</span>
+            <span className='nombre'>Lonko</span>
           </p>
         </>
       ),
@@ -217,18 +217,18 @@ function Portafolio() {
         <>
           <p>
             <span className='tipo'>Ilustración</span>
-            <span className='nombre'>Scar (Rey León)</span>
+            <span className='nombre'>Audax Italiano</span>
           </p>
         </>
       ),
       text: '' 
     },
-    { src: images.i5, category: 'i',
+    { src: images.i5, category: 'i', 
       titulo: (
         <>
           <p>
             <span className='tipo'>Ilustración</span>
-            <span className='nombre'>Skeletor</span>
+            <span className='nombre'>Love, Rock & Beer</span>
           </p>
         </>
       ),
@@ -239,7 +239,7 @@ function Portafolio() {
         <>
           <p>
             <span className='tipo'>Ilustración</span>
-            <span className='nombre'>Witch King</span>
+            <span className='nombre'>Machester United</span>
           </p>
         </>
       ),
@@ -250,13 +250,46 @@ function Portafolio() {
         <>
           <p>
             <span className='tipo'>Ilustración</span>
+            <span className='nombre'>Scar (Rey León)</span>
+          </p>
+        </>
+      ),
+      text: '' 
+    },
+    { src: images.i8, category: 'i',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Ilustración</span>
+            <span className='nombre'>Skeletor</span>
+          </p>
+        </>
+      ),
+      text: '' 
+    },
+    { src: images.i9, category: 'i', 
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Ilustración</span>
+            <span className='nombre'>Witch King</span>
+          </p>
+        </>
+      ),
+      text: '' 
+    },
+    { src: images.i10, category: 'i', 
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Ilustración</span>
             <span className='nombre'>Wonder Woman</span>
           </p>
         </>
       ),
       text: '' 
     },
-    { src: images.i8, category: 'i', 
+    { src: images.i11, category: 'i', 
       titulo: (
         <>
           <p>
@@ -267,7 +300,7 @@ function Portafolio() {
       ),
       text: '' 
     },
-    { src: images.i9, category: 'i', 
+    { src: images.i12, category: 'i', 
       titulo: (
         <>
           <p>
