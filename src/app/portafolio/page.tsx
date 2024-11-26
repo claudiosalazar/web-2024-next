@@ -1,10 +1,15 @@
 'use client'
 
-import React, { useState, useEffect, use } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import images from '../ui/Images';
 import ImageModal from '../ui/ImageModal';
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 
 function Portafolio() {
   const imageList = [
@@ -222,8 +227,6 @@ function Portafolio() {
         <p>Diseño UX/UI y desarrollo para sitio corporativo CMR de Falabella.</p>
       </>
     )},
-    // { src: images.ui1, category: 'ui', titulo: 'Diseño UI C&M Consultores', text: 'Diseño UI CYM' },
-    // { src: images.ui2, category: 'ui', titulo: 'Diseño UI Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
     { src: images.d1, category: 'd',
       titulo: (
         <>
@@ -531,6 +534,12 @@ function Portafolio() {
   };
 
   const handleImageClick = (src: string, titulo: React.ReactNode, text: React.ReactNode) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'Image',
+        event_label: typeof titulo === 'string' ? titulo : 'Image Click',
+      });
+    }
     setSelectedImage(src);
     setSelectedTitulo(titulo);
     setSelectedText(text);
@@ -578,15 +587,12 @@ function Portafolio() {
     <>
       <section className="portafolio row d-flex align-items-center">
 
-        <motion.div initial={{ opacity: 0 }} animate={controlTitulo} className='titulo col-12 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
+      <motion.div initial={{ opacity: 0 }} animate={controlTitulo} className='titulo col-12 mx-auto text-center pt-4 d-flex flex-column align-items-md-center'>
           <h1 className='text-center mb-4'>Portafolio</h1>
           <motion.ul initial={{ opacity: 0 }} animate={controlMenu} className='row menu-portafolio'>
             <li className='col-6 col-md'>
               <a href="#dev" className={`link-portafolio ${activeCategory === 'dev' ? 'active' : ''}`} onClick={() => handleCategoryClick('dev')}>Frontend DEV</a>
             </li>
-            {/* <li className='col-6 col-md'>
-              <a href="#ui" className={`link-portafolio ${activeCategory === 'ui' ? 'active' : ''}`} onClick={() => handleCategoryClick('ui')}>Diseño UI</a>
-            </li> */}
             <li className='col-6 col-md'>
               <a href="#d" className={`link-portafolio ${activeCategory === 'd' ? 'active' : ''}`} onClick={() => handleCategoryClick('d')}>Diseño Gráfico</a>
             </li>
