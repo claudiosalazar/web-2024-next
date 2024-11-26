@@ -12,7 +12,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>Mi Banco</span>
           </p>
         </>
@@ -28,7 +28,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>BCI | 360 Connect</span>
           </p>
         </>
@@ -44,7 +44,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>C&M Consultores</span>
           </p>
         </>
@@ -60,7 +60,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>Itaú</span>
           </p>
         </>
@@ -76,7 +76,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='tipo'>Diseño UI y Frontend DEV</span>
             <span className='nombre'>EBACH</span>
           </p>
         </>
@@ -91,7 +91,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='tipo'>Diseño UI y Frontend DEV</span>
             <span className='nombre'>Codelco Tech</span>
           </p>
         </>
@@ -106,7 +106,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>Mujeres que dejan huella</span>
           </p>
         </>
@@ -114,14 +114,14 @@ function Portafolio() {
       text: (
       <>
         <hr />
-        <p>Desarrollo para mini de Alto las Condes.</p>
+        <p>Frontend desarrollado en PHP para mini sitio de Alto las Condes dedicado a la mujer con encuesta para elegir ganadoras del año 2017.</p>
       </>
     )},
     { src: images.dev8, category: 'dev',
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>Mujeres que dejan huella</span>
           </p>
         </>
@@ -129,14 +129,14 @@ function Portafolio() {
       text: (
       <>
         <hr />
-        <p>Desarrollo para mini de Alto las Condes.</p>
+        <p>Frontend desarrollado en PHP para mini sitio de Alto las Condes con información de premiación de mujeres ganadoras de encuesta de Mujeres que dejan huella.</p>
       </>
     )},
     { src: images.dev9, category: 'dev',
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>Subaru STI</span>
           </p>
         </>
@@ -144,14 +144,14 @@ function Portafolio() {
       text: (
       <>
         <hr />
-        <p>Desarrollo para mini sitio para model de auto Subaru Imoreza STI 2009.</p>
+        <p>Frontend desarrollado en ASP.NET para mini sitio para model de auto Subaru Imoreza STI 2009.</p>
       </>
     )},
     { src: images.dev10, category: 'dev',
       titulo: (
         <>
           <p>
-            <span className='tipo'>Desarrollo web</span>
+            <span className='tipo'>Frontend DEV</span>
             <span className='nombre'>Subaru</span>
           </p>
         </>
@@ -159,14 +159,14 @@ function Portafolio() {
       text: (
       <>
         <hr />
-        <p>Desarrollo para sitio corporativo Subaru 2009.</p>
+        <p>Frontend desarrollado en ASP.NET para sitio corporativo Subaru 2009.</p>
       </>
     )},
     { src: images.dev11, category: 'dev',
       titulo: (
         <>
           <p>
-            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='tipo'>Diseño UI y Frontend DEV</span>
             <span className='nombre'>Banco Estado Corporativo</span>
           </p>
         </>
@@ -174,14 +174,14 @@ function Portafolio() {
       text: (
       <>
         <hr />
-        <p>Diseño UX/UI y desarrollo para sitio corporativo de Banco Estado.</p>
+        <p>Diseño UX/UI y Frontend desarrollado en ASP.NET para sitio corporativo de Banco Estado 2009.</p>
       </>
     )},
     { src: images.dev12, category: 'dev',
       titulo: (
         <>
           <p>
-            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='tipo'>Diseño UI y Frontend DEV</span>
             <span className='nombre'>Kal</span>
           </p>
         </>
@@ -189,14 +189,14 @@ function Portafolio() {
       text: (
       <>
         <hr />
-        <p>Diseño UX/UI y desarrollo para sitio corporativo de venta de articulos artesanales.</p>
+        <p>Diseño UX/UI y Frontend desarrollado en PHP para sitio corporativo de venta de articulos artesanales.</p>
       </>
     )},
     { src: images.dev13, category: 'dev',
       titulo: (
         <>
           <p>
-            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='tipo'>Diseño UI y Frontend DEV</span>
             <span className='nombre'>Mi Falabella</span>
           </p>
         </>
@@ -211,7 +211,7 @@ function Portafolio() {
       titulo: (
         <>
           <p>
-            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='tipo'>Diseño UI y Frontend DEV</span>
             <span className='nombre'>CMR</span>
           </p>
         </>
@@ -582,7 +582,7 @@ function Portafolio() {
           <h1 className='text-center mb-4'>Portafolio</h1>
           <motion.ul initial={{ opacity: 0 }} animate={controlMenu} className='row menu-portafolio'>
             <li className='col-6 col-md'>
-              <a href="#dev" className={`link-portafolio ${activeCategory === 'dev' ? 'active' : ''}`} onClick={() => handleCategoryClick('dev')}>Desarrollo</a>
+              <a href="#dev" className={`link-portafolio ${activeCategory === 'dev' ? 'active' : ''}`} onClick={() => handleCategoryClick('dev')}>Frontend DEV</a>
             </li>
             {/* <li className='col-6 col-md'>
               <a href="#ui" className={`link-portafolio ${activeCategory === 'ui' ? 'active' : ''}`} onClick={() => handleCategoryClick('ui')}>Diseño UI</a>
