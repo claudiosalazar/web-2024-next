@@ -72,6 +72,156 @@ function Portafolio() {
         <a href="https://www.itau.cl/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
       </>
     )},
+    { src: images.dev5, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='nombre'>EBACH</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Diseño UX/UI y desarrollo para sitio corporativo para escuela de flores de Bach.</p>
+      </>
+    )},
+    { src: images.dev6, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='nombre'>Codelco Tech</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Diseño UX/UI y desarrollo para mini sitio de Codelco.</p>
+      </>
+    )},
+    { src: images.dev7, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Desarrollo web</span>
+            <span className='nombre'>Mujeres que dejan huella</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Desarrollo para mini de Alto las Condes.</p>
+      </>
+    )},
+    { src: images.dev8, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Desarrollo web</span>
+            <span className='nombre'>Mujeres que dejan huella</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Desarrollo para mini de Alto las Condes.</p>
+      </>
+    )},
+    { src: images.dev9, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Desarrollo web</span>
+            <span className='nombre'>Subaru STI</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Desarrollo para mini sitio para model de auto Subaru Imoreza STI 2009.</p>
+      </>
+    )},
+    { src: images.dev10, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Desarrollo web</span>
+            <span className='nombre'>Subaru</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Desarrollo para sitio corporativo Subaru 2009.</p>
+      </>
+    )},
+    { src: images.dev11, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='nombre'>Banco Estado Corporativo</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Diseño UX/UI y desarrollo para sitio corporativo de Banco Estado.</p>
+      </>
+    )},
+    { src: images.dev12, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='nombre'>Kal</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Diseño UX/UI y desarrollo para sitio corporativo de venta de articulos artesanales.</p>
+      </>
+    )},
+    { src: images.dev13, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='nombre'>Mi Falabella</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Diseño UX/UI y desarrollo para sitio dedicado a clientes de Falabella.</p>
+      </>
+    )},
+    { src: images.dev14, category: 'dev',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Diseño UI y Desarrollo web</span>
+            <span className='nombre'>CMR</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Diseño UX/UI y desarrollo para sitio corporativo CMR de Falabella.</p>
+      </>
+    )},
     // { src: images.ui1, category: 'ui', titulo: 'Diseño UI C&M Consultores', text: 'Diseño UI CYM' },
     // { src: images.ui2, category: 'ui', titulo: 'Diseño UI Mi Banco', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet quam ut commodo finibus. Cras eu urna viverra, porta ante ut, mollis magna. Etiam vitae massa rutrum, hendrerit mi id, cursus nibh.' },
     { src: images.d1, category: 'd',
@@ -177,6 +327,21 @@ function Portafolio() {
       <>
         <hr />
         <p>Rediseño para flayer informativo.</p>
+      </>
+    )},
+    { src: images.d8, category: 'd',
+      titulo: (
+        <>
+          <p>
+            <span className='tipo'>Imagen corporativa</span>
+            <span className='nombre'>Daleychip</span>
+          </p>
+        </>
+      ),
+      text: (
+      <>
+        <hr />
+        <p>Diseño de imagen corporativa para productora digital.</p>
       </>
     )},
     { src: images.i1, category: 'i', 
