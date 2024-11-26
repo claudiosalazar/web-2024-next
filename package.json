@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "lint": "next lint"
+    "build": "next build && node generate-sitemap.js",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.4",

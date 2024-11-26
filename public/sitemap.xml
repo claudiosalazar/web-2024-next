@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+        <url>
+          <loc>https://www.claudiosalazar.cl/</loc>
+          <lastmod>2024-11-26T11:58:12.057Z</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.claudiosalazar.cl/trayectoria</loc>
+          <lastmod>2024-11-26T11:58:12.061Z</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.claudiosalazar.cl/conocimientos</loc>
+          <lastmod>2024-11-26T11:58:12.061Z</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.claudiosalazar.cl/portafolio</loc>
+          <lastmod>2024-11-26T11:58:12.061Z</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+        </url>
+      
+</urlset>
