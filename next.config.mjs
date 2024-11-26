@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    output: 'export',
+    distDir: 'prod',
+    basePath: '',
+    assetPrefix: 'https://www.claudiosalazar.cl/',
+  };
+  
+  export default nextConfig;
