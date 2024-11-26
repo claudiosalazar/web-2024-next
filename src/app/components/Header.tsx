@@ -1,6 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
@@ -60,6 +66,15 @@ function Header() {
     };
   }, [pathname]);
 
+  const handleClick = (label: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'Navigation',
+        event_label: label,
+      });
+    }
+  };
+
   return (
     <header className={`${fondoHeader} ${menuColor}`}>
       <nav className="navbar">
@@ -68,32 +83,31 @@ function Header() {
             <ul className="navbar-nav">
               <li className='separador-lista'></li>
               <li className='boton'>
-                <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
+                <Link href="/" className={`nav-link ${pathname === '/' ? "active" : ""} ${menuColor}`} onClick={() => handleClick('Bienvenida')}>
                   Bienvenida
                 </Link>
               </li>
               <li className='separador-menu'></li>
               <li className='boton'>
-                <Link href="/trayectoria" className={`nav-link ${pathname.startsWith('/trayectoria') ? "active" : ""} ${menuColor}`}>
+                <Link href="/trayectoria" className={`nav-link ${pathname.startsWith('/trayectoria') ? "active" : ""} ${menuColor}`} onClick={() => handleClick('Trayectoria')}>
                   Trayectoria
                 </Link>
               </li>
               <li className='separador-menu'></li>
               <li className="nav-item logo">
-                <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`}>
+                <Link href="/" className={`nav-link logo-link ${pathname === '/' ? "active" : ""} ${menuColor}`} onClick={() => handleClick('Logo')}>
                   <div className='logo-header'></div>
                 </Link>
               </li>
-              {/* <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li> */}
               <li className='separador-menu'></li>
               <li className='boton'>
-                <Link href="/conocimientos" className={`nav-link ${pathname.startsWith('/conocimientos') ? "active" : ""} ${menuColor}`}>
+                <Link href="/conocimientos" className={`nav-link ${pathname.startsWith('/conocimientos') ? "active" : ""} ${menuColor}`} onClick={() => handleClick('Conocimientos')}>
                   Conocimientos
                 </Link>
               </li>
               <li className={`separador-menu ${pathname.startsWith('/trayectoria') ? 'blanco' : ''}`}></li>
               <li className='boton'>
-                <Link href="/portafolio" className={`nav-link ${pathname.startsWith('/portafolio') ? "active" : ""} ${menuColor}`}>
+                <Link href="/portafolio" className={`nav-link ${pathname.startsWith('/portafolio') ? "active" : ""} ${menuColor}`} onClick={() => handleClick('Portafolio')}>
                   Portafolio
                 </Link>
               </li>
